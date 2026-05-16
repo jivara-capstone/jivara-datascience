@@ -1,245 +1,197 @@
-import streamlit as st
 import pandas as pd
-import json
-from pathlib import Path
+import plotly.express as px
+import streamlit as st
 
-st.set_page_config(page_title="Jivara Dashboard", page_icon="🌿", layout="wide", initial_sidebar_state="expanded")
+from ui import (
+    ASSET,
+    BRAND,
+    DATA,
+    PROC,
+    add_sidebar,
+    apply_theme,
+    card,
+    compute_drug_insights,
+    compute_interaction_frame,
+    compute_recipe_insights,
+    hero,
+    load_kb,
+    note,
+    plotly_layout,
+    section,
+)
 
-BASE = Path(__file__).resolve().parent
-DATA = BASE.parent / "data_output"
-PROC = DATA / "processed"
-ASSET = BASE / "asset"
+page_icon = str(ASSET / "splash.png") if (ASSET / "splash.png").exists() else "🌿"
+st.set_page_config(page_title="Jivara Dashboard", page_icon=page_icon, layout="wide", initial_sidebar_state="expanded")
+st.markdown(apply_theme(), unsafe_allow_html=True)
+add_sidebar("Dashboard Jivara", "Executive summary project data science")
 
-CSS = """
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
-*, html, body, [class*="css"] { font-family: 'Plus Jakarta Sans', sans-serif; }
-
-/* Background utama off-white */
-.stApp, [data-testid="stAppViewContainer"], [data-testid="stMain"],
-[data-testid="stAppViewBlockContainer"], .block-container { background: #F7F8FA !important; }
-
-/* Header atas hijau */
-header[data-testid="stHeader"] { background: #2E7D32 !important; }
-header[data-testid="stHeader"] button svg { color: #FFF !important; fill: #FFF !important; }
-
-/* Sidebar toggle saat collapsed */
-[data-testid="stSidebarCollapsedControl"] button svg { color: #333 !important; fill: #333 !important; }
-
-/* Sidebar */
-[data-testid="stSidebar"] { background: linear-gradient(175deg, #2E7D32 0%, #43A047 45%, #66BB6A 100%); }
-[data-testid="stSidebar"] * { color: #FFF !important; }
-[data-testid="stSidebar"] hr { border-color: rgba(255,255,255,0.22) !important; }
-[data-testid="stSidebar"] img { border-radius: 8px; }
-
-/* ── SEMUA TEKS DI MAIN AREA ── */
-[data-testid="stMain"] p, [data-testid="stMain"] li,
-[data-testid="stMain"] span, [data-testid="stMain"] td,
-[data-testid="stMain"] th { color: #333 !important; }
-[data-testid="stMain"] h1 { color: #1A1A1A !important; }
-[data-testid="stMain"] h2 { color: #222 !important; }
-[data-testid="stMain"] h3, [data-testid="stMain"] h4 { color: #2A2A2A !important; }
-[data-testid="stMain"] strong { color: #222 !important; }
-
-/* Widgets */
-button { color: #333 !important; }
-[data-testid="stSidebar"] button { color: #FFF !important; }
-input, textarea { color: #333 !important; background: #FFF !important; }
-[data-baseweb="select"], [data-baseweb="select"] span,
-[data-baseweb="select"] div, [data-baseweb="select"] input { color: #333 !important; }
-label, [data-testid="stWidgetLabel"] p,
-[data-testid="stWidgetLabel"] span { color: #444 !important; font-weight: 500; }
-[data-testid="stSidebar"] label,
-[data-testid="stSidebar"] [data-testid="stWidgetLabel"] * { color: #FFF !important; }
-
-/* Expander */
-[data-testid="stExpander"] summary { background: #FFF !important; border: 1px solid #DEE2E6 !important; border-radius: 10px !important; }
-[data-testid="stExpander"] summary * { color: #333 !important; font-weight: 600; }
-[data-testid="stExpander"] [data-testid="stMarkdownContainer"] * { color: #444 !important; }
-
-/* Captions, alerts, dataframe */
-[data-testid="stCaptionContainer"] p { color: #6C757D !important; }
-[data-testid="stAlert"] * { color: #333 !important; }
-[data-testid="stDataFrame"] * { color: #333 !important; }
-
-/* Metrics */
-div[data-testid="stMetric"] {
-    background: #FFF; border-radius: 14px; padding: 18px 22px;
-    border: 1px solid #DEE2E6; border-left: 5px solid #43A047;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.04);
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-div[data-testid="stMetric"]:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(0,0,0,0.08); }
-div[data-testid="stMetric"] label { color: #555 !important; font-weight: 600; font-size: 0.82rem; }
-div[data-testid="stMetric"] [data-testid="stMetricValue"] { color: #2E7D32 !important; font-weight: 800; }
-
-/* Hero banner */
-.hero-banner {
-    background: linear-gradient(135deg, #2E7D32 0%, #43A047 40%, #66BB6A 100%);
-    border-radius: 20px; padding: 44px 36px; text-align: center;
-    box-shadow: 0 6px 24px rgba(46,125,50,0.18); margin-bottom: 30px;
-    position: relative; overflow: hidden;
-}
-.hero-banner::before {
-    content:''; position:absolute; top:-50%; right:-20%; width:400px; height:400px;
-    background:radial-gradient(circle,rgba(255,255,255,0.08) 0%,transparent 70%); border-radius:50%;
-}
-.hero-banner h1 { color: #FFF !important; font-size: 2.1rem; font-weight: 800; margin-bottom: 8px; position: relative; }
-.hero-banner p { color: rgba(255,255,255,0.92) !important; font-size: 1rem; max-width: 700px; margin: 0 auto; line-height: 1.6; position: relative; }
-
-/* Cards */
-.glass-card {
-    background: #FFF; border-radius: 16px; padding: 26px;
-    border: 1px solid #DEE2E6; box-shadow: 0 1px 6px rgba(0,0,0,0.03);
-    transition: transform 0.25s, box-shadow 0.25s; height: 100%;
-}
-.glass-card:hover { transform: translateY(-3px); box-shadow: 0 6px 18px rgba(0,0,0,0.07); border-color: #A5D6A7; }
-.glass-card h3 { color: #2E7D32 !important; margin: 0 0 10px; font-weight: 700; font-size: 1.1rem; }
-.glass-card p { color: #555 !important; font-size: 0.92rem; line-height: 1.6; margin-bottom: 12px; }
-
-.badge {
-    display: inline-block; background: #EDF7ED; color: #2E7D32;
-    padding: 4px 14px; border-radius: 20px; font-size: 0.78rem;
-    font-weight: 600; margin: 3px 2px; border: 1px solid #D4E8D4;
-}
-
-.section-title {
-    color: #2E7D32 !important; font-weight: 700; font-size: 1.3rem;
-    border-bottom: 3px solid #A5D6A7; padding-bottom: 8px;
-    margin-bottom: 20px; display: inline-block;
-}
-
-.footer-text { text-align: center; color: #999; padding: 28px 0 10px; font-size: 0.85rem; }
-.footer-text strong { color: #43A047; }
-
-hr { border-color: #E5E7EB !important; }
-</style>
-"""
-st.markdown(CSS, unsafe_allow_html=True)
-
-# ── Sidebar ──
-logo_path = ASSET / "splash.png"
-if logo_path.exists():
-    st.sidebar.image(str(logo_path), width=200)
-st.sidebar.markdown("---")
-st.sidebar.markdown("### Dashboard Jivara")
-st.sidebar.markdown("*Stay On Track, Stay Healthy*")
-st.sidebar.markdown("---")
-st.sidebar.markdown("**Tim CC26-PSU090**")
-st.sidebar.markdown("Data Science: Rizki Pangestu & La Rayan")
-st.sidebar.markdown("AI Engineer: Hanif Rifan Ash Shidiq & Alfito Juanda")
-st.sidebar.markdown("Full Stack Developer: Panji Ihsanudin Fajri & Rama Danadipa Putra Wijaya")
-st.sidebar.markdown("---")
-st.sidebar.markdown("Sprint: Mei 2026")
-
-# ── Logo ──
-text = ASSET / "notext.png"
-if text.exists():
-    _, cc, _ = st.columns([1.2, 2, 1.2])
-    with cc:
-        st.image(str(text), width=350)
-
-# ── Hero ──
-st.markdown("""
-<div class="hero-banner">
-    <h1>Jivara — Drug-Food Interaction System</h1>
-    <p>Sistem cerdas yang mengintegrasikan deteksi makanan, analisis nutrisi, dan penalaran farmakologis
-    untuk meningkatkan keselamatan pasien Indonesia</p>
-</div>
-""", unsafe_allow_html=True)
-
-# ── KPIs ──
 @st.cache_data
-def load_stats():
-    n_food = len(pd.read_csv(PROC / "unified_nutrition.csv"))
-    n_drug = len(pd.read_csv(PROC / "obat_bpom_cleaned_dedup.csv"))
-    with open(DATA / "for_backend" / "drug_food_kb_final.json", "r", encoding="utf-8") as f:
-        kb = json.load(f)
-    meta = kb.get("metadata", {})
-    n_recipe = len(pd.read_csv(PROC / "61_kelas_resep_cleaned.csv"))
-    return n_food, n_drug, meta, n_recipe
+def load_data():
+    nutrisi = pd.read_csv(PROC / "unified_nutrition.csv")
+    resep = pd.read_csv(PROC / "61_kelas_resep_cleaned.csv")
+    obat = pd.read_csv(PROC / "obat_bpom_cleaned_dedup.csv")
+    kb = load_kb(DATA / "for_backend" / "drug_food_kb_final.json")
+    return nutrisi, resep, obat, kb
 
-n_food, n_drug, meta, n_recipe = load_stats()
 
-c1, c2, c3, c4, c5 = st.columns(5)
-c1.metric("Data Nutrisi", f"{n_food:,}")
-c2.metric("Obat BPOM", f"{n_drug:,}")
-c3.metric("Kelas Makanan", "35")
-c4.metric("Total Interaksi", f"{meta.get('total_global_interactions',0):,}")
-c5.metric("Resep", f"{n_recipe:,}")
+df_nutrisi, df_resep, df_obat, kb = load_data()
+idf, foods = compute_interaction_frame(kb)
+recipe_insight = compute_recipe_insights(df_resep)
+drug_insight = compute_drug_insights(df_obat)
+pl = plotly_layout()
 
-st.markdown("---")
+logo = ASSET / "text.png"
+if logo.exists():
+    left, center, right = st.columns([1.2, 1.6, 1.2])
+    with center:
+        st.image(str(logo), width=360)
 
-# ── Project Summary ──
-st.markdown('<div class="section-title">Ringkasan Proyek</div>', unsafe_allow_html=True)
+st.markdown(
+    hero(
+        "Jivara: dari makanan yang terlihat ke keputusan medis yang lebih aman",
+        "Dashboard ini merangkum bagaimana project Jivara menyatukan 4 aset inti: katalog nutrisi makanan, "
+        "resep Indonesia, registrasi obat BPOM, dan knowledge base interaksi obat-makanan. Fokus utamanya bukan "
+        "sekadar visualisasi, tetapi menunjukkan titik risiko dan peluang insight yang benar-benar relevan untuk produk.",
+    ),
+    unsafe_allow_html=True,
+)
 
-col1, col2, col3 = st.columns(3, gap="medium")
-with col1:
-    st.markdown("""
-    <div class="glass-card">
-        <h3>Tujuan</h3>
-        <p>Membangun sistem yang mendeteksi makanan Indonesia via kamera, menganalisis nutrisi,
-        dan memberikan peringatan interaksi obat-makanan secara real-time.</p>
-        <span class="badge">YOLOv11</span>
-        <span class="badge">Knowledge Base</span>
-        <span class="badge">Real-time</span>
-    </div>
-    """, unsafe_allow_html=True)
+col1, col2, col3, col4, col5 = st.columns(5)
+col1.metric("Kelas Makanan", f"{len(df_nutrisi):,}")
+col2.metric("Resep", f"{len(df_resep):,}")
+col3.metric("Produk BPOM", f"{len(df_obat):,}")
+col4.metric("Makanan di KB", f"{len(foods):,}")
+col5.metric("Interaksi KB", f"{len(idf):,}")
 
-with col2:
-    st.markdown("""
-    <div class="glass-card">
-        <h3>Dataset</h3>
-        <p>Pipeline data dari 3+ sumber: BPOM RI, Tabel Komposisi Pangan Indonesia (TKPI),
-        Food-101, dan Cookpad Indonesia — diproses menjadi Single Truth database.</p>
-        <span class="badge">1.476 Makanan</span>
-        <span class="badge">15.085 Obat</span>
-        <span class="badge">1.050 Resep</span>
-    </div>
-    """, unsafe_allow_html=True)
+st.markdown(
+    note(
+        "<strong>Catatan data: dashboard sekarang diselaraskan dengan isi file yang benar-benar ada di repo. "
+        "Dataset nutrisi aktif berisi 61 kelas makanan, bukan 1.476 item seperti dokumentasi lama.</strong>"
+    ),
+    unsafe_allow_html=True,
+)
 
-with col3:
-    st.markdown("""
-    <div class="glass-card">
-        <h3>Validasi</h3>
-        <p>A/B Testing membuktikan Jivara meningkatkan kepatuhan minum obat (+16%)
-        dan penghindaran makanan berbahaya (+37%) secara signifikan.</p>
-        <span class="badge">p &lt; 0.05</span>
-        <span class="badge">Effect Size: Besar</span>
-        <span class="badge">Proof of Concept</span>
-    </div>
-    """, unsafe_allow_html=True)
+st.markdown(section("Apa yang paling menonjol?"), unsafe_allow_html=True)
+row1, row2, row3 = st.columns(3)
+with row1:
+    st.markdown(
+        card(
+            "Makanan inti project sangat resep-driven",
+            f"Dataset resep berisi {len(df_resep):,} resep untuk {df_resep['Kelas_YOLO'].nunique()} kelas makanan. "
+            f"Kelas paling sering muncul adalah {recipe_insight['most_common_class'].replace('-', ' ').title()} "
+            f"dengan {recipe_insight['most_common_class_count']} resep, memberi sinyal kelas ini penting untuk prioritas model dan UX.",
+            ["Cookpad", "35 kelas", "resep lokal"],
+        ),
+        unsafe_allow_html=True,
+    )
+with row2:
+    st.markdown(
+        card(
+            "Portofolio BPOM sangat didominasi obat keras",
+            f"{drug_insight['top_group']} mencakup {drug_insight['top_group_count']:,} produk. "
+            f"Selain itu, {drug_insight['local_share']:.0%} produk berasal dari kategori lokal/lainnya, jadi coverage registrasi domestik adalah kekuatan data ini.",
+            ["BPOM", "regulatory", "lokal dominan"],
+        ),
+        unsafe_allow_html=True,
+    )
+with row3:
+    st.markdown(
+        card(
+            "Risiko interaksi paling sering tidak ringan",
+            f"Dari {len(idf):,} interaksi di knowledge base, severity level 3-5 mendominasi. "
+            f"Ini berarti value Jivara lebih kuat sebagai sistem pencegahan keputusan berisiko daripada sekadar edukasi nutrisi umum.",
+            ["severity 3-5", "clinical alert", "safety first"],
+        ),
+        unsafe_allow_html=True,
+    )
 
-st.markdown("---")
+st.markdown(section("Distribusi aset data"), unsafe_allow_html=True)
+left, right = st.columns([1.2, 1])
+with left:
+    source_counts = (
+        df_nutrisi["macro_category"]
+        .value_counts()
+        .rename_axis("Kategori")
+        .reset_index(name="Jumlah")
+    )
+    fig = px.bar(
+        source_counts,
+        x="Kategori",
+        y="Jumlah",
+        color="Kategori",
+        text="Jumlah",
+        color_discrete_sequence=[BRAND["green"], BRAND["gold"], BRAND["mint"], BRAND["coral"]],
+    )
+    fig.update_traces(textposition="outside")
+    fig.update_layout(**pl, height=380, showlegend=False, yaxis_title="Jumlah kelas makanan")
+    st.plotly_chart(fig, width="stretch")
+with right:
+    type_counts = idf["Tipe"].value_counts().reset_index()
+    type_counts.columns = ["Tipe", "Jumlah"]
+    fig = px.pie(
+        type_counts,
+        names="Tipe",
+        values="Jumlah",
+        hole=0.52,
+        color="Tipe",
+        color_discrete_map={
+            "AVOID": BRAND["coral"],
+            "MONITOR": BRAND["gold"],
+            "LIMIT": BRAND["mint"],
+            "TIMING": BRAND["green"],
+        },
+    )
+    fig.update_traces(textposition="inside", textinfo="percent+label")
+    fig.update_layout(**pl, height=380)
+    st.plotly_chart(fig, width="stretch")
 
-# ── Research Questions ──
-st.markdown('<div class="section-title">Research Questions</div>', unsafe_allow_html=True)
+st.markdown(section("Insight untuk product direction"), unsafe_allow_html=True)
+ins1, ins2 = st.columns(2)
+with ins1:
+    st.markdown(
+        card(
+            "Prioritas pengalaman pengguna",
+            f"Resep rata-rata membutuhkan {recipe_insight['avg_ingredients']:.1f} bahan dan {recipe_insight['avg_steps']:.1f} langkah. "
+            "Artinya penjelasan risiko sebaiknya dibuat sesingkat mungkin, karena konteks penggunaan sangat mungkin terjadi saat pengguna sedang memasak atau memilih makanan.",
+            ["UX", "mobile-first", "short alerts"],
+        ),
+        unsafe_allow_html=True,
+    )
+with ins2:
+    st.markdown(
+        card(
+            "Prioritas reasoning engine",
+            f"{drug_insight['multi_active_share']:.0%} produk BPOM memiliki lebih dari satu zat aktif. "
+            "Ini memberi sinyal bahwa reasoning engine Jivara perlu siap menangani kombinasi komposisi, bukan hanya pencocokan satu obat ke satu makanan.",
+            ["knowledge graph", "multi-ingredient", "backend"],
+        ),
+        unsafe_allow_html=True,
+    )
 
-rqs = [
-    ("RQ1", "Deteksi Agnostik", "Sejauh mana sistem mampu mendeteksi 35 kelas makanan Indonesia secara real-time?", "Target: Precision & Recall >= 85%"),
-    ("RQ2", "Keamanan Medis", "Berapa tingkat sensitivitas AI dalam menangkap interaksi obat-makanan berbahaya?", "Target: False Negative Rate < 5%"),
-    ("RQ3", "Kepatuhan Obat", "Apakah notifikasi peringatan efektif meningkatkan kepatuhan minum obat?", "Hasil: Peningkatan +16%"),
-    ("RQ4", "Penghindaran Makanan", "Apakah Jivara membantu pasien menghindari makanan yang berinteraksi?", "Hasil: Peningkatan +37%"),
-    ("RQ5", "Epidemiologi", "Tipe interaksi dan severity manakah yang paling prevalent?", "Analisis: 1.423 obat terindeks"),
-]
-
-for rq_id, title, desc, result in rqs:
-    with st.expander(f"**{rq_id}: {title}** — {result}"):
-        st.write(desc)
-
-st.markdown("---")
-
-# ── Navigation ──
-st.markdown('<div class="section-title">Navigasi Dashboard</div>', unsafe_allow_html=True)
-
-nc1, nc2, nc3 = st.columns(3, gap="medium")
-with nc1:
-    st.markdown('<div class="glass-card"><h3>Nutrisi & Resep</h3><p>Eksplorasi 1.476 data makanan, distribusi kalori, makronutrien, serta 1.050 resep lengkap dengan bahan dan langkah memasak.</p></div>', unsafe_allow_html=True)
-with nc2:
-    st.markdown('<div class="glass-card"><h3>Obat BPOM</h3><p>Analisis 15.085 produk obat terdaftar BPOM: golongan, bentuk sediaan, asal, dan kategori.</p></div>', unsafe_allow_html=True)
-with nc3:
-    st.markdown('<div class="glass-card"><h3>Interaksi & A/B Test</h3><p>Peta interaksi obat-makanan 35 kelas makanan & hasil A/B testing kepatuhan pasien.</p></div>', unsafe_allow_html=True)
-
-st.markdown("---")
-st.markdown('<div class="footer-text"><strong>Jivara</strong> — CC26-PSU090 | Capstone Project 2026<br><span style="font-size:0.8rem;">Stay On Track, Stay Healthy</span></div>', unsafe_allow_html=True)
+st.markdown(section("Arah eksplorasi halaman"), unsafe_allow_html=True)
+nav1, nav2, nav3 = st.columns(3)
+with nav1:
+    st.markdown(
+        card(
+            "Nutrisi & Resep",
+            "Lihat makanan yang padat kalori, kelas resep paling kompleks, dan bahan yang paling sering berulang untuk memahami pola konsumsi serta konteks masakan Indonesia.",
+        ),
+        unsafe_allow_html=True,
+    )
+with nav2:
+    st.markdown(
+        card(
+            "Obat BPOM",
+            "Telusuri dominasi golongan obat, bentuk sediaan utama, komposisi multi-zat aktif, dan profil produk lokal versus impor.",
+        ),
+        unsafe_allow_html=True,
+    )
+with nav3:
+    st.markdown(
+        card(
+            "Interaksi & Evidence",
+            "Eksplorasi makanan dengan severity tertinggi, kelas obat paling sering terdampak, serta bukti A/B testing simulatif untuk menilai value produk.",
+        ),
+        unsafe_allow_html=True,
+    )
