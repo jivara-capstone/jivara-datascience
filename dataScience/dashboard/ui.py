@@ -260,7 +260,7 @@ def plotly_layout():
     return dict(
         paper_bgcolor="rgba(0,0,0,0)",
         plot_bgcolor="rgba(0,0,0,0)",
-        font=dict(family="Manrope", color=BRAND["ink"], size=13),
+        font=dict(family="Manrope", color=BRAND["forest"], size=13),
         margin=dict(l=24, r=24, t=56, b=36),
         title_font=dict(size=16, color=BRAND["forest"], family="Manrope"),
         legend=dict(font=dict(size=12, color=BRAND["ink"]), title=dict(font=dict(size=12, color=BRAND["forest"]))),

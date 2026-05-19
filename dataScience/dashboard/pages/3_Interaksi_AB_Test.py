@@ -91,8 +91,8 @@ with i3:
 
 st.markdown(
     note(
-        "<strong>Makna untuk AI reasoning:</strong> pengguna tidak hanya perlu tahu 'aman atau tidak', "
-        "tetapi juga apakah risikonya karena sodium, kunyit, santan, gula, atau mekanisme lain yang bisa dipahami sehari-hari."
+        "<strong>Makna untuk AI reasoning: pengguna tidak hanya perlu tahu 'aman atau tidak', "
+        "tetapi juga apakah risikonya karena sodium, kunyit, santan, gula, atau mekanisme lain yang bisa dipahami sehari-hari.</strong>"
     ),
     unsafe_allow_html=True,
 )
@@ -109,8 +109,17 @@ with left:
         text="Jumlah",
         color_continuous_scale=[BRAND["lime"], BRAND["gold"], BRAND["coral"]],
     )
-    fig.update_traces(textposition="outside")
-    fig.update_layout(**pl, height=380, coloraxis_showscale=False)
+    fig.update_traces(textposition="outside", textfont=dict(size=14, color=BRAND["forest"]))
+    fig.update_layout(
+        **pl,
+        title="Distribusi Tingkat Severity",
+        height=380,
+        coloraxis_showscale=False,
+        xaxis_title="Severity",
+        yaxis_title="Jumlah Interaksi",
+        xaxis=dict(automargin=True, tickfont=dict(size=12, color=BRAND["forest"]), title_font=dict(size=13, color=BRAND["forest"])),
+        yaxis=dict(automargin=True, tickfont=dict(size=12, color=BRAND["forest"]), title_font=dict(size=13, color=BRAND["forest"])),
+    )
     st.plotly_chart(fig, width="stretch")
 with right:
     types = idf["Tipe"].value_counts().reset_index()
@@ -128,8 +137,8 @@ with right:
             "TIMING": BRAND["green"],
         },
     )
-    fig.update_traces(textposition="inside", textinfo="percent+label")
-    fig.update_layout(**pl, height=380)
+    fig.update_traces(textposition="inside", textinfo="percent+label", textfont=dict(size=13, color=BRAND["forest"]))
+    fig.update_layout(**pl, title="Proporsi Tipe Interaksi", height=380)
     st.plotly_chart(fig, width="stretch")
 
 st.markdown(section("Makanan dan kelas obat paling berisiko"), unsafe_allow_html=True)
@@ -152,7 +161,16 @@ with left:
         hover_name="Makanan",
         color_continuous_scale=[BRAND["mint"], BRAND["gold"], BRAND["coral"]],
     )
-    fig.update_layout(**pl, height=400, coloraxis_colorbar_title="Avg severity", xaxis_title="Jumlah interaksi", yaxis_title="Rata-rata severity")
+    fig.update_layout(
+        **pl,
+        title="Makanan dengan Risiko Interaksi Tertinggi",
+        height=400,
+        coloraxis_colorbar_title="Avg severity",
+        xaxis_title="Jumlah Interaksi",
+        yaxis_title="Rata-rata Severity",
+        xaxis=dict(automargin=True, tickfont=dict(size=12, color=BRAND["forest"]), title_font=dict(size=13, color=BRAND["forest"])),
+        yaxis=dict(automargin=True, tickfont=dict(size=12, color=BRAND["forest"]), title_font=dict(size=13, color=BRAND["forest"])),
+    )
     st.plotly_chart(fig, width="stretch")
 with right:
     top_classes = idf["Kelas_Obat"].value_counts().head(10).reset_index()
@@ -167,8 +185,17 @@ with right:
         color_continuous_scale=[BRAND["lime"], BRAND["mint"], BRAND["forest"]],
         text="Jumlah",
     )
-    fig.update_traces(textposition="outside")
-    fig.update_layout(**pl, height=430, coloraxis_showscale=False, yaxis_title="", yaxis=dict(automargin=True))
+    fig.update_traces(textposition="outside", textfont=dict(size=13, color=BRAND["forest"]))
+    fig.update_layout(
+        **pl,
+        title="Kelas Obat yang Paling Sering Terdampak",
+        height=430,
+        coloraxis_showscale=False,
+        xaxis_title="Jumlah Interaksi",
+        yaxis_title="Kelas Obat",
+        xaxis=dict(automargin=True, tickfont=dict(size=12, color=BRAND["forest"]), title_font=dict(size=13, color=BRAND["forest"])),
+        yaxis=dict(automargin=True, tickfont=dict(size=12, color=BRAND["forest"]), title_font=dict(size=13, color=BRAND["forest"])),
+    )
     st.plotly_chart(fig, width="stretch")
 
 st.markdown(section("Eksplorasi detail per makanan"), unsafe_allow_html=True)
@@ -245,7 +272,15 @@ with left:
         points="outliers",
         color_discrete_map={"Tanpa Jivara": BRAND["coral"], "Dengan Jivara": BRAND["green"]},
     )
-    fig.update_layout(**pl, height=420, showlegend=False, yaxis_tickformat=".0%")
+    fig.update_layout(
+        **pl,
+        title="Distribusi Kepatuhan Minum Obat",
+        height=420,
+        showlegend=False,
+        yaxis_tickformat=".0%",
+        xaxis=dict(automargin=True, tickfont=dict(size=12, color=BRAND["forest"])),
+        yaxis=dict(automargin=True, tickfont=dict(size=12, color=BRAND["forest"]), title_font=dict(size=13, color=BRAND["forest"])),
+    )
     st.plotly_chart(fig, width="stretch")
 with right:
     fig = px.violin(
@@ -257,5 +292,13 @@ with right:
         points="outliers",
         color_discrete_map={"Tanpa Jivara": BRAND["coral"], "Dengan Jivara": BRAND["green"]},
     )
-    fig.update_layout(**pl, height=420, showlegend=False, yaxis_tickformat=".0%")
+    fig.update_layout(
+        **pl,
+        title="Distribusi Penghindaran Makanan Berbahaya",
+        height=420,
+        showlegend=False,
+        yaxis_tickformat=".0%",
+        xaxis=dict(automargin=True, tickfont=dict(size=12, color=BRAND["forest"])),
+        yaxis=dict(automargin=True, tickfont=dict(size=12, color=BRAND["forest"]), title_font=dict(size=13, color=BRAND["forest"])),
+    )
     st.plotly_chart(fig, width="stretch")

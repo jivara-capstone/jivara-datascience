@@ -88,8 +88,8 @@ with i3:
 
 st.markdown(
     note(
-        "<strong>Implikasi produk:</strong> data obat di Jivara tidak cukup diperlakukan sebagai daftar nama. "
-        "Perusahaan, bentuk sediaan, dan jumlah zat aktif semuanya bisa memengaruhi cara sistem menjelaskan risiko."
+        "<strong>Implikasi produk:data obat di Jivara tidak cukup diperlakukan sebagai daftar nama. "
+        "Perusahaan, bentuk sediaan, dan jumlah zat aktif semuanya bisa memengaruhi cara sistem menjelaskan risiko.</strong> "
     ),
     unsafe_allow_html=True,
 )
@@ -107,8 +107,17 @@ with left:
         text="Jumlah",
         color_discrete_sequence=[BRAND["green"], BRAND["mint"], BRAND["gold"], BRAND["coral"], "#7FB069", "#52796F", "#E5989B"],
     )
-    fig.update_traces(textposition="outside")
-    fig.update_layout(**pl, height=420, showlegend=False, xaxis_title="", yaxis_title="Jumlah produk", xaxis=dict(automargin=True))
+    fig.update_traces(textposition="outside", textfont=dict(size=14, color=BRAND["forest"]))
+    fig.update_layout(
+        **pl,
+        title="Distribusi Golongan Obat",
+        height=420,
+        showlegend=False,
+        xaxis_title="Golongan Obat",
+        yaxis_title="Jumlah Produk",
+        xaxis=dict(automargin=True, tickfont=dict(size=12, color=BRAND["forest"]), title_font=dict(size=13, color=BRAND["forest"])),
+        yaxis=dict(automargin=True, tickfont=dict(size=12, color=BRAND["forest"]), title_font=dict(size=13, color=BRAND["forest"])),
+    )
     st.plotly_chart(fig, width="stretch")
 with right:
     dosage = df["Bentuk Sediaan"].value_counts().head(12).reset_index()
@@ -123,8 +132,17 @@ with right:
         color_continuous_scale=[BRAND["lime"], BRAND["mint"], BRAND["forest"]],
         text="Jumlah",
     )
-    fig.update_traces(textposition="outside")
-    fig.update_layout(**pl, height=420, coloraxis_showscale=False, yaxis_title="", yaxis=dict(automargin=True))
+    fig.update_traces(textposition="outside", textfont=dict(size=14, color=BRAND["forest"]))
+    fig.update_layout(
+        **pl,
+        title="Bentuk Sediaan Terbanyak",
+        height=420,
+        coloraxis_showscale=False,
+        xaxis_title="Jumlah Produk",
+        yaxis_title="Bentuk Sediaan",
+        xaxis=dict(automargin=True, tickfont=dict(size=12, color=BRAND["forest"]), title_font=dict(size=13, color=BRAND["forest"])),
+        yaxis=dict(automargin=True, tickfont=dict(size=12, color=BRAND["forest"]), title_font=dict(size=13, color=BRAND["forest"])),
+    )
     st.plotly_chart(fig, width="stretch")
 
 st.markdown(section("Asal produk dan kompleksitas formulasi"), unsafe_allow_html=True)
@@ -140,8 +158,8 @@ with left:
         color="Asal",
         color_discrete_map={"Lokal/Lainnya": BRAND["green"], "Impor": BRAND["gold"]},
     )
-    fig.update_traces(textposition="inside", textinfo="percent+label")
-    fig.update_layout(**pl, height=360)
+    fig.update_traces(textposition="inside", textinfo="percent+label", textfont=dict(size=13, color=BRAND["forest"]))
+    fig.update_layout(**pl, title="Asal Produk Obat", height=360)
     st.plotly_chart(fig, width="stretch")
 with right:
     active_dist = (
@@ -162,8 +180,17 @@ with right:
         text="Produk",
         color_continuous_scale=[BRAND["lime"], BRAND["mint"], BRAND["forest"]],
     )
-    fig.update_traces(textposition="outside")
-    fig.update_layout(**pl, height=360, coloraxis_showscale=False)
+    fig.update_traces(textposition="outside", textfont=dict(size=14, color=BRAND["forest"]))
+    fig.update_layout(
+        **pl,
+        title="Kompleksitas Jumlah Zat Aktif",
+        height=360,
+        coloraxis_showscale=False,
+        xaxis_title="Jumlah Zat Aktif",
+        yaxis_title="Jumlah Produk",
+        xaxis=dict(automargin=True, tickfont=dict(size=12, color=BRAND["forest"]), title_font=dict(size=13, color=BRAND["forest"])),
+        yaxis=dict(automargin=True, tickfont=dict(size=12, color=BRAND["forest"]), title_font=dict(size=13, color=BRAND["forest"])),
+    )
     st.plotly_chart(fig, width="stretch")
 
 st.markdown(section("Pencarian produk"), unsafe_allow_html=True)

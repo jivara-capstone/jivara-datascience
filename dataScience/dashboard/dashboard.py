@@ -123,8 +123,17 @@ with left:
         text="Jumlah",
         color_discrete_sequence=[BRAND["green"], BRAND["gold"], BRAND["mint"], BRAND["coral"]],
     )
-    fig.update_traces(textposition="outside")
-    fig.update_layout(**pl, height=380, showlegend=False, yaxis_title="Jumlah kelas makanan")
+    fig.update_traces(textposition="outside", textfont=dict(size=14, color=BRAND["forest"]))
+    fig.update_layout(
+        **pl,
+        title="Distribusi Kategori Makronutrien",
+        height=380,
+        showlegend=False,
+        xaxis_title="Kategori",
+        yaxis_title="Jumlah Kelas Makanan",
+        xaxis=dict(automargin=True, tickfont=dict(size=12, color=BRAND["forest"])),
+        yaxis=dict(automargin=True, tickfont=dict(size=12, color=BRAND["forest"])),
+    )
     st.plotly_chart(fig, width="stretch")
 with right:
     type_counts = idf["Tipe"].value_counts().reset_index()
@@ -142,8 +151,8 @@ with right:
             "TIMING": BRAND["green"],
         },
     )
-    fig.update_traces(textposition="inside", textinfo="percent+label")
-    fig.update_layout(**pl, height=380)
+    fig.update_traces(textposition="inside", textinfo="percent+label", textfont=dict(size=13, color=BRAND["forest"]))
+    fig.update_layout(**pl, title="Komposisi Tipe Interaksi", height=380)
     st.plotly_chart(fig, width="stretch")
 
 st.markdown(section("Insight untuk product direction"), unsafe_allow_html=True)
