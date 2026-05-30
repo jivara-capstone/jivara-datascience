@@ -1,10 +1,8 @@
 import sys
 from pathlib import Path
-import numpy as np
-import pandas as pd
+
 import plotly.express as px
 import streamlit as st
-from scipy.stats import ttest_ind
 
 sys.path.append(str(Path(__file__).resolve().parent.parent))
 
@@ -12,6 +10,7 @@ from ui import (
     ASSET,
     BRAND,
     DATA,
+    add_bar_headroom,
     add_sidebar,
     apply_theme,
     card,
@@ -21,33 +20,34 @@ from ui import (
     note,
     plotly_layout,
     section,
+    style_bar_labels,
+    style_figure,
     wrap_text,
 )
 
 page_icon = str(ASSET / "splash.png") if (ASSET / "splash.png").exists() else "🌿"
-st.set_page_config(page_title="Interaksi & Evidence - Jivara", page_icon=page_icon, layout="wide")
+st.set_page_config(page_title="Interaksi Obat-Makanan - Jivara", page_icon=page_icon, layout="wide")
 st.markdown(apply_theme(), unsafe_allow_html=True)
-add_sidebar("Interaksi & Evidence", "Severity, mekanisme, dan proof of concept")
+add_sidebar("Interaksi Obat-Makanan", "Severity, mekanisme, dan prioritas warning")
 pl = plotly_layout()
 
 
 @st.cache_data
 def load_data():
-    kb = load_kb(DATA / "for_backend" / "drug_food_kb_final.json")
-    return kb
+    return load_kb(DATA / "for_backend" / "drug_food_kb_final_v3.json")
 
 
 kb = load_data()
 idf, foods = compute_interaction_frame(kb)
 severity_share = (idf["Severity"] >= 4).mean() if not idf.empty else 0
-top_food = idf["Makanan"].value_counts().index[0]
-top_class = idf["Kelas_Obat"].value_counts().index[0]
+top_food = idf["Makanan"].value_counts().index[0] if not idf.empty else "-"
+top_class = idf["Kelas_Obat"].value_counts().index[0] if not idf.empty else "-"
 
 st.markdown(
     hero(
         "Knowledge base Jivara paling bernilai saat risiko mulai tinggi",
         "Halaman ini menyorot makanan mana yang paling sering memicu alert, kelas obat mana yang paling sering terdampak, "
-        "dan bagaimana bukti eksperimen mendukung nilai produk Jivara sebagai pendamping keputusan pasien.",
+        "serta mekanisme interaksi apa yang paling penting untuk dijelaskan dengan bahasa yang mudah dipahami pengguna.",
     ),
     unsafe_allow_html=True,
 )
@@ -109,17 +109,11 @@ with left:
         text="Jumlah",
         color_continuous_scale=[BRAND["lime"], BRAND["gold"], BRAND["coral"]],
     )
-    fig.update_traces(textposition="outside", textfont=dict(size=14, color=BRAND["forest"]))
-    fig.update_layout(
-        **pl,
-        title="Distribusi Tingkat Severity",
-        height=380,
-        coloraxis_showscale=False,
-        xaxis_title="Severity",
-        yaxis_title="Jumlah Interaksi",
-        xaxis=dict(automargin=True, tickfont=dict(size=12, color=BRAND["forest"]), title_font=dict(size=13, color=BRAND["forest"])),
-        yaxis=dict(automargin=True, tickfont=dict(size=12, color=BRAND["forest"]), title_font=dict(size=13, color=BRAND["forest"])),
-    )
+    fig.update_traces(textposition="outside")
+    style_bar_labels(fig)
+    fig.update_layout(**pl, title="Distribusi Tingkat Severity", coloraxis_showscale=False)
+    style_figure(fig, height=420, x_title="Severity", y_title="Jumlah Interaksi")
+    add_bar_headroom(fig, sev["Jumlah"])
     st.plotly_chart(fig, width="stretch")
 with right:
     types = idf["Tipe"].value_counts().reset_index()
@@ -137,8 +131,8 @@ with right:
             "TIMING": BRAND["green"],
         },
     )
-    fig.update_traces(textposition="inside", textinfo="percent+label", textfont=dict(size=13, color=BRAND["forest"]))
-    fig.update_layout(**pl, title="Proporsi Tipe Interaksi", height=380)
+    fig.update_traces(textposition="inside", textinfo="percent+label", textfont=dict(size=14, color=BRAND["forest"]))
+    fig.update_layout(**pl, title="Proporsi Tipe Interaksi", height=400)
     st.plotly_chart(fig, width="stretch")
 
 st.markdown(section("Makanan dan kelas obat paling berisiko"), unsafe_allow_html=True)
@@ -161,16 +155,8 @@ with left:
         hover_name="Makanan",
         color_continuous_scale=[BRAND["mint"], BRAND["gold"], BRAND["coral"]],
     )
-    fig.update_layout(
-        **pl,
-        title="Makanan dengan Risiko Interaksi Tertinggi",
-        height=400,
-        coloraxis_colorbar_title="Avg severity",
-        xaxis_title="Jumlah Interaksi",
-        yaxis_title="Rata-rata Severity",
-        xaxis=dict(automargin=True, tickfont=dict(size=12, color=BRAND["forest"]), title_font=dict(size=13, color=BRAND["forest"])),
-        yaxis=dict(automargin=True, tickfont=dict(size=12, color=BRAND["forest"]), title_font=dict(size=13, color=BRAND["forest"])),
-    )
+    fig.update_layout(**pl, title="Makanan dengan Risiko Interaksi Tertinggi", coloraxis_colorbar_title="Avg severity")
+    style_figure(fig, height=430, x_title="Jumlah Interaksi", y_title="Rata-rata Severity")
     st.plotly_chart(fig, width="stretch")
 with right:
     top_classes = idf["Kelas_Obat"].value_counts().head(10).reset_index()
@@ -185,17 +171,11 @@ with right:
         color_continuous_scale=[BRAND["lime"], BRAND["mint"], BRAND["forest"]],
         text="Jumlah",
     )
-    fig.update_traces(textposition="outside", textfont=dict(size=13, color=BRAND["forest"]))
-    fig.update_layout(
-        **pl,
-        title="Kelas Obat yang Paling Sering Terdampak",
-        height=430,
-        coloraxis_showscale=False,
-        xaxis_title="Jumlah Interaksi",
-        yaxis_title="Kelas Obat",
-        xaxis=dict(automargin=True, tickfont=dict(size=12, color=BRAND["forest"]), title_font=dict(size=13, color=BRAND["forest"])),
-        yaxis=dict(automargin=True, tickfont=dict(size=12, color=BRAND["forest"]), title_font=dict(size=13, color=BRAND["forest"])),
-    )
+    fig.update_traces(textposition="outside")
+    style_bar_labels(fig)
+    fig.update_layout(**pl, title="Kelas Obat yang Paling Sering Terdampak", coloraxis_showscale=False)
+    style_figure(fig, height=450, x_title="Jumlah Interaksi", y_title="Kelas Obat")
+    add_bar_headroom(fig, top_classes["Jumlah"], orientation="h")
     st.plotly_chart(fig, width="stretch")
 
 st.markdown(section("Eksplorasi detail per makanan"), unsafe_allow_html=True)
@@ -219,86 +199,3 @@ for interaction in food_data.get("drug_interactions", []):
         st.markdown(f"**Contoh obat:** {', '.join(interaction.get('drug_examples', []))}")
         st.markdown(f"**Interaksi:** {interaction.get('interaction', '-')}")
         st.markdown(f"**Mekanisme:** `{interaction.get('mechanism', '-')}`")
-
-st.markdown(section("A/B testing simulatif"), unsafe_allow_html=True)
-st.caption("Proof of concept simulatif, bukan data produksi pengguna riil.")
-
-np.random.seed(42)
-n = 150
-beta = lambda mu, size: np.random.beta(mu * 30, (1 - mu) * 30, size)
-ctrl_adh, treat_adh = beta(0.62, n), beta(0.78, n)
-ctrl_avoid, treat_avoid = beta(0.35, n), beta(0.72, n)
-_, p1 = ttest_ind(treat_adh, ctrl_adh, equal_var=False)
-_, p2 = ttest_ind(treat_avoid, ctrl_avoid, equal_var=False)
-
-a, b = st.columns(2)
-with a:
-    uplift = treat_adh.mean() - ctrl_adh.mean()
-    st.markdown(
-        card(
-            "RQ3: kepatuhan minum obat",
-            f"Rata-rata kepatuhan naik dari {ctrl_adh.mean():.0%} ke {treat_adh.mean():.0%} "
-            f"({uplift:+.0%}, p={p1:.4f}). Ini mendukung hipotesis bahwa warning yang tepat waktu dapat memengaruhi perilaku pasien.",
-        ),
-        unsafe_allow_html=True,
-    )
-with b:
-    uplift = treat_avoid.mean() - ctrl_avoid.mean()
-    st.markdown(
-        card(
-            "RQ4: penghindaran makanan berbahaya",
-            f"Penghindaran naik dari {ctrl_avoid.mean():.0%} ke {treat_avoid.mean():.0%} "
-            f"({uplift:+.0%}, p={p2:.4f}). Dampaknya lebih besar daripada kepatuhan obat, jadi food alert tampaknya sangat intuitif bagi user.",
-        ),
-        unsafe_allow_html=True,
-    )
-
-ab = pd.DataFrame(
-    {
-        "Grup": ["Tanpa Jivara"] * n + ["Dengan Jivara"] * n,
-        "Kepatuhan Obat": np.concatenate([ctrl_adh, treat_adh]),
-        "Penghindaran Makanan": np.concatenate([ctrl_avoid, treat_avoid]),
-    }
-)
-
-left, right = st.columns(2)
-with left:
-    fig = px.violin(
-        ab,
-        x="Grup",
-        y="Kepatuhan Obat",
-        color="Grup",
-        box=True,
-        points="outliers",
-        color_discrete_map={"Tanpa Jivara": BRAND["coral"], "Dengan Jivara": BRAND["green"]},
-    )
-    fig.update_layout(
-        **pl,
-        title="Distribusi Kepatuhan Minum Obat",
-        height=420,
-        showlegend=False,
-        yaxis_tickformat=".0%",
-        xaxis=dict(automargin=True, tickfont=dict(size=12, color=BRAND["forest"])),
-        yaxis=dict(automargin=True, tickfont=dict(size=12, color=BRAND["forest"]), title_font=dict(size=13, color=BRAND["forest"])),
-    )
-    st.plotly_chart(fig, width="stretch")
-with right:
-    fig = px.violin(
-        ab,
-        x="Grup",
-        y="Penghindaran Makanan",
-        color="Grup",
-        box=True,
-        points="outliers",
-        color_discrete_map={"Tanpa Jivara": BRAND["coral"], "Dengan Jivara": BRAND["green"]},
-    )
-    fig.update_layout(
-        **pl,
-        title="Distribusi Penghindaran Makanan Berbahaya",
-        height=420,
-        showlegend=False,
-        yaxis_tickformat=".0%",
-        xaxis=dict(automargin=True, tickfont=dict(size=12, color=BRAND["forest"])),
-        yaxis=dict(automargin=True, tickfont=dict(size=12, color=BRAND["forest"]), title_font=dict(size=13, color=BRAND["forest"])),
-    )
-    st.plotly_chart(fig, width="stretch")

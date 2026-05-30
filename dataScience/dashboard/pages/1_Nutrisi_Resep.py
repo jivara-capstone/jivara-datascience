@@ -12,6 +12,7 @@ from ui import (
     ASSET,
     BRAND,
     PROC,
+    add_bar_headroom,
     add_sidebar,
     apply_theme,
     card,
@@ -22,6 +23,8 @@ from ui import (
     plotly_layout,
     render_search_table,
     section,
+    style_bar_labels,
+    style_figure,
     wrap_text,
 )
 
@@ -120,8 +123,8 @@ with tab1:
             color="Kategori",
             color_discrete_sequence=[BRAND["green"], BRAND["gold"], BRAND["mint"], BRAND["coral"]],
         )
-        fig.update_traces(textposition="inside", textinfo="percent+label", textfont=dict(size=13, color=BRAND["forest"]))
-        fig.update_layout(**pl, title="Komposisi Kategori Makronutrien", height=380)
+        fig.update_traces(textposition="inside", textinfo="percent+label", textfont=dict(size=14, color=BRAND["forest"]))
+        fig.update_layout(**pl, title="Komposisi Kategori Makronutrien", height=400)
         st.plotly_chart(fig, width="stretch")
     with right:
         source_counts = df_nutrisi["source"].value_counts().reset_index()
@@ -141,17 +144,11 @@ with tab1:
             text="Jumlah",
             color_discrete_sequence=[BRAND["green"], BRAND["gold"], BRAND["mint"]],
         )
-        fig.update_traces(textposition="outside", textfont=dict(size=14, color=BRAND["forest"]))
-        fig.update_layout(
-            **pl,
-            title="Sumber Data Nutrisi",
-            height=380,
-            showlegend=False,
-            xaxis_title="Sumber Data",
-            yaxis_title="Jumlah Data",
-            xaxis=dict(automargin=True, tickfont=dict(size=12, color=BRAND["forest"]), title_font=dict(size=13, color=BRAND["forest"])),
-            yaxis=dict(automargin=True, tickfont=dict(size=12, color=BRAND["forest"]), title_font=dict(size=13, color=BRAND["forest"])),
-        )
+        fig.update_traces(textposition="outside")
+        style_bar_labels(fig)
+        fig.update_layout(**pl, title="Sumber Data Nutrisi")
+        style_figure(fig, height=420, x_title="Sumber Data", y_title="Jumlah Data", legend=False)
+        add_bar_headroom(fig, source_counts["Jumlah"])
         st.plotly_chart(fig, width="stretch")
 
     st.markdown(section("Peta makanan padat energi"), unsafe_allow_html=True)
@@ -165,16 +162,11 @@ with tab1:
         text="calories",
         color_discrete_sequence=[BRAND["green"], BRAND["gold"], BRAND["coral"], BRAND["mint"]],
     )
-    fig.update_traces(texttemplate="%{text:.0f} kkal", textposition="outside", textfont=dict(size=13, color=BRAND["forest"]))
-    fig.update_layout(
-        **pl,
-        title="Makanan dengan Kalori Tertinggi",
-        height=500,
-        xaxis_title="Kalori per 100g",
-        yaxis_title="Nama Makanan",
-        xaxis=dict(automargin=True, tickfont=dict(size=12, color=BRAND["forest"]), title_font=dict(size=13, color=BRAND["forest"])),
-        yaxis=dict(automargin=True, tickfont=dict(size=12, color=BRAND["forest"]), title_font=dict(size=13, color=BRAND["forest"])),
-    )
+    fig.update_traces(texttemplate="%{text:.0f} kkal", textposition="outside")
+    style_bar_labels(fig)
+    fig.update_layout(**pl, title="Makanan dengan Kalori Tertinggi")
+    style_figure(fig, height=520, x_title="Kalori per 100g", y_title="Nama Makanan")
+    add_bar_headroom(fig, top["calories"], orientation="h")
     st.plotly_chart(fig, width="stretch")
 
     st.markdown(section("Kalori vs protein"), unsafe_allow_html=True)
@@ -187,15 +179,8 @@ with tab1:
         hover_data=["food_name", "carbohydrate"],
         color_discrete_sequence=[BRAND["green"], BRAND["gold"], BRAND["coral"], BRAND["mint"]],
     )
-    fig.update_layout(
-        **pl,
-        title="Korelasi Kalori dan Protein",
-        height=430,
-        xaxis_title="Kalori",
-        yaxis_title="Protein",
-        xaxis=dict(automargin=True, tickfont=dict(size=12, color=BRAND["forest"]), title_font=dict(size=13, color=BRAND["forest"])),
-        yaxis=dict(automargin=True, tickfont=dict(size=12, color=BRAND["forest"]), title_font=dict(size=13, color=BRAND["forest"])),
-    )
+    fig.update_layout(**pl, title="Korelasi Kalori dan Protein")
+    style_figure(fig, height=450, x_title="Kalori", y_title="Protein")
     st.plotly_chart(fig, width="stretch")
 
     query = st.text_input("Cari makanan", placeholder="contoh: rendang, gudeg, sate")
@@ -236,17 +221,11 @@ with tab2:
             text="Jumlah",
             color_discrete_map={"Sederhana": BRAND["mint"], "Menengah": BRAND["gold"], "Kompleks": BRAND["coral"]},
         )
-        fig.update_traces(textposition="outside", textfont=dict(size=14, color=BRAND["forest"]))
-        fig.update_layout(
-            **pl,
-            title="Distribusi Kompleksitas Resep",
-            height=380,
-            showlegend=False,
-            xaxis_title="Kompleksitas",
-            yaxis_title="Jumlah Resep",
-            xaxis=dict(automargin=True, tickfont=dict(size=12, color=BRAND["forest"]), title_font=dict(size=13, color=BRAND["forest"])),
-            yaxis=dict(automargin=True, tickfont=dict(size=12, color=BRAND["forest"]), title_font=dict(size=13, color=BRAND["forest"])),
-        )
+        fig.update_traces(textposition="outside")
+        style_bar_labels(fig)
+        fig.update_layout(**pl, title="Distribusi Kompleksitas Resep")
+        style_figure(fig, height=420, x_title="Kompleksitas", y_title="Jumlah Resep", legend=False)
+        add_bar_headroom(fig, complexity["Jumlah"])
         st.plotly_chart(fig, width="stretch")
     with right:
         top_classes = df_resep["Kelas_YOLO"].value_counts().head(12).reset_index()
@@ -261,17 +240,11 @@ with tab2:
             color_continuous_scale=[BRAND["lime"], BRAND["mint"], BRAND["green"]],
             text="Jumlah",
         )
-        fig.update_traces(textposition="outside", textfont=dict(size=13, color=BRAND["forest"]))
-        fig.update_layout(
-            **pl,
-            title="Kelas Resep dengan Jumlah Terbanyak",
-            height=400,
-            coloraxis_showscale=False,
-            xaxis_title="Jumlah Resep",
-            yaxis_title="Kelas Makanan",
-            xaxis=dict(automargin=True, tickfont=dict(size=12, color=BRAND["forest"]), title_font=dict(size=13, color=BRAND["forest"])),
-            yaxis=dict(automargin=True, tickfont=dict(size=12, color=BRAND["forest"]), title_font=dict(size=13, color=BRAND["forest"])),
-        )
+        fig.update_traces(textposition="outside")
+        style_bar_labels(fig)
+        fig.update_layout(**pl, title="Kelas Resep dengan Jumlah Terbanyak", coloraxis_showscale=False)
+        style_figure(fig, height=430, x_title="Jumlah Resep", y_title="Kelas Makanan")
+        add_bar_headroom(fig, top_classes["Jumlah"], orientation="h")
         st.plotly_chart(fig, width="stretch")
 
     st.markdown(section("Bahan paling sering muncul"), unsafe_allow_html=True)
@@ -286,17 +259,11 @@ with tab2:
         color_continuous_scale=[BRAND["lime"], BRAND["mint"], BRAND["forest"]],
         text="Frekuensi",
     )
-    fig.update_traces(textposition="outside", textfont=dict(size=13, color=BRAND["forest"]))
-    fig.update_layout(
-        **pl,
-        title="Bahan yang Paling Sering Digunakan",
-        height=580,
-        coloraxis_showscale=False,
-        xaxis_title="Frekuensi",
-        yaxis_title="Nama Bahan",
-        xaxis=dict(automargin=True, tickfont=dict(size=12, color=BRAND["forest"]), title_font=dict(size=13, color=BRAND["forest"])),
-        yaxis=dict(automargin=True, tickfont=dict(size=12, color=BRAND["forest"]), title_font=dict(size=13, color=BRAND["forest"])),
-    )
+    fig.update_traces(textposition="outside")
+    style_bar_labels(fig)
+    fig.update_layout(**pl, title="Bahan yang Paling Sering Digunakan", coloraxis_showscale=False)
+    style_figure(fig, height=600, x_title="Frekuensi", y_title="Nama Bahan")
+    add_bar_headroom(fig, ing_df["Frekuensi"], orientation="h")
     st.plotly_chart(fig, width="stretch")
 
     st.markdown(section("Eksplorasi kelas resep"), unsafe_allow_html=True)

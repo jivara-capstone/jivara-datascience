@@ -260,11 +260,58 @@ def plotly_layout():
     return dict(
         paper_bgcolor="rgba(0,0,0,0)",
         plot_bgcolor="rgba(0,0,0,0)",
-        font=dict(family="Manrope", color=BRAND["forest"], size=13),
-        margin=dict(l=24, r=24, t=56, b=36),
-        title_font=dict(size=16, color=BRAND["forest"], family="Manrope"),
-        legend=dict(font=dict(size=12, color=BRAND["ink"]), title=dict(font=dict(size=12, color=BRAND["forest"]))),
+        font=dict(family="Manrope", color=BRAND["ink"], size=14),
+        margin=dict(l=28, r=28, t=70, b=52),
+        title_font=dict(size=18, color=BRAND["forest"], family="Manrope"),
+        legend=dict(font=dict(size=13, color=BRAND["ink"]), title=dict(font=dict(size=13, color=BRAND["forest"]))),
     )
+
+
+def axis_style(title: str):
+    return dict(
+        title=dict(text=title, font=dict(size=15, color=BRAND["ink"])),
+        tickfont=dict(size=13, color=BRAND["forest"]),
+        automargin=True,
+        title_standoff=10,
+        showgrid=True,
+        gridcolor="rgba(31,41,55,0.14)",
+        zeroline=False,
+    )
+
+
+def style_figure(fig, height: int, x_title: str = "", y_title: str = "", legend: bool = True):
+    fig.update_layout(
+        height=height,
+        showlegend=legend,
+        uniformtext_minsize=13,
+        uniformtext_mode="show",
+    )
+    if x_title is not None:
+        fig.update_xaxes(**axis_style(x_title))
+    if y_title is not None:
+        fig.update_yaxes(**axis_style(y_title))
+    return fig
+
+
+def style_bar_labels(fig):
+    fig.update_traces(
+        textfont=dict(size=15, color=BRAND["forest"]),
+        cliponaxis=False,
+    )
+    return fig
+
+
+def add_bar_headroom(fig, series: pd.Series, orientation: str = "v", pad: float = 0.18):
+    values = pd.to_numeric(series, errors="coerce").dropna()
+    if values.empty:
+        return fig
+    max_value = float(values.max())
+    upper = max_value * (1 + pad) if max_value > 0 else 1
+    if orientation == "h":
+        fig.update_xaxes(range=[0, upper])
+    else:
+        fig.update_yaxes(range=[0, upper])
+    return fig
 
 
 def add_sidebar(title: str, subtitle: str):
@@ -372,7 +419,57 @@ def compute_interaction_frame(kb: dict):
                     "Mekanisme": inter.get("mechanism", ""),
                 }
             )
-    return pd.DataFrame(rows), foods
+
+    # Fallback: if the JSON KB is empty, load from the CSV instead
+    if not rows:
+        csv_path = PROC / "drug_food_interactions.csv"
+        if csv_path.exists():
+            csv_df = pd.read_csv(csv_path)
+            # Only keep rows that actually have an interaction
+            csv_df = csv_df[csv_df["has_interaction"] == 1].copy()
+            csv_df = csv_df.rename(columns={
+                "food_class": "Makanan",
+                "drug_category": "Kelas_Obat",
+                "severity": "Severity",
+                "interaction_type": "Tipe",
+                "mechanism": "Mekanisme",
+            })
+            csv_df["Kategori"] = ""
+            # Normalize Tipe to the expected labels
+            tipe_map = {
+                "pharmacokinetic": "AVOID",
+                "pharmacodynamic": "MONITOR",
+                "additive": "LIMIT",
+                "timing": "TIMING",
+            }
+            csv_df["Tipe"] = csv_df["Tipe"].str.strip().str.lower().map(tipe_map).fillna("MONITOR")
+            idf = csv_df[["Makanan", "Kategori", "Severity", "Tipe", "Kelas_Obat", "Mekanisme"]].reset_index(drop=True)
+            # Build a synthetic foods dict for downstream compatibility
+            foods = {}
+            for food_name, group in csv_df.groupby("Makanan"):
+                interactions = []
+                for _, row in group.iterrows():
+                    interactions.append({
+                        "drug_class": row["Kelas_Obat"],
+                        "severity": int(row["Severity"]),
+                        "type": row["Tipe"],
+                        "mechanism": row.get("Mekanisme", ""),
+                        "interaction": row.get("Mekanisme", ""),
+                        "drug_examples": [],
+                    })
+                foods[food_name] = {
+                    "category": "",
+                    "key_ingredients": [],
+                    "drug_interactions": interactions,
+                }
+            return idf, foods
+
+    idf = pd.DataFrame(rows)
+    # Ensure expected columns exist even when empty
+    for col in ["Makanan", "Kategori", "Severity", "Tipe", "Kelas_Obat", "Mekanisme"]:
+        if col not in idf.columns:
+            idf[col] = pd.Series(dtype="object")
+    return idf, foods
 
 
 def load_kb(path: Path):

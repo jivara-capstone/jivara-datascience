@@ -7,8 +7,11 @@ from ui import (
     BRAND,
     DATA,
     PROC,
+    add_bar_headroom,
     add_sidebar,
     apply_theme,
+    style_bar_labels,
+    style_figure,
     card,
     compute_drug_insights,
     compute_interaction_frame,
@@ -31,7 +34,7 @@ def load_data():
     nutrisi = pd.read_csv(PROC / "unified_nutrition.csv")
     resep = pd.read_csv(PROC / "61_kelas_resep_cleaned.csv")
     obat = pd.read_csv(PROC / "obat_bpom_cleaned_dedup.csv")
-    kb = load_kb(DATA / "for_backend" / "drug_food_kb_final.json")
+    kb = load_kb(DATA / "for_backend" / "drug_food_kb_final_v3.json")
     return nutrisi, resep, obat, kb
 
 
@@ -81,7 +84,7 @@ with row1:
             f"Dataset resep berisi {len(df_resep):,} resep untuk {df_resep['Kelas_YOLO'].nunique()} kelas makanan. "
             f"Kelas paling sering muncul adalah {recipe_insight['most_common_class'].replace('-', ' ').title()} "
             f"dengan {recipe_insight['most_common_class_count']} resep, memberi sinyal kelas ini penting untuk prioritas model dan UX.",
-            ["Cookpad", "35 kelas", "resep lokal"],
+            ["Cookpad", "61 kelas", "resep lokal"],
         ),
         unsafe_allow_html=True,
     )
@@ -123,17 +126,11 @@ with left:
         text="Jumlah",
         color_discrete_sequence=[BRAND["green"], BRAND["gold"], BRAND["mint"], BRAND["coral"]],
     )
-    fig.update_traces(textposition="outside", textfont=dict(size=14, color=BRAND["forest"]))
-    fig.update_layout(
-        **pl,
-        title="Distribusi Kategori Makronutrien",
-        height=380,
-        showlegend=False,
-        xaxis_title="Kategori",
-        yaxis_title="Jumlah Kelas Makanan",
-        xaxis=dict(automargin=True, tickfont=dict(size=12, color=BRAND["forest"])),
-        yaxis=dict(automargin=True, tickfont=dict(size=12, color=BRAND["forest"])),
-    )
+    fig.update_traces(textposition="outside")
+    style_bar_labels(fig)
+    fig.update_layout(**pl, title="Distribusi Kategori Makronutrien")
+    style_figure(fig, height=420, x_title="Kategori", y_title="Jumlah Kelas Makanan", legend=False)
+    add_bar_headroom(fig, source_counts["Jumlah"])
     st.plotly_chart(fig, width="stretch")
 with right:
     type_counts = idf["Tipe"].value_counts().reset_index()
@@ -151,8 +148,8 @@ with right:
             "TIMING": BRAND["green"],
         },
     )
-    fig.update_traces(textposition="inside", textinfo="percent+label", textfont=dict(size=13, color=BRAND["forest"]))
-    fig.update_layout(**pl, title="Komposisi Tipe Interaksi", height=380)
+    fig.update_traces(textposition="inside", textinfo="percent+label", textfont=dict(size=14, color=BRAND["forest"]))
+    fig.update_layout(**pl, title="Komposisi Tipe Interaksi", height=400)
     st.plotly_chart(fig, width="stretch")
 
 st.markdown(section("Insight untuk product direction"), unsafe_allow_html=True)
@@ -199,8 +196,8 @@ with nav2:
 with nav3:
     st.markdown(
         card(
-            "Interaksi & Evidence",
-            "Eksplorasi makanan dengan severity tertinggi, kelas obat paling sering terdampak, serta bukti A/B testing simulatif untuk menilai value produk.",
+            "Interaksi Obat-Makanan",
+            "Eksplorasi makanan dengan severity tertinggi, kelas obat paling sering terdampak, serta mekanisme interaksi yang paling penting untuk dijelaskan ke pengguna.",
         ),
         unsafe_allow_html=True,
     )
