@@ -123,13 +123,15 @@ def apply_theme():
         margin-bottom: 1rem;
     }}
 
-    .jv-hero h1, .jv-hero h2 {{
+    [data-testid="stMain"] .jv-hero h1,
+    [data-testid="stMain"] .jv-hero h2 {{
         color: white !important;
         margin-bottom: 0.35rem;
         font-weight: 800;
     }}
 
-    .jv-hero p {{
+    [data-testid="stMain"] .jv-hero p,
+    [data-testid="stMain"] .jv-hero span {{
         color: rgba(255,255,255,0.92) !important;
         margin: 0;
         max-width: 760px;
