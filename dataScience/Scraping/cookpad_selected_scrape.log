@@ -1,0 +1,817 @@
+
+======================================================================
+  SCRAPER GAMBAR RESEP - COOKPAD INDONESIA
+  Kategori: 13 jenis
+  Target per kategori: 50 gambar
+  Output: C:\laragon\www\jivara\dataScience\data_mentah\cookpad_images_selected_classes
+======================================================================
+
+[1/13] Kategori: 'kunyit-asam'
+  Query: kunyit asam, kunyit-asam
+  Folder: C:\laragon\www\jivara\dataScience\data_mentah\cookpad_images_selected_classes\kunyit_asam
+  Mengumpulkan link resep...
+    Halaman 1: 30 link ditemukan (total: 30)
+    Halaman 2: 30 link ditemukan (total: 60)
+    Halaman 3: 30 link ditemukan (total: 90)
+    Halaman 4: 30 link ditemukan (total: 120)
+    Halaman 5: 30 link ditemukan (total: 150)
+    Halaman 1: 30 link ditemukan (total: 30)
+    Halaman 2: 30 link ditemukan (total: 60)
+    Halaman 3: 30 link ditemukan (total: 90)
+    Halaman 4: 30 link ditemukan (total: 120)
+    Halaman 5: 30 link ditemukan (total: 150)
+  Total link: 150
+  Mengunduh gambar...
+    [1/50] kunyit_asam_001.jpg [OK]
+    [2/50] kunyit_asam_002.jpg [OK]
+    [3/50] kunyit_asam_003.jpg [OK]
+    [4/50] kunyit_asam_004.jpg [OK]
+    [5/50] kunyit_asam_005.jpg [OK]
+    [6/50] kunyit_asam_006.jpg [OK]
+    [7/50] kunyit_asam_007.jpg [OK]
+    [8/50] kunyit_asam_008.jpg [OK]
+    [9/50] kunyit_asam_009.jpg [OK]
+    [10/50] kunyit_asam_010.jpg [OK]
+    [11/50] kunyit_asam_011.jpg [OK]
+    [12/50] kunyit_asam_012.jpg [OK]
+    [13/50] kunyit_asam_013.jpg [OK]
+    [14/50] kunyit_asam_014.jpg [OK]
+    [15/50] kunyit_asam_015.jpg [OK]
+    [16/50] kunyit_asam_016.jpg [OK]
+    [17/50] kunyit_asam_017.jpg [OK]
+    [18/50] kunyit_asam_018.jpg [OK]
+    [19/50] kunyit_asam_019.jpg [OK]
+    [20/50] kunyit_asam_020.jpg [OK]
+    [21/50] kunyit_asam_021.jpg [OK]
+    [22/50] kunyit_asam_022.jpg [OK]
+    [23/50] kunyit_asam_023.jpg [OK]
+    [24/50] kunyit_asam_024.jpg [OK]
+    [25/50] kunyit_asam_025.jpg [OK]
+    [26/50] kunyit_asam_026.jpg [OK]
+    [27/50] kunyit_asam_027.jpg [OK]
+    [28/50] kunyit_asam_028.jpg [OK]
+    [29/50] kunyit_asam_029.jpg [OK]
+    [30/50] kunyit_asam_030.jpg [OK]
+    [31/50] kunyit_asam_031.jpg [OK]
+    [32/50] kunyit_asam_032.jpg [OK]
+    [33/50] kunyit_asam_033.jpg [OK]
+    [34/50] kunyit_asam_034.jpg [OK]
+    [35/50] kunyit_asam_035.jpg [OK]
+    [36/50] kunyit_asam_036.jpg [OK]
+    [37/50] kunyit_asam_037.jpg [OK]
+    [38/50] kunyit_asam_038.jpg [OK]
+    [39/50] kunyit_asam_039.jpg [OK]
+    [40/50] kunyit_asam_040.jpg [OK]
+    [41/50] kunyit_asam_041.jpg [OK]
+    [42/50] kunyit_asam_042.jpg [OK]
+    [43/50] kunyit_asam_043.jpg [OK]
+    [44/50] kunyit_asam_044.jpg [OK]
+    [45/50] kunyit_asam_045.jpg [OK]
+    [46/50] kunyit_asam_046.jpg [OK]
+    [47/50] kunyit_asam_047.jpg [OK]
+    [48/50] kunyit_asam_048.jpg [OK]
+    [49/50] kunyit_asam_049.jpg [OK]
+    [50/50] kunyit_asam_050.jpg [OK]
+  Target tercapai (50/50)
+  [OK] Berhasil: 50, Gagal: 0
+
+[2/13] Kategori: 'gudeg'
+  Query: gudeg
+  Folder: C:\laragon\www\jivara\dataScience\data_mentah\cookpad_images_selected_classes\gudeg
+  Mengumpulkan link resep...
+    Halaman 1: 30 link ditemukan (total: 30)
+    Halaman 2: 30 link ditemukan (total: 60)
+    Halaman 3: 30 link ditemukan (total: 90)
+    Halaman 4: 30 link ditemukan (total: 120)
+    Halaman 5: 30 link ditemukan (total: 150)
+  Total link: 150
+  Mengunduh gambar...
+    [1/50] gudeg_001.jpg [OK]
+    [2/50] gudeg_002.jpg [OK]
+    [3/50] gudeg_003.jpg [OK]
+    [4/50] gudeg_004.jpg [OK]
+    [5/50] gudeg_005.jpg [OK]
+    [6/50] gudeg_006.jpg [OK]
+    [7/50] gudeg_007.jpg [OK]
+    [8/50] gudeg_008.jpg [OK]
+    [9/50] gudeg_009.jpg [OK]
+    [10/50] gudeg_010.jpg [OK]
+    [11/50] gudeg_011.jpg [OK]
+    [12/50] gudeg_012.jpg [OK]
+    [13/50] gudeg_013.jpg [OK]
+    [14/50] gudeg_014.jpg [OK]
+    [15/50] gudeg_015.jpg [OK]
+    [16/50] gudeg_016.jpg [OK]
+    [17/50] gudeg_017.jpg [OK]
+    [18/50] gudeg_018.jpg [OK]
+    [19/50] gudeg_019.jpg [OK]
+    [20/50] gudeg_020.jpg [OK]
+    [21/50] gudeg_021.jpg [OK]
+    [22/50] gudeg_022.jpg [OK]
+    [23/50] gudeg_023.jpg [OK]
+    [24/50] gudeg_024.jpg [OK]
+    [25/50] gudeg_025.jpg [OK]
+    [26/50] gudeg_026.jpg [OK]
+    [27/50] gudeg_027.jpg [OK]
+    [28/50] gudeg_028.jpg [OK]
+    [29/50] gudeg_029.jpg [OK]
+    [30/50] gudeg_030.jpg [OK]
+    [31/50] gudeg_031.jpg [OK]
+    [32/50] gudeg_032.jpg [OK]
+    [33/50] gudeg_033.jpg [OK]
+    [34/50] gudeg_034.jpg [OK]
+    [35/50] gudeg_035.jpg [OK]
+    [36/50] gudeg_036.jpg [OK]
+    [37/50] gudeg_037.jpg [OK]
+    [38/50] gudeg_038.jpg [OK]
+    [39/50] gudeg_039.jpg [OK]
+    [40/50] gudeg_040.jpg [OK]
+    [41/50] gudeg_041.jpg [OK]
+    [42/50] gudeg_042.jpg [OK]
+    [43/50] gudeg_043.jpg [OK]
+    [44/50] gudeg_044.jpg [OK]
+    [45/50] gudeg_045.jpg [OK]
+    [46/50] gudeg_046.jpg [OK]
+    [47/50] gudeg_047.jpg [OK]
+    [48/50] gudeg_048.jpg [OK]
+    [49/50] gudeg_049.jpg [OK]
+    [50/50] gudeg_050.jpg [OK]
+  Target tercapai (50/50)
+  [OK] Berhasil: 50, Gagal: 0
+
+[3/13] Kategori: 'bir pletok'
+  Query: bir pletok
+  Folder: C:\laragon\www\jivara\dataScience\data_mentah\cookpad_images_selected_classes\bir_pletok
+  Mengumpulkan link resep...
+    Halaman 1: 30 link ditemukan (total: 30)
+    Halaman 2: 30 link ditemukan (total: 60)
+    Halaman 3: 30 link ditemukan (total: 90)
+    Halaman 4: 30 link ditemukan (total: 120)
+    Halaman 5: 30 link ditemukan (total: 150)
+  Total link: 150
+  Mengunduh gambar...
+    [1/50] bir_pletok_001.jpg [OK]
+    [2/50] bir_pletok_002.jpg [OK]
+    [3/50] bir_pletok_003.jpg [OK]
+    [4/50] bir_pletok_004.jpg [OK]
+    [5/50] bir_pletok_005.jpg [OK]
+    [6/50] bir_pletok_006.jpg [OK]
+    [7/50] bir_pletok_007.jpg [OK]
+    [8/50] bir_pletok_008.jpg [OK]
+    [9/50] bir_pletok_009.jpg [OK]
+    [10/50] bir_pletok_010.jpg [OK]
+    [11/50] bir_pletok_011.jpg [OK]
+    [12/50] bir_pletok_012.jpg [OK]
+    [13/50] bir_pletok_013.jpg [OK]
+    [14/50] bir_pletok_014.jpg [OK]
+    [15/50] bir_pletok_015.jpg [OK]
+    [16/50] bir_pletok_016.jpg [OK]
+    [17/50] bir_pletok_017.jpg [OK]
+    [18/50] bir_pletok_018.jpg [OK]
+    [19/50] bir_pletok_019.jpg [OK]
+    [20/50] bir_pletok_020.jpg [OK]
+    [21/50] bir_pletok_021.jpg [OK]
+    [22/50] bir_pletok_022.jpg [OK]
+    [23/50] bir_pletok_023.jpg [OK]
+    [24/50] bir_pletok_024.jpg [OK]
+    [25/50] bir_pletok_025.jpg [OK]
+    [26/50] bir_pletok_026.jpg [OK]
+    [27/50] bir_pletok_027.jpg [OK]
+    [28/50] bir_pletok_028.jpg [OK]
+    [29/50] bir_pletok_029.jpg [OK]
+    [30/50] bir_pletok_030.jpg [OK]
+    [31/50] bir_pletok_031.jpg [OK]
+    [32/50] bir_pletok_032.jpg [OK]
+    [33/50] bir_pletok_033.jpg [OK]
+    [34/50] bir_pletok_034.jpg [OK]
+    [35/50] bir_pletok_035.jpg [OK]
+    [36/50] bir_pletok_036.jpg [OK]
+    [37/50] bir_pletok_037.jpg [OK]
+    [38/50] bir_pletok_038.jpg [OK]
+    [39/50] bir_pletok_039.jpg [OK]
+    [40/50] bir_pletok_040.jpg [OK]
+    [41/50] bir_pletok_041.jpg [OK]
+    [42/50] bir_pletok_042.jpg [OK]
+    [43/50] bir_pletok_043.jpg [OK]
+    [44/50] bir_pletok_044.jpg [OK]
+    [45/50] bir_pletok_045.jpg [OK]
+    [46/50] bir_pletok_046.jpg [OK]
+    [47/50] bir_pletok_047.jpg [OK]
+    [48/50] bir_pletok_048.jpg [OK]
+    [49/50] bir_pletok_049.jpg [OK]
+    [50/50] bir_pletok_050.jpg [OK]
+  Target tercapai (50/50)
+  [OK] Berhasil: 50, Gagal: 0
+
+[4/13] Kategori: 'papeda'
+  Query: papeda
+  Folder: C:\laragon\www\jivara\dataScience\data_mentah\cookpad_images_selected_classes\papeda
+  Mengumpulkan link resep...
+    Halaman 1: 30 link ditemukan (total: 30)
+    Halaman 2: 30 link ditemukan (total: 60)
+    Halaman 3: 30 link ditemukan (total: 90)
+    Halaman 4: 30 link ditemukan (total: 120)
+    Halaman 5: 30 link ditemukan (total: 150)
+  Total link: 150
+  Mengunduh gambar...
+    [1/50] papeda_001.jpg [OK]
+    [2/50] papeda_002.jpg [OK]
+    [3/50] papeda_003.jpg [OK]
+    [4/50] papeda_004.jpg [OK]
+    [5/50] papeda_005.jpg [OK]
+    [6/50] papeda_006.jpg [OK]
+    [7/50] papeda_007.jpg [OK]
+    [8/50] papeda_008.jpg [OK]
+    [9/50] papeda_009.jpg [OK]
+    [10/50] papeda_010.jpg [OK]
+    [11/50] papeda_011.jpg [OK]
+    [12/50] papeda_012.jpg [OK]
+    [13/50] papeda_013.jpg [OK]
+    [14/50] papeda_014.jpg [OK]
+    [15/50] papeda_015.jpg [OK]
+    [16/50] papeda_016.jpg [OK]
+    [17/50] papeda_017.jpg [OK]
+    [18/50] papeda_018.jpg [OK]
+    [19/50] papeda_019.jpg [OK]
+    [20/50] papeda_020.jpg [OK]
+    [21/50] papeda_021.jpg [OK]
+    [22/50] papeda_022.jpg [OK]
+    [23/50] papeda_023.jpg [OK]
+    [24/50] papeda_024.jpg [OK]
+    [25/50] papeda_025.jpg [OK]
+    [26/50] papeda_026.jpg [OK]
+    [27/50] papeda_027.jpg [OK]
+    [28/50] papeda_028.jpg [OK]
+    [29/50] papeda_029.jpg [OK]
+    [30/50] papeda_030.jpg [OK]
+    [31/50] papeda_031.jpg [OK]
+    [32/50] papeda_032.jpg [OK]
+    [33/50] papeda_033.jpg [OK]
+    [34/50] papeda_034.jpg [OK]
+    [35/50] papeda_035.jpg [OK]
+    [36/50] papeda_036.jpg [OK]
+    [37/50] papeda_037.jpg [OK]
+    [38/50] papeda_038.jpg [OK]
+    [39/50] papeda_039.jpg [OK]
+    [40/50] papeda_040.jpg [OK]
+    [41/50] papeda_041.jpg [OK]
+    [42/50] papeda_042.jpg [OK]
+    [43/50] papeda_043.jpg [OK]
+    [44/50] papeda_044.jpg [OK]
+    [45/50] papeda_045.jpg [OK]
+    [46/50] papeda_046.jpg [OK]
+    [47/50] papeda_047.jpg [OK]
+    [48/50] papeda_048.jpg [OK]
+    [49/50] papeda_049.jpg [OK]
+    [50/50] papeda_050.jpg [OK]
+  Target tercapai (50/50)
+  [OK] Berhasil: 50, Gagal: 0
+
+[5/13] Kategori: 'sate lilit'
+  Query: sate lilit
+  Folder: C:\laragon\www\jivara\dataScience\data_mentah\cookpad_images_selected_classes\sate_lilit
+  Mengumpulkan link resep...
+    Halaman 1: 30 link ditemukan (total: 30)
+    Halaman 2: 30 link ditemukan (total: 60)
+    Halaman 3: 30 link ditemukan (total: 90)
+    Halaman 4: 30 link ditemukan (total: 120)
+    Halaman 5: 30 link ditemukan (total: 150)
+  Total link: 150
+  Mengunduh gambar...
+    [1/50] sate_lilit_001.jpg [OK]
+    [2/50] sate_lilit_002.jpg [OK]
+    [3/50] sate_lilit_003.jpg [OK]
+    [4/50] sate_lilit_004.jpg [OK]
+    [5/50] sate_lilit_005.jpg [OK]
+    [6/50] sate_lilit_006.jpg [OK]
+    [7/50] sate_lilit_007.jpg [OK]
+    [8/50] sate_lilit_008.jpg [OK]
+    [9/50] sate_lilit_009.jpg [OK]
+    [10/50] sate_lilit_010.jpg [OK]
+    [11/50] sate_lilit_011.jpg [OK]
+    [12/50] sate_lilit_012.jpg [OK]
+    [13/50] sate_lilit_013.jpg [OK]
+    [14/50] sate_lilit_014.jpg [OK]
+    [15/50] sate_lilit_015.jpg [OK]
+    [16/50] sate_lilit_016.jpg [OK]
+    [17/50] sate_lilit_017.jpg [OK]
+    [18/50] sate_lilit_018.jpg [OK]
+    [19/50] sate_lilit_019.jpg [OK]
+    [20/50] sate_lilit_020.jpg [OK]
+    [21/50] sate_lilit_021.jpg [OK]
+    [22/50] sate_lilit_022.jpg [OK]
+    [23/50] sate_lilit_023.jpg [OK]
+    [24/50] sate_lilit_024.jpg [OK]
+    [25/50] sate_lilit_025.jpg [OK]
+    [26/50] sate_lilit_026.jpg [OK]
+    [27/50] sate_lilit_027.jpg [OK]
+    [28/50] sate_lilit_028.jpg [OK]
+    [29/50] sate_lilit_029.jpg [OK]
+    [30/50] sate_lilit_030.jpg [OK]
+    [31/50] sate_lilit_031.jpg [OK]
+    [32/50] sate_lilit_032.jpg [OK]
+    [33/50] sate_lilit_033.jpg [OK]
+    [34/50] sate_lilit_034.jpg [OK]
+    [35/50] sate_lilit_035.jpg [OK]
+    [36/50] sate_lilit_036.jpg [OK]
+    [37/50] sate_lilit_037.jpg [OK]
+    [38/50] sate_lilit_038.jpg [OK]
+    [39/50] sate_lilit_039.jpg [OK]
+    [40/50] sate_lilit_040.jpg [OK]
+    [41/50] sate_lilit_041.jpg [OK]
+    [42/50] sate_lilit_042.jpg [OK]
+    [43/50] sate_lilit_043.jpg [OK]
+    [44/50] sate_lilit_044.jpg [OK]
+    [45/50] sate_lilit_045.jpg [OK]
+    [46/50] sate_lilit_046.jpg [OK]
+    [47/50] sate_lilit_047.jpg [OK]
+    [48/50] sate_lilit_048.jpg [OK]
+    [49/50] sate_lilit_049.jpg [OK]
+    [50/50] sate_lilit_050.jpg [OK]
+  Target tercapai (50/50)
+  [OK] Berhasil: 50, Gagal: 0
+
+[6/13] Kategori: 'ayam goreng lengkuas'
+  Query: ayam goreng lengkuas
+  Folder: C:\laragon\www\jivara\dataScience\data_mentah\cookpad_images_selected_classes\ayam_goreng_lengkuas
+  Mengumpulkan link resep...
+    Halaman 1: 30 link ditemukan (total: 30)
+    Halaman 2: 30 link ditemukan (total: 60)
+    Halaman 3: 30 link ditemukan (total: 90)
+    Halaman 4: 30 link ditemukan (total: 120)
+    Halaman 5: 30 link ditemukan (total: 150)
+  Total link: 150
+  Mengunduh gambar...
+    [1/50] ayam_goreng_lengkuas_001.jpg [OK]
+    [2/50] ayam_goreng_lengkuas_002.jpg [OK]
+    [3/50] ayam_goreng_lengkuas_003.jpg [OK]
+    [4/50] ayam_goreng_lengkuas_004.jpg [OK]
+    [5/50] ayam_goreng_lengkuas_005.jpg [OK]
+    [6/50] ayam_goreng_lengkuas_006.jpg [OK]
+    [7/50] ayam_goreng_lengkuas_007.jpg [OK]
+    [8/50] ayam_goreng_lengkuas_008.jpg [OK]
+    [9/50] ayam_goreng_lengkuas_009.jpg [OK]
+    [10/50] ayam_goreng_lengkuas_010.jpg [OK]
+    [11/50] ayam_goreng_lengkuas_011.jpg [OK]
+    [12/50] ayam_goreng_lengkuas_012.jpg [OK]
+    [13/50] ayam_goreng_lengkuas_013.jpg [OK]
+    [14/50] ayam_goreng_lengkuas_014.jpg [OK]
+    [15/50] ayam_goreng_lengkuas_015.jpg [OK]
+    [16/50] ayam_goreng_lengkuas_016.jpg [OK]
+    [17/50] ayam_goreng_lengkuas_017.jpg [OK]
+    [18/50] ayam_goreng_lengkuas_018.jpg [OK]
+    [19/50] ayam_goreng_lengkuas_019.jpg [OK]
+    [20/50] ayam_goreng_lengkuas_020.jpg [OK]
+    [21/50] ayam_goreng_lengkuas_021.jpg [OK]
+    [22/50] ayam_goreng_lengkuas_022.jpg [OK]
+    [23/50] ayam_goreng_lengkuas_023.jpg [OK]
+    [24/50] ayam_goreng_lengkuas_024.jpg [OK]
+    [25/50] ayam_goreng_lengkuas_025.jpg [OK]
+    [26/50] ayam_goreng_lengkuas_026.jpg [OK]
+    [27/50] ayam_goreng_lengkuas_027.jpg [OK]
+    [28/50] ayam_goreng_lengkuas_028.jpg [OK]
+    [29/50] ayam_goreng_lengkuas_029.jpg [OK]
+    [30/50] ayam_goreng_lengkuas_030.jpg [OK]
+    [31/50] ayam_goreng_lengkuas_031.jpg [OK]
+    [32/50] ayam_goreng_lengkuas_032.jpg [OK]
+    [33/50] ayam_goreng_lengkuas_033.jpg [OK]
+    [34/50] ayam_goreng_lengkuas_034.jpg [OK]
+    [35/50] ayam_goreng_lengkuas_035.jpg [OK]
+    [36/50] ayam_goreng_lengkuas_036.jpg [OK]
+    [37/50] ayam_goreng_lengkuas_037.jpg [OK]
+    [38/50] ayam_goreng_lengkuas_038.jpg [OK]
+    [39/50] ayam_goreng_lengkuas_039.jpg [OK]
+    [40/50] ayam_goreng_lengkuas_040.jpg [OK]
+    [41/50] ayam_goreng_lengkuas_041.jpg [OK]
+    [42/50] ayam_goreng_lengkuas_042.jpg [OK]
+    [43/50] ayam_goreng_lengkuas_043.jpg [OK]
+    [44/50] ayam_goreng_lengkuas_044.jpg [OK]
+    [45/50] ayam_goreng_lengkuas_045.jpg [OK]
+    [46/50] ayam_goreng_lengkuas_046.jpg [OK]
+    [47/50] ayam_goreng_lengkuas_047.jpg [OK]
+    [48/50] ayam_goreng_lengkuas_048.jpg [OK]
+    [49/50] ayam_goreng_lengkuas_049.jpg [OK]
+    [50/50] ayam_goreng_lengkuas_050.jpg [OK]
+  Target tercapai (50/50)
+  [OK] Berhasil: 50, Gagal: 0
+
+[7/13] Kategori: 'sate meranggi'
+  Query: sate meranggi, sate maranggi
+  Folder: C:\laragon\www\jivara\dataScience\data_mentah\cookpad_images_selected_classes\sate_meranggi
+  Mengumpulkan link resep...
+    Halaman 1: 9 link ditemukan (total: 9)
+    Halaman 1: 30 link ditemukan (total: 30)
+    Halaman 2: 30 link ditemukan (total: 60)
+    Halaman 3: 30 link ditemukan (total: 90)
+    Halaman 4: 30 link ditemukan (total: 120)
+    Halaman 5: 30 link ditemukan (total: 150)
+  Total link: 159
+  Mengunduh gambar...
+    [1/50] sate_meranggi_001.jpg [OK]
+    [2/50] sate_meranggi_002.jpg [OK]
+    [3/50] sate_meranggi_003.jpg [OK]
+    [4/50] sate_meranggi_004.jpg [OK]
+    [5/50] sate_meranggi_005.jpg [OK]
+    [6/50] sate_meranggi_006.jpg [OK]
+    [7/50] sate_meranggi_007.jpg [OK]
+    [8/50] sate_meranggi_008.jpg [OK]
+    [9/50] sate_meranggi_009.jpg [OK]
+    [10/50] sate_meranggi_010.jpg [OK]
+    [11/50] sate_meranggi_011.jpg [OK]
+    [12/50] sate_meranggi_012.jpg [OK]
+    [13/50] sate_meranggi_013.jpg [OK]
+    [14/50] sate_meranggi_014.jpg [OK]
+    [15/50] sate_meranggi_015.jpg [OK]
+    [16/50] sate_meranggi_016.jpg [OK]
+    [17/50] sate_meranggi_017.jpg [OK]
+    [18/50] sate_meranggi_018.jpg [OK]
+    [19/50] sate_meranggi_019.jpg [OK]
+    [20/50] sate_meranggi_020.jpg [OK]
+    [21/50] sate_meranggi_021.jpg [OK]
+    [22/50] sate_meranggi_022.jpg [OK]
+    [23/50] sate_meranggi_023.jpg [OK]
+    [24/50] sate_meranggi_024.jpg [OK]
+    [25/50] sate_meranggi_025.jpg [OK]
+    [26/50] sate_meranggi_026.jpg [OK]
+    [27/50] sate_meranggi_027.jpg [OK]
+    [28/50] sate_meranggi_028.jpg [OK]
+    [29/50] sate_meranggi_029.jpg [OK]
+    [30/50] sate_meranggi_030.jpg [OK]
+    [31/50] sate_meranggi_031.jpg [OK]
+    [32/50] sate_meranggi_032.jpg [OK]
+    [33/50] sate_meranggi_033.jpg [OK]
+    [34/50] sate_meranggi_034.jpg [OK]
+    [35/50] sate_meranggi_035.jpg [OK]
+    [36/50] sate_meranggi_036.jpg [OK]
+    [37/50] sate_meranggi_037.jpg [OK]
+    [38/50] sate_meranggi_038.jpg [OK]
+    [39/50] sate_meranggi_039.jpg [OK]
+    [40/50] sate_meranggi_040.jpg [OK]
+    [41/50] sate_meranggi_041.jpg [OK]
+    [42/50] sate_meranggi_042.jpg [OK]
+    [43/50] sate_meranggi_043.jpg [OK]
+    [44/50] sate_meranggi_044.jpg [OK]
+    [45/50] sate_meranggi_045.jpg [OK]
+    [46/50] sate_meranggi_046.jpg [OK]
+    [47/50] sate_meranggi_047.jpg [OK]
+    [48/50] sate_meranggi_048.jpg [OK]
+    [49/50] sate_meranggi_049.jpg [OK]
+    [50/50] sate_meranggi_050.jpg [OK]
+  Target tercapai (50/50)
+  [OK] Berhasil: 50, Gagal: 0
+
+[8/13] Kategori: 'soerabi'
+  Query: soerabi, serabi, surabi
+  Folder: C:\laragon\www\jivara\dataScience\data_mentah\cookpad_images_selected_classes\soerabi
+  Mengumpulkan link resep...
+    Halaman 1: 30 link ditemukan (total: 30)
+    Halaman 2: 30 link ditemukan (total: 60)
+    Halaman 3: 30 link ditemukan (total: 90)
+    Halaman 4: 30 link ditemukan (total: 120)
+    Halaman 5: 30 link ditemukan (total: 150)
+    Halaman 1: 30 link ditemukan (total: 30)
+    Halaman 2: 30 link ditemukan (total: 60)
+    Halaman 3: 30 link ditemukan (total: 90)
+    Halaman 4: 30 link ditemukan (total: 120)
+    Halaman 5: 30 link ditemukan (total: 150)
+    Halaman 1: 30 link ditemukan (total: 30)
+    Halaman 2: 30 link ditemukan (total: 60)
+    Halaman 3: 30 link ditemukan (total: 90)
+    Halaman 4: 30 link ditemukan (total: 120)
+    Halaman 5: 30 link ditemukan (total: 150)
+  Total link: 315
+  Mengunduh gambar...
+    [1/50] soerabi_001.jpg [OK]
+    [2/50] soerabi_002.jpg [OK]
+    [3/50] soerabi_003.jpg [OK]
+    [4/50] soerabi_004.jpg [OK]
+    [5/50] soerabi_005.jpg [OK]
+    [6/50] soerabi_006.jpg [OK]
+    [7/50] soerabi_007.jpg [OK]
+    [8/50] soerabi_008.jpg [OK]
+    [9/50] soerabi_009.jpg [OK]
+    [10/50] soerabi_010.jpg [OK]
+    [11/50] soerabi_011.jpg [OK]
+    [12/50] soerabi_012.jpg [OK]
+    [13/50] soerabi_013.jpg [OK]
+    [14/50] soerabi_014.jpg [OK]
+    [15/50] soerabi_015.jpg [OK]
+    [16/50] soerabi_016.jpg [OK]
+    [17/50] soerabi_017.jpg [OK]
+    [18/50] soerabi_018.jpg [OK]
+    [19/50] soerabi_019.jpg [OK]
+    [20/50] soerabi_020.jpg [OK]
+    [21/50] soerabi_021.jpg [OK]
+    [22/50] soerabi_022.jpg [OK]
+    [23/50] soerabi_023.jpg [OK]
+    [24/50] soerabi_024.jpg [OK]
+    [25/50] soerabi_025.jpg [OK]
+    [26/50] soerabi_026.jpg [OK]
+    [27/50] soerabi_027.jpg [OK]
+    [28/50] soerabi_028.jpg [OK]
+    [29/50] soerabi_029.jpg [OK]
+    [30/50] soerabi_030.jpg [OK]
+    [31/50] soerabi_031.jpg [OK]
+    [32/50] soerabi_032.jpg [OK]
+    [33/50] soerabi_033.jpg [OK]
+    [34/50] soerabi_034.jpg [OK]
+    [35/50] soerabi_035.jpg [OK]
+    [36/50] soerabi_036.jpg [OK]
+    [37/50] soerabi_037.jpg [OK]
+    [38/50] soerabi_038.jpg [OK]
+    [39/50] soerabi_039.jpg [OK]
+    [40/50] soerabi_040.jpg [OK]
+    [41/50] soerabi_041.jpg [OK]
+    [42/50] soerabi_042.jpg [OK]
+    [43/50] soerabi_043.jpg [OK]
+    [44/50] soerabi_044.jpg [OK]
+    [45/50] soerabi_045.jpg [OK]
+    [46/50] soerabi_046.jpg [OK]
+    [47/50] soerabi_047.jpg [OK]
+    [48/50] soerabi_048.jpg [OK]
+    [49/50] soerabi_049.jpg [OK]
+    [50/50] soerabi_050.jpg [OK]
+  Target tercapai (50/50)
+  [OK] Berhasil: 50, Gagal: 0
+
+[9/13] Kategori: 'es dawet'
+  Query: es dawet
+  Folder: C:\laragon\www\jivara\dataScience\data_mentah\cookpad_images_selected_classes\es_dawet
+  Mengumpulkan link resep...
+    Halaman 1: 30 link ditemukan (total: 30)
+    Halaman 2: 30 link ditemukan (total: 60)
+    Halaman 3: 30 link ditemukan (total: 90)
+    Halaman 4: 30 link ditemukan (total: 120)
+    Halaman 5: 30 link ditemukan (total: 150)
+  Total link: 150
+  Mengunduh gambar...
+    [1/50] es_dawet_001.jpg [OK]
+    [2/50] es_dawet_002.jpg [OK]
+    [3/50] es_dawet_003.jpg [OK]
+    [4/50] es_dawet_004.jpg [OK]
+    [5/50] es_dawet_005.jpg [OK]
+    [6/50] es_dawet_006.jpg [OK]
+    [7/50] es_dawet_007.jpg [OK]
+    [8/50] es_dawet_008.jpg [OK]
+    [9/50] es_dawet_009.jpg [OK]
+    [10/50] es_dawet_010.jpg [OK]
+    [11/50] es_dawet_011.jpg [OK]
+    [12/50] es_dawet_012.jpg [OK]
+    [13/50] es_dawet_013.jpg [OK]
+    [14/50] es_dawet_014.jpg [OK]
+    [15/50] es_dawet_015.jpg [OK]
+    [16/50] es_dawet_016.jpg [OK]
+    [17/50] es_dawet_017.jpg [OK]
+    [18/50] es_dawet_018.jpg [OK]
+    [19/50] es_dawet_019.jpg [OK]
+    [20/50] es_dawet_020.jpg [OK]
+    [21/50] es_dawet_021.jpg [OK]
+    [22/50] es_dawet_022.jpg [OK]
+    [23/50] es_dawet_023.jpg [OK]
+    [24/50] es_dawet_024.jpg [OK]
+    [25/50] es_dawet_025.jpg [OK]
+    [26/50] es_dawet_026.jpg [OK]
+    [27/50] es_dawet_027.jpg [OK]
+    [28/50] es_dawet_028.jpg [OK]
+    [29/50] es_dawet_029.jpg [OK]
+    [30/50] es_dawet_030.jpg [OK]
+    [31/50] es_dawet_031.jpg [OK]
+    [32/50] es_dawet_032.jpg [OK]
+    [33/50] es_dawet_033.jpg [OK]
+    [34/50] es_dawet_034.jpg [OK]
+    [35/50] es_dawet_035.jpg [OK]
+    [36/50] es_dawet_036.jpg [OK]
+    [37/50] es_dawet_037.jpg [OK]
+    [38/50] es_dawet_038.jpg [OK]
+    [39/50] es_dawet_039.jpg [OK]
+    [40/50] es_dawet_040.jpg [OK]
+    [41/50] es_dawet_041.jpg [OK]
+    [42/50] es_dawet_042.jpg [OK]
+    [43/50] es_dawet_043.jpg [OK]
+    [44/50] es_dawet_044.jpg [OK]
+    [45/50] es_dawet_045.jpg [OK]
+    [46/50] es_dawet_046.jpg [OK]
+    [47/50] es_dawet_047.jpg [OK]
+    [48/50] es_dawet_048.jpg [OK]
+    [49/50] es_dawet_049.jpg [OK]
+    [50/50] es_dawet_050.jpg [OK]
+  Target tercapai (50/50)
+  [OK] Berhasil: 50, Gagal: 0
+
+[10/13] Kategori: 'sate ayam lamongan'
+  Query: sate ayam lamongan, sate lamongan
+  Folder: C:\laragon\www\jivara\dataScience\data_mentah\cookpad_images_selected_classes\sate_ayam_lamongan
+  Mengumpulkan link resep...
+    Halaman 1: 0 link ditemukan (total: 0)
+    Halaman 1: 10 link ditemukan (total: 10)
+  Total link: 10
+  Mengunduh gambar...
+    [1/50] sate_ayam_lamongan_001.jpg [OK]
+    [2/50] sate_ayam_lamongan_002.jpg [OK]
+    [3/50] sate_ayam_lamongan_003.jpg [OK]
+    [4/50] sate_ayam_lamongan_004.jpg [OK]
+    [5/50] sate_ayam_lamongan_005.jpg [OK]
+    [6/50] sate_ayam_lamongan_006.jpg [OK]
+    [7/50] sate_ayam_lamongan_007.jpg [OK]
+    [8/50] sate_ayam_lamongan_008.jpg [OK]
+    [9/50] sate_ayam_lamongan_009.jpg [OK]
+    [10/50] sate_ayam_lamongan_010.jpg [OK]
+  [OK] Berhasil: 10, Gagal: 0
+
+[11/13] Kategori: 'gulai ikan mas'
+  Query: gulai ikan mas
+  Folder: C:\laragon\www\jivara\dataScience\data_mentah\cookpad_images_selected_classes\gulai_ikan_mas
+  Mengumpulkan link resep...
+    Halaman 1: 30 link ditemukan (total: 30)
+    Halaman 2: 30 link ditemukan (total: 60)
+    Halaman 3: 30 link ditemukan (total: 90)
+    Halaman 4: 30 link ditemukan (total: 120)
+    Halaman 5: 30 link ditemukan (total: 150)
+  Total link: 150
+  Mengunduh gambar...
+    [1/50] gulai_ikan_mas_001.jpg [OK]
+    [2/50] gulai_ikan_mas_002.jpg [OK]
+    [3/50] gulai_ikan_mas_003.jpg [OK]
+    [4/50] gulai_ikan_mas_004.jpg [OK]
+    [5/50] gulai_ikan_mas_005.jpg [OK]
+    [6/50] gulai_ikan_mas_006.jpg [OK]
+    [7/50] gulai_ikan_mas_007.jpg [OK]
+    [8/50] gulai_ikan_mas_008.jpg [OK]
+    [9/50] gulai_ikan_mas_009.jpg [OK]
+    [10/50] gulai_ikan_mas_010.jpg [OK]
+    [11/50] gulai_ikan_mas_011.jpg [OK]
+    [12/50] gulai_ikan_mas_012.jpg [OK]
+    [13/50] gulai_ikan_mas_013.jpg [OK]
+    [14/50] gulai_ikan_mas_014.jpg [OK]
+    [15/50] gulai_ikan_mas_015.jpg [OK]
+    [16/50] gulai_ikan_mas_016.jpg [OK]
+    [17/50] gulai_ikan_mas_017.jpg [OK]
+    [18/50] gulai_ikan_mas_018.jpg [OK]
+    [19/50] gulai_ikan_mas_019.jpg [OK]
+    [20/50] gulai_ikan_mas_020.jpg [OK]
+    [21/50] gulai_ikan_mas_021.jpg [OK]
+    [22/50] gulai_ikan_mas_022.jpg [OK]
+    [23/50] gulai_ikan_mas_023.jpg [OK]
+    [24/50] gulai_ikan_mas_024.jpg [OK]
+    [25/50] gulai_ikan_mas_025.jpg [OK]
+    [26/50] gulai_ikan_mas_026.jpg [OK]
+    [27/50] gulai_ikan_mas_027.jpg [OK]
+    [28/50] gulai_ikan_mas_028.jpg [OK]
+    [29/50] gulai_ikan_mas_029.jpg [OK]
+    [30/50] gulai_ikan_mas_030.jpg [OK]
+    [31/50] gulai_ikan_mas_031.jpg [OK]
+    [32/50] gulai_ikan_mas_032.jpg [OK]
+    [33/50] gulai_ikan_mas_033.jpg [OK]
+    [34/50] gulai_ikan_mas_034.jpg [OK]
+    [35/50] gulai_ikan_mas_035.jpg [OK]
+    [36/50] gulai_ikan_mas_036.jpg [OK]
+    [37/50] gulai_ikan_mas_037.jpg [OK]
+    [38/50] gulai_ikan_mas_038.jpg [OK]
+    [39/50] gulai_ikan_mas_039.jpg [OK]
+    [40/50] gulai_ikan_mas_040.jpg [OK]
+    [41/50] gulai_ikan_mas_041.jpg [OK]
+    [42/50] gulai_ikan_mas_042.jpg [OK]
+    [43/50] gulai_ikan_mas_043.jpg [OK]
+    [44/50] gulai_ikan_mas_044.jpg [OK]
+    [45/50] gulai_ikan_mas_045.jpg [OK]
+    [46/50] gulai_ikan_mas_046.jpg [OK]
+    [47/50] gulai_ikan_mas_047.jpg [OK]
+    [48/50] gulai_ikan_mas_048.jpg [OK]
+    [49/50] gulai_ikan_mas_049.jpg [OK]
+    [50/50] gulai_ikan_mas_050.jpg [OK]
+  Target tercapai (50/50)
+  [OK] Berhasil: 50, Gagal: 0
+
+[12/13] Kategori: 'kerak telor'
+  Query: kerak telor
+  Folder: C:\laragon\www\jivara\dataScience\data_mentah\cookpad_images_selected_classes\kerak_telor
+  Mengumpulkan link resep...
+    Halaman 1: 30 link ditemukan (total: 30)
+    Halaman 2: 30 link ditemukan (total: 60)
+    Halaman 3: 30 link ditemukan (total: 90)
+    Halaman 4: 30 link ditemukan (total: 120)
+    Halaman 5: 27 link ditemukan (total: 147)
+  Total link: 147
+  Mengunduh gambar...
+    [1/50] kerak_telor_001.jpg [OK]
+    [2/50] kerak_telor_002.jpg [OK]
+    [3/50] kerak_telor_003.jpg [OK]
+    [4/50] kerak_telor_004.jpg [OK]
+    [5/50] kerak_telor_005.jpg [OK]
+    [6/50] kerak_telor_006.jpg [OK]
+    [7/50] kerak_telor_007.jpg [OK]
+    [8/50] kerak_telor_008.jpg [OK]
+    [9/50] kerak_telor_009.jpg [OK]
+    [10/50] kerak_telor_010.jpg [OK]
+    [11/50] kerak_telor_011.jpg [OK]
+    [12/50] kerak_telor_012.jpg [OK]
+    [13/50] kerak_telor_013.jpg [OK]
+    [14/50] kerak_telor_014.jpg [OK]
+    [15/50] kerak_telor_015.jpg [OK]
+    [16/50] kerak_telor_016.jpg [OK]
+    [17/50] kerak_telor_017.jpg [OK]
+    [18/50] kerak_telor_018.jpg [OK]
+    [19/50] kerak_telor_019.jpg [OK]
+    [20/50] kerak_telor_020.jpg [OK]
+    [21/50] kerak_telor_021.jpg [OK]
+    [22/50] kerak_telor_022.jpg [OK]
+    [23/50] kerak_telor_023.jpg [OK]
+    [24/50] kerak_telor_024.jpg [OK]
+    [25/50] kerak_telor_025.jpg [OK]
+    [26/50] kerak_telor_026.jpg [OK]
+    [27/50] kerak_telor_027.jpg [OK]
+    [28/50] kerak_telor_028.jpg [OK]
+    [29/50] kerak_telor_029.jpg [OK]
+    [30/50] kerak_telor_030.jpg [OK]
+    [31/50] kerak_telor_031.jpg [OK]
+    [32/50] kerak_telor_032.jpg [OK]
+    [33/50] kerak_telor_033.jpg [OK]
+    [34/50] kerak_telor_034.jpg [OK]
+    [35/50] kerak_telor_035.jpg [OK]
+    [36/50] kerak_telor_036.jpg [OK]
+    [37/50] kerak_telor_037.jpg [OK]
+    [38/50] kerak_telor_038.jpg [OK]
+    [39/50] kerak_telor_039.jpg [OK]
+    [40/50] kerak_telor_040.jpg [OK]
+    [41/50] kerak_telor_041.jpg [OK]
+    [42/50] kerak_telor_042.jpg [OK]
+    [43/50] kerak_telor_043.jpg [OK]
+    [44/50] kerak_telor_044.jpg [OK]
+    [45/50] kerak_telor_045.jpg [OK]
+    [46/50] kerak_telor_046.jpg [OK]
+    [47/50] kerak_telor_047.jpg [OK]
+    [48/50] kerak_telor_048.jpg [OK]
+    [49/50] kerak_telor_049.jpg [OK]
+    [50/50] kerak_telor_050.jpg [OK]
+  Target tercapai (50/50)
+  [OK] Berhasil: 50, Gagal: 0
+
+[13/13] Kategori: 'kalppertart'
+  Query: kalppertart, klappertart
+  Folder: C:\laragon\www\jivara\dataScience\data_mentah\cookpad_images_selected_classes\kalppertart
+  Mengumpulkan link resep...
+    Halaman 1: 0 link ditemukan (total: 0)
+    Halaman 1: 30 link ditemukan (total: 30)
+    Halaman 2: 30 link ditemukan (total: 60)
+    Halaman 3: 30 link ditemukan (total: 90)
+    Halaman 4: 30 link ditemukan (total: 120)
+    Halaman 5: 30 link ditemukan (total: 150)
+  Total link: 150
+  Mengunduh gambar...
+    [1/50] kalppertart_001.jpg [OK]
+    [2/50] kalppertart_002.jpg [OK]
+    [3/50] kalppertart_003.jpg [OK]
+    [4/50] kalppertart_004.jpg [OK]
+    [5/50] kalppertart_005.jpg [OK]
+    [6/50] kalppertart_006.jpg [OK]
+    [7/50] kalppertart_007.jpg [OK]
+    [8/50] kalppertart_008.jpg [OK]
+    [9/50] kalppertart_009.jpg [OK]
+    [10/50] kalppertart_010.jpg [OK]
+    [11/50] kalppertart_011.jpg [OK]
+    [12/50] kalppertart_012.jpg [OK]
+    [13/50] kalppertart_013.jpg [OK]
+    [14/50] kalppertart_014.jpg [OK]
+    [15/50] kalppertart_015.jpg [OK]
+    [16/50] kalppertart_016.jpg [OK]
+    [17/50] kalppertart_017.jpg [OK]
+    [18/50] kalppertart_018.jpg [OK]
+    [19/50] kalppertart_019.jpg [OK]
+    [20/50] kalppertart_020.jpg [OK]
+    [21/50] kalppertart_021.jpg [OK]
+    [22/50] kalppertart_022.jpg [OK]
+    [23/50] kalppertart_023.jpg [OK]
+    [24/50] kalppertart_024.jpg [OK]
+    [25/50] kalppertart_025.jpg [OK]
+    [26/50] kalppertart_026.jpg [OK]
+    [27/50] kalppertart_027.jpg [OK]
+    [28/50] kalppertart_028.jpg [OK]
+    [29/50] kalppertart_029.jpg [OK]
+    [30/50] kalppertart_030.jpg [OK]
+    [31/50] kalppertart_031.jpg [OK]
+    [32/50] kalppertart_032.jpg [OK]
+    [33/50] kalppertart_033.jpg [OK]
+    [34/50] kalppertart_034.jpg [OK]
+    [35/50] kalppertart_035.jpg [OK]
+    [36/50] kalppertart_036.jpg [OK]
+    [37/50] kalppertart_037.jpg [OK]
+    [38/50] kalppertart_038.jpg [OK]
+    [39/50] kalppertart_039.jpg [OK]
+    [40/50] kalppertart_040.jpg [OK]
+    [41/50] kalppertart_041.jpg [OK]
+    [42/50] kalppertart_042.jpg [OK]
+    [43/50] kalppertart_043.jpg [OK]
+    [44/50] kalppertart_044.jpg [OK]
+    [45/50] kalppertart_045.jpg [OK]
+    [46/50] kalppertart_046.jpg [OK]
+    [47/50] kalppertart_047.jpg [OK]
+    [48/50] kalppertart_048.jpg [OK]
+    [49/50] kalppertart_049.jpg [OK]
+    [50/50] kalppertart_050.jpg [OK]
+  Target tercapai (50/50)
+  [OK] Berhasil: 50, Gagal: 0
+
+======================================================================
+  SELESAI!
+======================================================================
+

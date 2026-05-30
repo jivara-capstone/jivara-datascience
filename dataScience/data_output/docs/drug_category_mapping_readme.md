@@ -1,35 +1,67 @@
-# Drug Product to Drug Category Mapping
+# Drug Category Mapping Readme
 
-Dokumen ini menjelaskan artefak mapping dari nama obat BPOM ke `drug_category`
-yang dipakai oleh `drug_food_interactions.csv`.
+Dokumen ini menjelaskan mapping nama obat BPOM ke `drug_category` yang digunakan untuk rule interaksi obat-makanan.
+
+## Pertanyaan Bisnis
+
+Dokumen ini mendukung pertanyaan bisnis:
+
+Bagaimana membersihkan dan menstandarkan data obat BPOM agar dapat digunakan untuk sistem interaksi obat-makanan?
+
+Dan:
+
+Bagaimana membangun knowledge base yang menghubungkan makanan, bahan, nutrisi, obat, dan interaksi obat-makanan?
 
 ## Konsep
 
-`drug_category` adalah kategori farmakologi/terapi, bukan nama obat dan bukan
-`Golongan_Obat` BPOM. Contoh: `statin`, `antidiabetes`, `ccb`, `nsaid`.
+`drug_category` adalah kategori farmakologi/terapi yang dipakai oleh rule interaksi obat-makanan. Kategori ini berbeda dari `Golongan_Obat` BPOM.
 
-Alur lookup backend:
+Contoh:
 
-1. Normalisasi input nama obat pasien.
-2. Cari di `drug_name_category_lookup.csv` melalui `lookup_name_norm`.
-3. Ambil satu atau lebih `drug_category`.
-4. Join ke `drug_food_interactions.csv` dengan `food_class + drug_category`.
-5. Jika ada beberapa kategori, gunakan severity tertinggi untuk ringkasan dan
-   tampilkan detail semua kategori yang match.
+- `antidiabetes`
+- `statin`
+- `nsaid`
+- `maoi`
+- `kortikosteroid`
+- `ccb`
+- `ace_arb`
 
-## Artefak
+`Golongan_Obat` BPOM menjelaskan aspek regulatori seperti obat bebas atau obat keras, sedangkan `drug_category` dipakai untuk mencocokkan obat dengan potensi interaksi makanan.
 
-- `drug_active_category_map.csv`: kamus curated zat aktif ke `drug_category`.
-- `drug_product_category_mapping.csv`: mapping produk BPOM ke `drug_category`.
-- `drug_product_category_mapping_unmatched.csv`: zat aktif BPOM yang belum masuk
-  kategori interaksi utama.
-- `drug_name_category_lookup.csv`: lookup siap-backend yang menggabungkan nama
-  produk dan alias zat aktif generik.
+## Alur Lookup Backend
 
-## Catatan
+1. Backend menerima input nama obat dari user.
+2. Nama obat dinormalisasi.
+3. Sistem mencari obat pada lookup kategori.
+4. Sistem mengambil `primary_drug_category` atau `all_drug_categories`.
+5. Kategori obat dicocokkan ke `drug_food_interactions.csv`.
+6. Jika ada interaksi, backend menampilkan severity dan rekomendasi.
 
-Mapping ini berbasis `Zat_Aktif`, bukan `Golongan_Obat`, karena `Golongan_Obat`
-BPOM adalah kategori regulatori seperti `Obat Keras` atau `Obat Bebas`.
+## Artefak Terkait
 
-Semua rule diberi `source = curated_rule` dan perlu review farmasis sebelum
-dipakai sebagai ground truth klinis final.
+| File | Fungsi |
+|---|---|
+| `data_output/processed/drug_active_category_map.csv` | Kamus awal zat aktif ke kategori obat. |
+| `data_output/processed/drug_active_category_map_expanded.csv` | Kamus zat aktif yang sudah diperluas. |
+| `data_output/processed/drug_product_category_mapping.csv` | Mapping produk BPOM ke kategori obat. |
+| `data_output/processed/drug_product_category_mapping_unmatched.csv` | Produk/zat aktif yang belum berhasil dipetakan. |
+| `data_output/processed/drug_name_complete_category_lookup.csv` | Lookup lengkap nama obat ke kategori. |
+| `data_output/processed/drug_name_category_lookup.csv` | Lookup ringkas nama obat ke kategori. |
+| `data_output/processed/drug_food_interactions.csv` | Rule interaksi makanan dan kategori obat. |
+
+## Status Data
+
+Jumlah baris pada lookup lengkap:
+
+- `drug_name_complete_category_lookup.csv`: 2,173 baris.
+
+Jumlah rule interaksi:
+
+- `drug_food_interactions.csv`: 1,037 baris.
+
+## Catatan Kualitas
+
+- Mapping berbasis zat aktif dari kolom komposisi.
+- Obat yang belum memiliki kategori diberi status belum match/unknown.
+- Rule ini adalah artefak data untuk sistem, bukan pengganti validasi farmasis.
+- Untuk penggunaan klinis final, rule tetap perlu review domain expert.

@@ -1,52 +1,151 @@
-# 📊 Dokumentasi Metrik Evaluasi Sistem & Research Questions (RQ)
-**Proyek Jivara (CC26-PSU090)**  
-**Penanggung Jawab:** La Rayan & Rizki Pangestu (Data Science & Evaluator)
+# System Evaluation Metrics - Jivara
 
-Dokumen ini mendefinisikan standar keberhasilan sistem Jivara dan menjabarkan **Pertanyaan Penelitian/Bisnis (RQ1-RQ5)** yang diukur melalui metode yang spesifik. Sistem dievaluasi dari dua pilar utama: Keandalan AI (Machine Learning) dan Keberhasilan Intervensi Pengguna (Bisnis/UX).
+Dokumen ini menjelaskan metrik evaluasi yang relevan dengan 5 pertanyaan bisnis utama Data Science Jivara. Fokusnya adalah memastikan artefak data yang dibuat dapat dinilai secara objektif sebelum digunakan oleh AI Engineer dan Backend.
 
----
+## 1. Evaluasi Dataset Computer Vision
 
-## A. Daftar Pertanyaan Bisnis (Research Questions - RQ)
+Pertanyaan bisnis:
 
-Untuk memastikan produk ini memiliki *impact* pada kepatuhan pasien kesehatan di Indonesia, berikut 5 pilar pertanyaan analisis yang dijawab sistem Jivara:
+Bagaimana menyiapkan dataset image makanan yang layak untuk training model computer vision YOLO?
 
-1. **RQ1 (Deteksi Agnostik):** Sejauh mana sistem Jivara mampu mendeteksi 35 kelas makanan lokal Indonesia secara *real-time* dibandingkan batas kelayakan produksi?
-2. **RQ2 (Keamanan Medis):** Berapa tingkat *sensitivitas* agen AI dalam menangkap insiden bahaya interaksi obat–makanan (mencegah absennya peringatan pada kondisi fatal)?
-3. **RQ3 (Kepatuhan Jangka Pendek & Menengah):** Apakah pemberian notifikasi peringatan interaksi gizi terbukti efektif meningkatkan *Adherence Rate* (kepatuhan minum obat) kelompok pengguna uji dalam rentang 7 dan 30 hari?
-4. **RQ4 (UX & Effectiveness):** Bagaimana rasio korelasi linear antara frekuensi interaksi pengguna dengan *reminder* aplikasi (melalui CTR) terhadap efektivitas jadwal konsumsi?
-5. **RQ5 (Epidemiologi Data):** Dari 1.423 obat dan bahan dasar masakan lokal, tipe interaksi obat-makanan dan level keparahan (*severity*) manakah yang memiliki prevalensi atau probabilitas kejadian terekam paling tinggi?
+Metrik yang digunakan:
 
----
+| Metrik | Tujuan |
+|---|---|
+| Jumlah kelas | Memastikan kelas makanan target tersedia dalam dataset. |
+| Jumlah image per split | Memastikan train, validation, dan test tersedia. |
+| Distribusi kelas | Mengukur imbalance antar kelas. |
+| Validitas bounding box | Memastikan anotasi tidak keluar batas gambar atau bernilai tidak valid. |
+| Duplikasi image | Mengurangi risiko data leakage dan overfitting. |
+| Visual spot-check | Memastikan label dan bounding box sesuai objek makanan. |
 
-## B. Metrik Evaluasi (Key Performance Indicators)
+Artefak terkait:
 
-### 1. Performa Model AI (Deteksi Makanan YOLOv11)
-Karena sistem Jivara bergantung pada kemampuan identifikasi kamera pasien, model harus sangat akurat. Batas batas standar penerimaan untuk produksi (Production Grade) proyek ini adalah:
-- **Precision (Presisi) ≥ 85%**: Dari seluruh makanan yang *ditebak* sistem sebagai "Rendang", pastikan 85% di antaranya benar-benar Rendang (Meminimalisir salah tebak interaksi).
-- **Recall (Sensitivitas) ≥ 85%**: Dari seluruh gambar Rendang aktual yang difoto pengguna, 85% berhasil terdeteksi sebagai Rendang oleh batas *bounding box* sistem.
+- `data_output/for_ai_engineer/exports`
+- `data_output/docs/dataset_report_roboflow.md`
+- `data_output/docs/roboflow_data_readiness_plan.md`
 
-### 2. Akurasi Interaksi Obat Berbasis Knowledge-Base (Safety Metric)
-Sistem kesehatan memiliki risiko tinggi. Lebih baik sistem *over-warning* daripada melewatkan peringatan serius.
-- **False Negative Rate (FNR) < 5%**: Parameter terpenting di sistem Pakar Medis. Persentase di mana sistem "gagal memberikan peringatan" pada saat pengguna memakan makanan yang **seharusnya terdeteksi fatal (Misal: Tyramine + MAOI)** harus di bawah 5%.
+Target praktis:
 
-### 3. Tingkat Kepatuhan Pengguna (Business & UX)
-Sistem Jivara harus secara medis mengintervensi kebiasaan buruk masyarakat Indonesia berdasarkan *survei literatur ketidakpatuhan pasien Indonesia*. Diukur dengan metode observasi A/B Testing:
-- **Adherence Rate (7 Hari)**: Persentase dosis minum obat yang dikonsumsi tepat waktu tanpa interaksi fatal terhadap jadwal total per minggu (Target: Baseline Peningkatan Minimal +15%).
-- **Adherence Rate (30 Hari)**: Persentase konsistensi kepatuhan regimen jangka menengah untuk penyakit kronis (Hipertensi, TB).
+- Dataset memiliki struktur YOLO yang valid.
+- Tidak ada file image/label utama yang hilang pada export final.
+- Kelas mayoritas dan minoritas terdokumentasi.
+- Validation dan test dipertahankan sebagai evaluasi yang representatif.
 
-### 4. Efektivitas Reminder Notification 
-- **Response Rate**: Waktu jeda rata-rata (TTO - Time To Open) pengguna merespons alarm/notifikasi ponsel dibandingkan waktu penegasan (dispensing) obatnya.
-- **Click-Through Rate (CTR)**: Persentase seberapa sering peringatan *Knowledge Base Interaksi Obat* (saat Severity ≥ 3) diklik pengguna untuk membaca literatur farmasinya.
+## 2. Evaluasi Mapping Makanan ke Bahan dan Nutrisi
 
----
+Pertanyaan bisnis:
 
-## C. Metodologi A/B Testing & Rencana Analisis
-Tingkat *Adherence* (Kepatuhan) akan divalidasi menggunakan A/B Testing dengan prosedur:
-*   **Grup A (Control):** Pasien menggunakan kalender pengingat jam minum obat konvensional (tanpa scan foto makanan / peringatan Drug Interaction).
-*   **Grup B (Treatment):** Pasien menggunakan fitur utuh Jivara dengan deteksi YOLOv11 dan filter interaksi senyawa obat dari database.
+Bagaimana memetakan hasil deteksi makanan dari model YOLO ke informasi bahan makanan dan nutrisi?
 
-**Uji Hipotesis:**
-*   *H0:* Penggunaan sistem peringatan makanan Jivara tidak memiliki perbedaan signifikan pada Adherence Rate.
-*   *H1:* Penggunaan sistem peringatan makanan Jivara mendongkrak signifikan Adherence Rate 7 hari.
+Metrik yang digunakan:
 
-Analisis akhir akan diterbitkan dalam laporan EDA komprehensif oleh Evaluator Sistem menggunakan metode uji signifikansi (P-Value < 0.05).
+| Metrik | Tujuan |
+|---|---|
+| Jumlah kelas makanan yang memiliki mapping bahan | Mengukur coverage knowledge base bahan. |
+| Jumlah unique ingredient | Mengukur kekayaan bahan yang dapat dianalisis. |
+| Noise ingredient | Mengecek apakah hasil ekstraksi masih berisi satuan, instruksi masak, atau label section. |
+| Coverage mapping image-nutrition | Mengukur apakah kelas makanan dapat dihubungkan ke katalog nutrisi. |
+
+Artefak terkait:
+
+- `data_output/for_ai_engineer/food_to_ingredient_kb.json`
+- `data_output/for_ai_engineer/ingredient_to_food_kb.json`
+- `data_output/processed/food_ingredient_mapping.csv`
+- `data_output/processed/mapping_image_nutrition.csv`
+
+Target praktis:
+
+- Setiap kelas makanan utama memiliki daftar bahan yang masuk akal.
+- Mapping bahan tidak didominasi noise seperti satuan, instruksi, atau judul section.
+- Mapping dapat digunakan sebagai jembatan dari output YOLO ke rule interaksi obat.
+
+## 3. Evaluasi Katalog Nutrisi
+
+Pertanyaan bisnis:
+
+Bagaimana membangun katalog nutrisi makanan Indonesia yang siap digunakan oleh Backend dan AI?
+
+Metrik yang digunakan:
+
+| Metrik | Tujuan |
+|---|---|
+| Jumlah entri nutrisi | Mengukur cakupan katalog. |
+| Duplikasi `nutrition_key` | Memastikan key lookup unik. |
+| Missing value pada makronutrien utama | Memastikan data nutrisi dapat digunakan backend. |
+| Zero value pada makronutrien utama | Mengidentifikasi nilai yang perlu dicek. |
+
+Artefak terkait:
+
+- `data_output/processed/unified_nutrition_all_nutrition1.csv`
+- `data_output/processed/nutrition1_food_catalog.csv`
+
+Target praktis:
+
+- Setiap makanan memiliki `food_id` dan `nutrition_key`.
+- Makronutrien utama tersedia untuk analisis dasar.
+- Katalog dapat digunakan untuk lookup nutrisi oleh backend.
+
+## 4. Evaluasi Data Obat BPOM
+
+Pertanyaan bisnis:
+
+Bagaimana membersihkan dan menstandarkan data obat BPOM agar dapat digunakan untuk sistem interaksi obat-makanan?
+
+Metrik yang digunakan:
+
+| Metrik | Tujuan |
+|---|---|
+| Jumlah baris sebelum dan sesudah deduplikasi | Mengukur dampak cleaning dan deduplication. |
+| Jumlah nomor registrasi unik | Memastikan identitas obat lebih bersih. |
+| Jumlah zat aktif yang berhasil diekstrak | Mengukur keberhasilan parsing komposisi. |
+| Jumlah obat yang berhasil dipetakan ke kategori | Mengukur coverage sistem lookup obat. |
+| Match rate kategori obat | Mengukur seberapa banyak obat bisa digunakan untuk rule interaksi. |
+
+Artefak terkait:
+
+- `data_output/processed/obat_bpom_cleaned_full.csv`
+- `data_output/processed/obat_bpom_cleaned_dedup.csv`
+- `data_output/processed/obat_bpom_one_brand_per_composition_with_drug_category.csv`
+- `data_output/processed/drug_name_complete_category_lookup.csv`
+
+Target praktis:
+
+- Komposisi obat dapat dibaca dan diparsing.
+- Data obat dapat dicari berdasarkan nama produk.
+- Zat aktif dapat dipetakan ke kategori interaksi jika tersedia.
+
+## 5. Evaluasi Knowledge Base Interaksi Obat-Makanan
+
+Pertanyaan bisnis:
+
+Bagaimana membangun knowledge base yang menghubungkan makanan, bahan, nutrisi, obat, dan interaksi obat-makanan?
+
+Metrik yang digunakan:
+
+| Metrik | Tujuan |
+|---|---|
+| Jumlah rule interaksi | Mengukur cakupan knowledge base. |
+| Jumlah kategori obat | Mengukur variasi kategori farmakologi. |
+| Distribusi severity | Mengukur tingkat risiko interaksi. |
+| Jumlah makanan dengan interaksi | Mengukur coverage makanan yang memiliki potensi risiko. |
+| Jumlah obat matched dan unmatched | Mengukur batasan lookup obat. |
+
+Artefak terkait:
+
+- `data_output/processed/drug_food_interactions.csv`
+- `data_output/processed/drug_name_complete_category_lookup.csv`
+- `data_output/for_ai_engineer/food_to_ingredient_kb.json`
+- `data_output/for_ai_engineer/ingredient_to_food_kb.json`
+
+Target praktis:
+
+- Rule interaksi dapat dicari berdasarkan makanan dan kategori obat.
+- Severity dapat digunakan backend untuk menentukan level warning.
+- Obat yang belum match diberi status yang jelas agar tidak menimbulkan klaim klinis berlebihan.
+
+## Catatan Implementasi Produk
+
+Metrik seperti precision, recall, mAP, false negative rate, adherence rate, CTR, dan A/B Testing tetap relevan untuk evaluasi produk akhir. Namun metrik tersebut berada pada tahap AI/model deployment dan product evaluation, bukan seluruhnya pada tahap data preparation notebook.
+
+Notebook Data Science saat ini terutama membuktikan kesiapan data, kualitas dataset, dan ketersediaan artefak untuk AI Engineer serta Backend.

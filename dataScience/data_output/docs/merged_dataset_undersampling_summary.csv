@@ -1,0 +1,62 @@
+,before,after,removed,is_over_cap_after
+Apel,238,238,0,False
+Ayam Goreng,229,229,0,False
+Bakso,327,327,0,False
+Biskuit Choco Chips,410,400,10,False
+Burger,319,319,0,False
+Capcay,276,276,0,False
+Donat,413,399,14,False
+Ikan Goreng,264,264,0,False
+Kentang Goreng,231,231,0,False
+Kiwi,318,318,0,False
+Mie Goreng,298,298,0,False
+Nanas,249,249,0,False
+Nasi Goreng,224,224,0,False
+Nasi Putih,312,312,0,False
+Nugget,284,284,0,False
+Pempek,513,400,113,False
+Pisang,222,222,0,False
+Pizza,234,234,0,False
+Rendang,560,400,160,False
+Sate Umum,315,315,0,False
+Spaghetti,326,326,0,False
+Steak,261,261,0,False
+Stroberi,222,222,0,False
+Tahu Goreng,799,399,400,False
+Telur Goreng,281,281,0,False
+Telur Rebus,272,272,0,False
+Tempe Goreng,672,398,274,False
+Terong Balado,232,232,0,False
+Tumis Kangkung,310,310,0,False
+asinan-jakarta,218,218,0,False
+ayam-betutu,188,188,0,False
+ayam-bumbu-rujak,192,192,0,False
+ayam-goreng-lengkuas,220,220,0,False
+bika-ambon,192,192,0,False
+bir-pletok,241,241,0,False
+bubur-manado,236,236,0,False
+cendol,194,194,0,False
+es-dawet,243,243,0,False
+gado-gado,245,245,0,False
+gudeg,236,236,0,False
+gulai-ikan-mas,288,288,0,False
+keladi,48,48,0,False
+kerak-telor,224,224,0,False
+klappertart,292,292,0,False
+kolak,240,240,0,False
+kue-lumpur,247,247,0,False
+kunyit-asam,274,274,0,False
+laksa-bogor,189,189,0,False
+lumpia-semarang,219,219,0,False
+mie-aceh,239,239,0,False
+nagasari,183,183,0,False
+papeda,189,189,0,False
+rawon-surabaya,239,239,0,False
+rujak-cingur,213,213,0,False
+sate-ayam-madura,245,245,0,False
+sate-lilit,266,266,0,False
+sate-maranggi,287,287,0,False
+soerabi,210,210,0,False
+soto-ayam-lamongan,224,224,0,False
+soto-banjar,205,205,0,False
+tahu-telur,215,215,0,False

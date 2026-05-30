@@ -162,6 +162,40 @@ ACTIVE_CATEGORY_RULES = [
     ("imunosupresan", "MIKOFENOLAT", "immunosuppressant"),
     ("imunosupresan", "AZATHIOPRINE", "immunosuppressant"),
     ("imunosupresan", "METHOTREXATE", "immunosuppressant"),
+
+    # Corticosteroids
+    ("kortikosteroid", "METHYLPREDNISOLONE", "systemic corticosteroid"),
+    ("kortikosteroid", "METILPREDNISOLON", "systemic corticosteroid"),
+    ("kortikosteroid", "DEXAMETHASONE", "systemic corticosteroid"),
+    ("kortikosteroid", "DEKSAMETASON", "systemic corticosteroid"),
+    ("kortikosteroid", "PREDNISONE", "systemic corticosteroid"),
+    ("kortikosteroid", "PREDNISON", "systemic corticosteroid"),
+    ("kortikosteroid", "PREDNISOLONE", "systemic corticosteroid"),
+    ("kortikosteroid", "PREDNISOLON", "systemic corticosteroid"),
+    ("kortikosteroid", "HYDROCORTISONE", "corticosteroid"),
+    ("kortikosteroid", "HIDROKORTISON", "corticosteroid"),
+    ("kortikosteroid", "BETAMETHASONE", "corticosteroid"),
+    ("kortikosteroid", "BETAMETASON", "corticosteroid"),
+    ("kortikosteroid", "TRIAMCINOLONE", "corticosteroid"),
+    ("kortikosteroid", "TRIAMSINOLON", "corticosteroid"),
+    ("kortikosteroid", "MOMETASONE", "corticosteroid"),
+    ("kortikosteroid", "MOMETASON", "corticosteroid"),
+    ("kortikosteroid", "FLUTICASONE", "corticosteroid"),
+    ("kortikosteroid", "FLUTIKASON", "corticosteroid"),
+    ("kortikosteroid", "BUDESONIDE", "corticosteroid"),
+    ("kortikosteroid", "BUDESONID", "corticosteroid"),
+
+    # Dopaminergic Parkinson drugs
+    ("dopaminergik_parkinson", "LEVODOPA", "dopaminergic Parkinson therapy"),
+    ("dopaminergik_parkinson", "CARBIDOPA", "dopaminergic Parkinson therapy adjunct"),
+    ("dopaminergik_parkinson", "BENSERAZIDE", "dopaminergic Parkinson therapy adjunct"),
+
+    # Potassium-sparing diuretics
+    ("diuretik_hemat_kalium", "SPIRONOLACTONE", "potassium-sparing diuretic"),
+    ("diuretik_hemat_kalium", "SPIRONOLAKTON", "potassium-sparing diuretic"),
+    ("diuretik_hemat_kalium", "EPLERENONE", "potassium-sparing diuretic"),
+    ("diuretik_hemat_kalium", "AMILORIDE", "potassium-sparing diuretic"),
+    ("diuretik_hemat_kalium", "TRIAMTERENE", "potassium-sparing diuretic"),
 ]
 
 
@@ -371,6 +405,10 @@ def assert_expected_examples(product_mapping: pd.DataFrame) -> None:
         "METFORMIN": {"antidiabetes"},
         "AMLODIPINE": {"ccb"},
         "WARFARIN": {"antikoagulan"},
+        "METHYLPREDNISOLONE": {"kortikosteroid"},
+        "DEXAMETHASONE": {"kortikosteroid"},
+        "LEVODOPA": {"dopaminergik_parkinson"},
+        "SPIRONOLACTONE": {"diuretik_hemat_kalium"},
     }
 
     for product_name, expected_categories in examples.items():
