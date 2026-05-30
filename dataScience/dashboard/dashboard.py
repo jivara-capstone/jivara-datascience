@@ -69,8 +69,10 @@ col5.metric("Interaksi KB", f"{len(idf):,}")
 
 st.markdown(
     note(
-        "<strong>Catatan data: dashboard sekarang diselaraskan dengan isi file yang benar-benar ada di repo. "
-        "Dataset nutrisi aktif berisi 61 kelas makanan, bukan 1.476 item seperti dokumentasi lama.</strong>"
+        f"<strong>Insight kunci: Jivara menghubungkan {len(df_nutrisi)} kelas makanan, "
+        f"{len(df_resep):,} resep lokal, dan {len(df_obat):,} produk obat BPOM ke dalam {len(idf):,} interaksi obat-makanan "
+        f"yang terdeteksi. Artinya setiap makanan rata-rata terhubung ke "
+        f"{len(idf) / max(len(foods), 1):.1f} potensi risiko obat — cukup untuk memberikan warning yang bermakna di level hidangan sehari-hari.</strong>"
     ),
     unsafe_allow_html=True,
 )
