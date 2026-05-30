@@ -584,7 +584,15 @@
             "kentang agak besar"
         ],
         "nasi-putih": [
-            "nasi putih"
+            "bawang putih",
+            "kangkung",
+            "bawang merah",
+            "tempe",
+            "nasi putih",
+            "cabai rawit",
+            "kecap manis",
+            "tomat",
+            "wortel"
         ],
         "nugget": [
             "telur",
@@ -749,7 +757,20 @@
             "tomat"
         ],
         "apel": [
-            "apel"
+            "minyak zaitun",
+            "madu",
+            "bawang bombay",
+            "cuka apel",
+            "apel",
+            "mayonnaise",
+            "mustard",
+            "wortel",
+            "keju cheddar",
+            "minyak salad",
+            "telur rebus",
+            "salad dressing",
+            "susu kental manis",
+            "timun"
         ],
         "biskuit-choco-chips": [
             "tepung terigu",
@@ -812,10 +833,23 @@
             "kiwi"
         ],
         "nanas": [
-            "nanas"
+            "nanas",
+            "wortel",
+            "tomat",
+            "timun",
+            "gula pasir",
+            "bawang putih"
         ],
         "pisang": [
-            "pisang"
+            "tepung terigu",
+            "gula pasir",
+            "tepung beras",
+            "vanili",
+            "tepung maizena",
+            "pisang",
+            "susu kental manis",
+            "margarin",
+            "keju"
         ],
         "pizza": [
             "margarin",
@@ -835,7 +869,9 @@
             "saus tomat"
         ],
         "stroberi": [
-            "stroberi"
+            "stroberi",
+            "gula pasir",
+            "madu"
         ]
     }
 }
