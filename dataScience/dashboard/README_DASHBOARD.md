@@ -15,8 +15,7 @@ pip install streamlit pandas plotly scipy
 
 ### Run Dashboard
 ```bash
-cd d:\jivara\dataScience\dashboard
-streamlit run dashboard.py
+python -m streamlit run dataScience\dashboard\dashboard.py
 ```
 
 Dashboard akan buka di: `http://localhost:8501`
