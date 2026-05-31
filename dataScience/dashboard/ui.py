@@ -34,8 +34,13 @@ def apply_theme():
         font-family: 'Manrope', sans-serif;
     }}
 
-    .stApp, [data-testid="stAppViewContainer"], [data-testid="stMain"],
-    [data-testid="stAppViewBlockContainer"], .block-container {{
+    html, body, .stApp,
+    [data-testid="stAppViewContainer"],
+    [data-testid="stAppViewBlockContainer"],
+    [data-testid="stMain"],
+    section[data-testid="stMain"],
+    [data-testid="stMainBlockContainer"],
+    .block-container {{
         background: #FFFFFF !important;
     }}
 
@@ -45,16 +50,22 @@ def apply_theme():
         backdrop-filter: blur(10px);
     }}
 
-    [data-testid="stSidebar"] {{
+    section[data-testid="stSidebar"],
+    [data-testid="stSidebar"],
+    [data-testid="stSidebarContent"] {{
         background: #FFFFFF !important;
         border-right: 2px solid #E8F5EA;
     }}
 
-    [data-testid="stSidebar"] * {{
+    section[data-testid="stSidebar"] *,
+    [data-testid="stSidebar"] *,
+    [data-testid="stSidebarContent"] * {{
         color: {BRAND["ink"]} !important;
     }}
 
-    [data-testid="stSidebar"] hr {{
+    section[data-testid="stSidebar"] hr,
+    [data-testid="stSidebar"] hr,
+    [data-testid="stSidebarContent"] hr {{
         border-color: #E8F5EA !important;
     }}
 
@@ -71,11 +82,17 @@ def apply_theme():
     }}
 
     [data-testid="stMain"] p, [data-testid="stMain"] li, [data-testid="stMain"] span,
-    [data-testid="stMain"] td, [data-testid="stMain"] th, [data-testid="stMain"] label {{
+    [data-testid="stMain"] td, [data-testid="stMain"] th, [data-testid="stMain"] label,
+    section[data-testid="stMain"] p, section[data-testid="stMain"] li, section[data-testid="stMain"] span,
+    section[data-testid="stMain"] td, section[data-testid="stMain"] th, section[data-testid="stMain"] label,
+    [data-testid="stMainBlockContainer"] p, [data-testid="stMainBlockContainer"] li, [data-testid="stMainBlockContainer"] span,
+    [data-testid="stMainBlockContainer"] td, [data-testid="stMainBlockContainer"] th, [data-testid="stMainBlockContainer"] label {{
         color: {BRAND["ink"]} !important;
     }}
 
-    [data-testid="stMain"] h1, [data-testid="stMain"] h2, [data-testid="stMain"] h3 {{
+    [data-testid="stMain"] h1, [data-testid="stMain"] h2, [data-testid="stMain"] h3,
+    section[data-testid="stMain"] h1, section[data-testid="stMain"] h2, section[data-testid="stMain"] h3,
+    [data-testid="stMainBlockContainer"] h1, [data-testid="stMainBlockContainer"] h2, [data-testid="stMainBlockContainer"] h3 {{
         color: {BRAND["forest"]} !important;
     }}
 
