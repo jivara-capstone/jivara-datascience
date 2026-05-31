@@ -46,9 +46,9 @@ insight = compute_drug_insights(df)
 
 st.markdown(
     hero(
-        "BPOM data memberi konteks dunia nyata untuk keputusan medis",
-        "Semakin kaya struktur produk obat, semakin realistis sistem Jivara saat menghubungkan nama obat, komposisi, "
-        "dan interaksi yang perlu diwaspadai. Halaman ini menonjolkan pola yang paling berpengaruh ke reasoning engine.",
+        "Data obat BPOM adalah fondasi keputusan medis yang aman",
+        "Semakin lengkap data obat (nama, komposisi, zat aktif), semakin akurat sistem Jivara mendeteksi risiko interaksi. "
+        "Halaman ini menunjukkan pola obat apa yang paling banyak terdaftar dan bagaimana strukturnya.",
     ),
     unsafe_allow_html=True,
 )
@@ -64,35 +64,35 @@ i1, i2, i3 = st.columns(3)
 with i1:
     st.markdown(
         card(
-            "Golongan dominan",
-            f"{insight['top_group']} mendominasi dengan {insight['top_group_count']:,} produk. "
-            "Ini memperlihatkan bahwa use case Jivara paling relevan pada area terapi yang memang butuh kehati-hatian klinis lebih tinggi.",
+            "Jenis obat terbanyak",
+            f"{insight['top_group']} paling banyak ({insight['top_group_count']:,} produk). "
+            "Ini adalah prioritas utama untuk sistem deteksi risiko Jivara.",
         ),
         unsafe_allow_html=True,
     )
 with i2:
     st.markdown(
         card(
-            "Komposisi kombinasi bukan kasus kecil",
-            f"{insight['multi_active_share']:.0%} produk memiliki lebih dari satu zat aktif. "
-            "Artinya mapping komposisi dan normalisasi ingredient obat akan sangat menentukan kualitas alert interaksi.",
+            "Banyak obat dengan beberapa zat aktif",
+            f"{insight['multi_active_share']:.0%} obat memiliki lebih dari satu zat aktif. "
+            "Sistem harus bisa mencocokkan kombinasi zat aktif, bukan hanya satu obat.",
         ),
         unsafe_allow_html=True,
     )
 with i3:
     st.markdown(
         card(
-            "Registrasi juga punya dimensi lifecycle",
-            f"Ada sekitar {insight['expiring_1y']:,} produk yang masa berlakunya jatuh dalam 12 bulan ke depan. "
-            "Kalau project berkembang ke monitoring operasional, status regulasi bisa menjadi sinyal kualitas data tambahan.",
+            "Beberapa obat akan segera expired",
+            f"Sekitar {insight['expiring_1y']:,} produk berakhir masa berlakunya dalam 12 bulan. "
+            "Data perlu diperbarui secara berkala agar tetap akurat.",
         ),
         unsafe_allow_html=True,
     )
 
 st.markdown(
     note(
-        "<strong>Implikasi produk:data obat di Jivara tidak cukup diperlakukan sebagai daftar nama. "
-        "Perusahaan, bentuk sediaan, dan jumlah zat aktif semuanya bisa memengaruhi cara sistem menjelaskan risiko.</strong> "
+        "<strong>Catatan:</strong> Data obat tidak hanya daftar nama, tapi juga komposisi, zat aktif, dan status regulasi. "
+        "Semua ini mempengaruhi akurasi deteksi risiko interaksi."
     ),
     unsafe_allow_html=True,
 )

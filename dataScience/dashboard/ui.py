@@ -13,15 +13,15 @@ PROC = DATA / "processed"
 ASSET = BASE / "asset"
 
 BRAND = {
-    "forest": "#123524",
-    "green": "#2F6B43",
-    "mint": "#74C69D",
-    "lime": "#D8F3DC",
-    "sand": "#F6FFF8",
+    "forest": "#1E5631",  # Sidebar & headings - deep green
+    "green": "#2F7D56",   # Primary green accent
+    "mint": "#6FBC94",    # Light green for badges
+    "lime": "#E8F5EA",    # Very light green bg
+    "sand": "#FFFFFF",    # Pure white background
     "gold": "#E9C46A",
     "coral": "#E76F51",
-    "ink": "#1F2937",
-    "muted": "#5F6F65",
+    "ink": "#1F2937",     # Dark text
+    "muted": "#6B7280",   # Muted gray-green
 }
 
 
@@ -36,26 +36,26 @@ def apply_theme():
 
     .stApp, [data-testid="stAppViewContainer"], [data-testid="stMain"],
     [data-testid="stAppViewBlockContainer"], .block-container {{
-        background:
-            radial-gradient(circle at top right, rgba(116,198,157,0.18), transparent 28%),
-            linear-gradient(180deg, #fbfff9 0%, #f3fbf4 100%) !important;
+        background: #FFFFFF !important;
     }}
 
     header[data-testid="stHeader"] {{
-        background: rgba(18,53,36,0.9) !important;
+        background: #FFFFFF !important;
+        border-bottom: 2px solid #E8F5EA !important;
         backdrop-filter: blur(10px);
     }}
 
     [data-testid="stSidebar"] {{
-        background: linear-gradient(180deg, #123524 0%, #1E5631 48%, #2F6B43 100%);
+        background: #FFFFFF !important;
+        border-right: 2px solid #E8F5EA;
     }}
 
     [data-testid="stSidebar"] * {{
-        color: white !important;
+        color: {BRAND["ink"]} !important;
     }}
 
     [data-testid="stSidebar"] hr {{
-        border-color: rgba(255,255,255,0.16) !important;
+        border-color: #E8F5EA !important;
     }}
 
     [data-testid="stSidebarHeader"] img,
@@ -66,8 +66,8 @@ def apply_theme():
 
     [data-testid="stSidebarCollapsedControl"] button svg,
     header[data-testid="stHeader"] button svg {{
-        color: white !important;
-        fill: white !important;
+        color: {BRAND["forest"]} !important;
+        fill: {BRAND["forest"]} !important;
     }}
 
     [data-testid="stMain"] p, [data-testid="stMain"] li, [data-testid="stMain"] span,
@@ -80,11 +80,11 @@ def apply_theme():
     }}
 
     div[data-testid="stMetric"] {{
-        background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(244,252,246,0.95));
-        border: 1px solid rgba(47,107,67,0.10);
-        border-radius: 20px;
-        padding: 18px 20px;
-        box-shadow: 0 12px 30px rgba(18,53,36,0.06);
+        background: #FFFFFF;
+        border: 2px solid #E8F5EA;
+        border-radius: 18px;
+        padding: 20px 24px;
+        box-shadow: 0 2px 8px rgba(30,86,49,0.08);
     }}
 
     div[data-testid="stMetric"] label {{
@@ -103,9 +103,9 @@ def apply_theme():
     }}
 
     [data-testid="stExpander"] summary {{
-        background: rgba(255,255,255,0.88) !important;
-        border: 1px solid rgba(47,107,67,0.10) !important;
-        border-radius: 16px !important;
+        background: #FFFFFF !important;
+        border: 2px solid #E8F5EA !important;
+        border-radius: 14px !important;
     }}
 
     [data-baseweb="input"], [data-baseweb="select"], textarea {{
@@ -113,14 +113,12 @@ def apply_theme():
     }}
 
     .jv-hero {{
-        background:
-            radial-gradient(circle at top right, rgba(233,196,106,0.28), transparent 26%),
-            linear-gradient(135deg, #123524 0%, #1E5631 48%, #2F6B43 100%);
-        border-radius: 28px;
-        padding: 38px 34px;
+        background: linear-gradient(135deg, #1E5631 0%, #2F7D56 100%);
+        border-radius: 24px;
+        padding: 36px 32px;
         color: white;
-        box-shadow: 0 18px 45px rgba(18,53,36,0.18);
-        margin-bottom: 1rem;
+        box-shadow: 0 8px 24px rgba(30,86,49,0.15);
+        margin-bottom: 1.5rem;
     }}
 
     [data-testid="stMain"] .jv-hero h1,
@@ -144,19 +142,19 @@ def apply_theme():
 
     .jv-section h3 {{
         display: inline-block;
-        border-bottom: 4px solid {BRAND["mint"]};
-        padding-bottom: 0.3rem;
-        margin-bottom: 0.35rem;
+        border-bottom: 4px solid {BRAND["green"]};
+        padding-bottom: 0.4rem;
+        margin-bottom: 0.5rem;
     }}
 
     .jv-card {{
-        background: linear-gradient(180deg, rgba(255,255,255,0.97), rgba(247,252,248,0.96));
-        border: 1px solid rgba(47,107,67,0.16);
-        border-radius: 22px;
-        padding: 22px 22px 18px;
-        box-shadow: 0 12px 24px rgba(18,53,36,0.05);
+        background: #FFFFFF;
+        border: 2px solid #E8F5EA;
+        border-radius: 18px;
+        padding: 24px;
+        box-shadow: 0 2px 8px rgba(30,86,49,0.06);
         height: 100%;
-        min-height: 198px;
+        min-height: 200px;
     }}
 
     .jv-card h4 {{
@@ -175,10 +173,10 @@ def apply_theme():
     }}
 
     [data-testid="stDataFrame"] {{
-        border: 1px solid rgba(47,107,67,0.14);
-        border-radius: 18px;
+        border: 2px solid #E8F5EA;
+        border-radius: 16px;
         overflow: hidden;
-        box-shadow: 0 10px 24px rgba(18,53,36,0.05);
+        box-shadow: 0 2px 8px rgba(30,86,49,0.06);
     }}
 
     .jv-badge {{
@@ -193,11 +191,11 @@ def apply_theme():
     }}
 
     .jv-note {{
-        background: rgba(216,243,220,0.55);
+        background: #E8F5EA;
         border-left: 5px solid {BRAND["green"]};
-        border-radius: 16px;
+        border-radius: 14px;
         padding: 16px 18px;
-        margin: 0.5rem 0 1rem;
+        margin: 0.75rem 0 1rem;
     }}
 
     .jv-note strong {{
@@ -206,11 +204,11 @@ def apply_theme():
 
     .jv-table-wrap {{
         margin-top: 0.75rem;
-        border: 1px solid rgba(47,107,67,0.16);
-        border-radius: 20px;
+        border: 2px solid #E8F5EA;
+        border-radius: 16px;
         overflow: hidden;
-        box-shadow: 0 10px 24px rgba(18,53,36,0.06);
-        background: rgba(255,255,255,0.97);
+        box-shadow: 0 2px 8px rgba(30,86,49,0.06);
+        background: #FFFFFF;
     }}
 
     .jv-table-scroll {{
@@ -224,10 +222,10 @@ def apply_theme():
     }}
 
     .jv-table thead th {{
-        background: linear-gradient(180deg, #123524 0%, #1E5631 100%);
+        background: linear-gradient(180deg, #1E5631 0%, #2F7D56 100%);
         color: #ffffff !important;
         text-align: left;
-        padding: 12px 14px;
+        padding: 14px 16px;
         font-size: 0.9rem;
         font-weight: 700;
         border-right: 1px solid rgba(255,255,255,0.08);
@@ -235,23 +233,23 @@ def apply_theme():
     }}
 
     .jv-table tbody td {{
-        padding: 11px 14px;
+        padding: 12px 16px;
         color: {BRAND["ink"]} !important;
-        border-top: 1px solid #E2F0E7;
+        border-top: 1px solid #E8F5EA;
         vertical-align: top;
         line-height: 1.55;
-        background: rgba(255,255,255,0.98);
+        background: #FFFFFF;
     }}
 
     .jv-table tbody tr:nth-child(even) td {{
-        background: #F6FFF8;
+        background: #F9FEFB;
     }}
 
     .jv-table-empty {{
-        padding: 20px 16px;
+        padding: 24px 16px;
         color: {BRAND["muted"]} !important;
         text-align: center;
-        background: rgba(255,255,255,0.98);
+        background: #FFFFFF;
     }}
     </style>
     """
@@ -321,7 +319,8 @@ def add_sidebar(title: str, subtitle: str):
     import streamlit as st
 
     if logo.exists():
-        st.logo(str(logo), size="large")
+        st.sidebar.image(str(logo), width=200, use_container_width=False)
+        st.sidebar.markdown("")
 
     st.sidebar.markdown(f"### {title}")
     st.sidebar.caption(subtitle)

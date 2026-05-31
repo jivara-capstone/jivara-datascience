@@ -67,26 +67,26 @@ protein_dense = (
 c1, c2, c3, c4 = st.columns(4)
 c1.metric("Kelas Makanan", f"{len(df_nutrisi):,}")
 c2.metric("Total Resep", f"{len(df_resep):,}")
-c3.metric("Rata-rata Bahan", f"{recipe_insight['avg_ingredients']:.1f}")
-c4.metric("Rata-rata Langkah", f"{recipe_insight['avg_steps']:.1f}")
+c3.metric("Bahan per Resep", f"{recipe_insight['avg_ingredients']:.1f}")
+c4.metric("Langkah per Resep", f"{recipe_insight['avg_steps']:.1f}")
 
 st.markdown(section("Insight cepat"), unsafe_allow_html=True)
 ic1, ic2, ic3 = st.columns(3)
 with ic1:
     st.markdown(
         card(
-            "Padat kalori tertinggi",
-            f"{top_calorie['food_name']} muncul sebagai makanan dengan kalori tertinggi di dataset aktif "
-            f"({top_calorie['calories']:.0f} kkal per 100g). Ini cocok dijadikan contoh untuk edukasi porsi dan risk messaging.",
+            "Makanan dengan kalori tertinggi",
+            f"{top_calorie['food_name']} paling tinggi kalorinya ({top_calorie['calories']:.0f} kkal per 100g). "
+            "Penting untuk diketahui saat memberikan rekomendasi kepada pengguna.",
         ),
         unsafe_allow_html=True,
     )
 with ic2:
     st.markdown(
         card(
-            "Protein density terbaik",
-            f"{protein_dense['food_name']} punya rasio protein terhadap kalori paling kuat. "
-            "Insight seperti ini berguna saat Jivara nanti berkembang dari warning system menjadi assistant pilihan makanan yang lebih personal.",
+            "Makanan berprotein tinggi",
+            f"{protein_dense['food_name']} paling kaya protein dibanding kalorinya. "
+            "Cocok untuk edukasi nutrisi dan pilihan makanan yang lebih sehat.",
         ),
         unsafe_allow_html=True,
     )
@@ -94,8 +94,9 @@ with ic3:
     top_ing, top_ing_count = ingredient_counts.most_common(1)[0]
     st.markdown(
         card(
-            "Bahan yang paling berulang",
-            f"'{top_ing}' muncul {top_ing_count} kali di seluruh resep. Bahan berulang seperti ini layak diprioritaskan dalam knowledge base ingredient-level karena efeknya menyebar ke banyak kelas makanan.",
+            "Bahan paling sering digunakan",
+            f"'{top_ing}' muncul {top_ing_count} kali di berbagai resep. "
+            "Bahan populer seperti ini penting untuk dipantau kalau ada risiko interaksi.",
         ),
         unsafe_allow_html=True,
     )

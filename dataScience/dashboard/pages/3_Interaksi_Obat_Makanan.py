@@ -45,36 +45,37 @@ top_class = idf["Kelas_Obat"].value_counts().index[0] if not idf.empty else "-"
 
 st.markdown(
     hero(
-        "Knowledge base Jivara paling bernilai saat risiko mulai tinggi",
-        "Halaman ini menyorot makanan mana yang paling sering memicu alert, kelas obat mana yang paling sering terdampak, "
-        "serta mekanisme interaksi apa yang paling penting untuk dijelaskan dengan bahasa yang mudah dipahami pengguna.",
+        "Waspada saat risiko interaksi obat-makanan tinggi",
+        "Halaman ini menunjukkan makanan mana yang paling banyak berinteraksi dengan obat, jenis obat apa yang paling sering terdampak, "
+        "dan bagaimana interaksi terjadi agar mudah dijelaskan ke pengguna.",
     ),
     unsafe_allow_html=True,
 )
 
-c1, c2, c3, c4 = st.columns(4)
-c1.metric("Makanan di KB", f"{len(foods):,}")
+c1, c2, c3 = st.columns(3)
+c1.metric("Makanan Dipantau", f"{len(foods):,}")
 c2.metric("Total Interaksi", f"{len(idf):,}")
-c3.metric("Severity 4-5", f"{severity_share:.0%}")
-c4.metric("Kelas Obat Dominan", top_class)
+c3.metric("Severity Tinggi (4-5)", f"{severity_share:.0%}")
+
+st.metric("Jenis Obat Terbanyak", top_class)
 
 st.markdown(section("Insight cepat"), unsafe_allow_html=True)
 i1, i2, i3 = st.columns(3)
 with i1:
     st.markdown(
         card(
-            "Interaksi paling sering tidak ringan",
-            f"{severity_share:.0%} interaksi berada di severity level 4-5. "
-            "Ini menandakan Jivara memang bermain di ruang keputusan yang sensitif, sehingga penjelasan mekanisme dan tingkat urgensi harus jelas.",
+            "Mayoritas interaksi termasuk serius",
+            f"{severity_share:.0%} interaksi adalah kategori 4-5 (serius). "
+            "Ini berarti sistem warning harus jelas dan tidak boleh disepelekan.",
         ),
         unsafe_allow_html=True,
     )
 with i2:
     st.markdown(
         card(
-            "Antidiabetik paling sering bersinggungan",
-            f"Kelas obat yang paling sering muncul adalah {top_class}. "
-            "Secara produk, ini membuka peluang pengembangan alur edukasi khusus untuk pasien dengan kebutuhan pemantauan gula darah.",
+            "Jenis obat terbanyak: " + top_class,
+            f"Obat {top_class} paling sering berinteraksi dengan makanan. "
+            "Pengguna yang minum obat jenis ini perlu ekstra hati-hati saat memilih makanan.",
         ),
         unsafe_allow_html=True,
     )
@@ -82,17 +83,17 @@ with i3:
     food_count = int(idf["Makanan"].value_counts().iloc[0])
     st.markdown(
         card(
-            "Makanan prioritas untuk penjelasan mendalam",
-            f"{top_food.replace('-', ' ').title()} memiliki jumlah interaksi terbanyak di knowledge base ({food_count} interaksi). "
-            "Kelas seperti ini cocok dijadikan template UX untuk halaman detail warning.",
+            "Makanan paling berisiko: " + top_food.replace('-', ' ').title(),
+            f"{top_food.replace('-', ' ').title()} memiliki {food_count} interaksi dengan berbagai obat. "
+            "Makanan ini harus menjadi contoh utama untuk edukasi pengguna.",
         ),
         unsafe_allow_html=True,
     )
 
 st.markdown(
     note(
-        "<strong>Makna untuk AI reasoning: pengguna tidak hanya perlu tahu 'aman atau tidak', "
-        "tetapi juga apakah risikonya karena sodium, kunyit, santan, gula, atau mekanisme lain yang bisa dipahami sehari-hari.</strong>"
+        "<strong>Penting untuk pengguna: bukan hanya \"aman atau tidak\", tapi juga \"kenapa\" dan \"apa yang harus dilakukan\". "
+        "Misalnya, apakah risikonya karena kalsium, zat besi, asam, atau hal lain yang mudah dipahami?</strong>"
     ),
     unsafe_allow_html=True,
 )

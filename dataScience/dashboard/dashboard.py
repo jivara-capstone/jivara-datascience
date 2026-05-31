@@ -44,12 +44,6 @@ recipe_insight = compute_recipe_insights(df_resep)
 drug_insight = compute_drug_insights(df_obat)
 pl = plotly_layout()
 
-logo = ASSET / "text.png"
-if logo.exists():
-    left, center, right = st.columns([1.2, 1.6, 1.2])
-    with center:
-        st.image(str(logo), width=360)
-
 st.markdown(
     hero(
         "Jivara: dari makanan yang terlihat ke keputusan medis yang lebih aman",
@@ -60,19 +54,18 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-col1, col2, col3, col4, col5 = st.columns(5)
+col1, col2, col3, col4 = st.columns(4)
 col1.metric("Kelas Makanan", f"{len(df_nutrisi):,}")
 col2.metric("Resep", f"{len(df_resep):,}")
-col3.metric("Produk BPOM", f"{len(df_obat):,}")
-col4.metric("Makanan di KB", f"{len(foods):,}")
-col5.metric("Interaksi KB", f"{len(idf):,}")
+col3.metric("Makanan Dipantau", f"{len(foods):,}")
+col4.metric("Risiko Interaksi", f"{len(idf):,}")
 
 st.markdown(
     note(
-        f"<strong>Insight kunci: Jivara menghubungkan {len(df_nutrisi)} kelas makanan, "
-        f"{len(df_resep):,} resep lokal, dan {len(df_obat):,} produk obat BPOM ke dalam {len(idf):,} interaksi obat-makanan "
-        f"yang terdeteksi. Artinya setiap makanan rata-rata terhubung ke "
-        f"{len(idf) / max(len(foods), 1):.1f} potensi risiko obat — cukup untuk memberikan warning yang bermakna di level hidangan sehari-hari.</strong>"
+        f"<strong>Snapshot data:</strong> Jivara menghubungkan {len(df_nutrisi)} jenis makanan, "
+        f"{len(df_resep):,} resep lokal, dan {len(df_obat):,} produk obat yang terdaftar BPOM. "
+        f"Dari data tersebut, sistem mendeteksi {len(idf):,} interaksi potensial antara obat dan makanan. "
+        f"Rata-rata setiap makanan terhubung ke {len(idf) / max(len(foods), 1):.1f} risiko—cukup untuk memberikan peringatan bermakna saat pengguna memilih menu atau minum obat.</strong>"
     ),
     unsafe_allow_html=True,
 )
@@ -82,31 +75,31 @@ row1, row2, row3 = st.columns(3)
 with row1:
     st.markdown(
         card(
-            "Makanan inti project sangat resep-driven",
-            f"Dataset resep berisi {len(df_resep):,} resep untuk {df_resep['Kelas_YOLO'].nunique()} kelas makanan. "
-            f"Kelas paling sering muncul adalah {recipe_insight['most_common_class'].replace('-', ' ').title()} "
-            f"dengan {recipe_insight['most_common_class_count']} resep, memberi sinyal kelas ini penting untuk prioritas model dan UX.",
-            ["Cookpad", "61 kelas", "resep lokal"],
+            "Dataset resep sangat beragam",
+            f"Ada {len(df_resep):,} resep untuk {df_resep['Kelas_YOLO'].nunique()} jenis makanan. "
+            f"Makanan terbanyak adalah {recipe_insight['most_common_class'].replace('-', ' ').title()} "
+            f"dengan {recipe_insight['most_common_class_count']} resep—ini makanan penting untuk sistem.",
+            ["61 jenis makanan", "dari Cookpad", "lokal Indonesia"],
         ),
         unsafe_allow_html=True,
     )
 with row2:
     st.markdown(
         card(
-            "Portofolio BPOM sangat didominasi obat keras",
-            f"{drug_insight['top_group']} mencakup {drug_insight['top_group_count']:,} produk. "
-            f"Selain itu, {drug_insight['local_share']:.0%} produk berasal dari kategori lokal/lainnya, jadi coverage registrasi domestik adalah kekuatan data ini.",
-            ["BPOM", "regulatory", "lokal dominan"],
+            "Obat keras mendominasi daftar BPOM",
+            f"Obat {drug_insight['top_group']} terbanyak dengan {drug_insight['top_group_count']:,} produk. "
+            f"Selain itu, {drug_insight['local_share']:.0%} obat lokal atau uncategorized—banyak produk Indonesia terdaftar.",
+            ["registrasi lokal", "BPOM regulatory", "keamanan diperhatikan"],
         ),
         unsafe_allow_html=True,
     )
 with row3:
     st.markdown(
         card(
-            "Risiko interaksi paling sering tidak ringan",
-            f"Dari {len(idf):,} interaksi di knowledge base, severity level 3-5 mendominasi. "
-            f"Ini berarti value Jivara lebih kuat sebagai sistem pencegahan keputusan berisiko daripada sekadar edukasi nutrisi umum.",
-            ["severity 3-5", "clinical alert", "safety first"],
+            "Mayoritas interaksi termasuk kategori serius",
+            f"Dari {len(idf):,} interaksi yang terdaftar, sebagian besar level 3-5 (serius). "
+            f"Ini berarti Jivara penting untuk pencegahan, bukan sekadar informasi nutrisi biasa.",
+            ["severe interactions", "clinical alerts", "safety system"],
         ),
         unsafe_allow_html=True,
     )
@@ -159,39 +152,39 @@ ins1, ins2 = st.columns(2)
 with ins1:
     st.markdown(
         card(
-            "Prioritas pengalaman pengguna",
-            f"Resep rata-rata membutuhkan {recipe_insight['avg_ingredients']:.1f} bahan dan {recipe_insight['avg_steps']:.1f} langkah. "
-            "Artinya penjelasan risiko sebaiknya dibuat sesingkat mungkin, karena konteks penggunaan sangat mungkin terjadi saat pengguna sedang memasak atau memilih makanan.",
-            ["UX", "mobile-first", "short alerts"],
+            "Desain untuk pengguna yang sibuk",
+            f"Setiap resep rata-rata butuh {recipe_insight['avg_ingredients']:.1f} bahan dan {recipe_insight['avg_steps']:.1f} langkah memasak. "
+            "Artinya warning obat-makanan harus singkat dan jelas, karena pengguna kemungkinan besar sedang memasak atau memilih menu makan.",
+            ["UX priority", "mobile-first", "alert design"],
         ),
         unsafe_allow_html=True,
     )
 with ins2:
     st.markdown(
         card(
-            "Prioritas reasoning engine",
-            f"{drug_insight['multi_active_share']:.0%} produk BPOM memiliki lebih dari satu zat aktif. "
-            "Ini memberi sinyal bahwa reasoning engine Jivara perlu siap menangani kombinasi komposisi, bukan hanya pencocokan satu obat ke satu makanan.",
-            ["knowledge graph", "multi-ingredient", "backend"],
+            "Sistem butuh mengenali kombinasi obat",
+            f"{drug_insight['multi_active_share']:.0%} obat BPOM memiliki lebih dari satu zat aktif. "
+            "Ini berarti sistem tidak bisa hanya mencocokkan satu obat ke satu makanan—harus bisa handle kombinasi zat aktif yang kompleks.",
+            ["kompleks composition", "multi-zat", "reasoning"],
         ),
         unsafe_allow_html=True,
     )
 
-st.markdown(section("Arah eksplorasi halaman"), unsafe_allow_html=True)
+st.markdown(section("Halaman lain yang bisa dijelajahi"), unsafe_allow_html=True)
 nav1, nav2, nav3 = st.columns(3)
 with nav1:
     st.markdown(
         card(
             "Nutrisi & Resep",
-            "Lihat makanan yang padat kalori, kelas resep paling kompleks, dan bahan yang paling sering berulang untuk memahami pola konsumsi serta konteks masakan Indonesia.",
+            "Lihat makanan berkalori tinggi, resep paling kompleks, bahan yang sering digunakan, dan pola konsumsi makanan Indonesia.",
         ),
         unsafe_allow_html=True,
     )
 with nav2:
     st.markdown(
         card(
-            "Obat BPOM",
-            "Telusuri dominasi golongan obat, bentuk sediaan utama, komposisi multi-zat aktif, dan profil produk lokal versus impor.",
+            "Daftar Obat BPOM",
+            "Telusuri jenis obat, bentuk sediaan, zat aktif dalam produk, serta obat lokal versus impor.",
         ),
         unsafe_allow_html=True,
     )
@@ -199,7 +192,7 @@ with nav3:
     st.markdown(
         card(
             "Interaksi Obat-Makanan",
-            "Eksplorasi makanan dengan severity tertinggi, kelas obat paling sering terdampak, serta mekanisme interaksi yang paling penting untuk dijelaskan ke pengguna.",
+            "Cari makanan berbahaya, obat yang sering berinteraksi, dan cara interaksi terjadi untuk edukasi pengguna.",
         ),
         unsafe_allow_html=True,
     )
