@@ -52,6 +52,7 @@ OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 COLOR_BASELINE = "#FF6B6B"      # Merah - Baseline/tanpa DS pipeline
 COLOR_OPTIMIZED = "#4ECDC4"     # Hijau tosca - Dengan DS pipeline
 COLOR_IMPROVEMENT = "#95E1D3"
+PIPELINE_LABELS = ["Baseline\n(Raw Data)", "Optimized\n(DS Pipeline)"]
 
 
 # ============================================================
@@ -99,6 +100,95 @@ def ab_test(optimized, baseline):
         "d": d, 
         "d_label": label_d(d),
     }
+
+
+def format_percent_axis(axis):
+    """Format axis as percentage."""
+    axis.set_major_formatter(plt.FuncFormatter(lambda value, _: f"{value:.0%}"))
+
+
+def draw_mean_panel(ax, result, ylabel):
+    """Consistent left panel for all A/B charts."""
+    means = [result["baseline_mean"], result["optimized_mean"]]
+    colors = [COLOR_BASELINE, COLOR_OPTIMIZED]
+    bars = ax.bar(
+        PIPELINE_LABELS,
+        means,
+        color=colors,
+        alpha=0.85,
+        edgecolor="black",
+        linewidth=1.5,
+        width=0.55,
+    )
+    for bar, mean in zip(bars, means):
+        ax.text(
+            bar.get_x() + bar.get_width() / 2,
+            mean + 0.02,
+            f"{mean:.1%}",
+            ha="center",
+            fontsize=16,
+            fontweight="bold",
+        )
+
+    ax.annotate(
+        f'+{result["diff"]:.1%}',
+        xy=(0.5, sum(means) / 2),
+        fontsize=18,
+        fontweight="bold",
+        color="#27AE60",
+        ha="center",
+        bbox=dict(boxstyle="round,pad=0.5", fc="lightgreen", alpha=0.9),
+    )
+    ax.set_ylabel(ylabel, fontsize=13, fontweight="bold")
+    ax.set_ylim(0, 1.0)
+    format_percent_axis(ax.yaxis)
+    ax.set_title("Perbandingan Rata-rata", fontsize=14, fontweight="bold")
+    ax.grid(axis="y", alpha=0.3)
+
+
+def draw_distribution_panel(ax, df, metric, ylabel):
+    """Consistent right panel for all A/B charts."""
+    for pipeline, color in [("Baseline", COLOR_BASELINE), ("Optimized", COLOR_OPTIMIZED)]:
+        data = df[df["pipeline"] == pipeline][metric]
+        ax.hist(
+            data,
+            bins=25,
+            alpha=0.6,
+            label=pipeline,
+            color=color,
+            edgecolor="black",
+            linewidth=0.8,
+        )
+    ax.set_xlabel(ylabel, fontsize=12)
+    ax.set_ylabel("Jumlah Sampel", fontsize=12)
+    format_percent_axis(ax.xaxis)
+    ax.set_title("Distribusi Per Pipeline", fontsize=14, fontweight="bold")
+    ax.legend(fontsize=11)
+    ax.grid(axis="y", alpha=0.3)
+
+
+def plot_metric(df, result, metric, title, left_ylabel, right_ylabel, output_name):
+    """Template visualisasi seragam untuk semua RQ."""
+    fig, axes = plt.subplots(1, 2, figsize=(14, 6))
+    draw_mean_panel(axes[0], result, left_ylabel)
+    draw_distribution_panel(axes[1], df, metric, right_ylabel)
+
+    sig = "SIGNIFIKAN" if result["significant"] else "TIDAK SIGNIFIKAN"
+    fig.suptitle(title, fontsize=16, fontweight="bold", y=1.02)
+    fig.text(
+        0.5,
+        -0.02,
+        f"Hasil: {sig} (p={result['p_welch']:.4f}) | Effect size: {result['d']:.2f} ({result['d_label']}) | "
+        f"95% CI: [{result['ci_lo']:.1%}, {result['ci_hi']:.1%}] | N={N_SAMPLES} per grup",
+        ha="center",
+        fontsize=10,
+        style="italic",
+        bbox=dict(boxstyle="round", fc="#F0F0F0", alpha=0.8),
+    )
+
+    plt.tight_layout()
+    plt.savefig(OUTPUT_DIR / output_name, dpi=300, bbox_inches="tight")
+    plt.close()
 
 
 # ============================================================
@@ -157,6 +247,17 @@ def plot_rq1(df, result):
     RQ1: Akurasi Deteksi Makanan (YOLO)
     → Image_Dataset_Pipeline_Roboflow.ipynb
     """
+    plot_metric(
+        df,
+        result,
+        "yolo_accuracy",
+        "RQ1: Akurasi Deteksi Makanan dengan Data Science Pipeline",
+        "Akurasi Deteksi Makanan (%)",
+        "Akurasi (%)",
+        "RQ1_yolo_accuracy.png",
+    )
+    return
+
     fig, axes = plt.subplots(1, 2, figsize=(14, 6))
 
     # Panel Kiri: Mean Comparison
@@ -214,6 +315,17 @@ def plot_rq3(df, result):
     RQ3: Kelengkapan Katalog Nutrisi
     → Master_Data_Preparation_Pipeline_v3.ipynb
     """
+    plot_metric(
+        df,
+        result,
+        "nutrisi_completeness",
+        "RQ3: Kelengkapan Katalog Nutrisi dengan Data Science Pipeline",
+        "Kelengkapan Katalog Nutrisi (%)",
+        "Kelengkapan (%)",
+        "RQ3_nutrisi_completeness.png",
+    )
+    return
+
     fig, axes = plt.subplots(1, 2, figsize=(14, 6))
 
     ax = axes[0]
@@ -269,6 +381,17 @@ def plot_rq5(df, result):
     RQ5: Akurasi Deteksi Interaksi Obat-Makanan
     → BPOM_Drug_Data_Processing.ipynb + Integrated KB
     """
+    plot_metric(
+        df,
+        result,
+        "interaksi_recall",
+        "RQ5: Akurasi Deteksi Interaksi Obat-Makanan dengan DS Pipeline",
+        "Akurasi Deteksi Interaksi (%)",
+        "Recall (%)",
+        "RQ5_interaksi_recall.png",
+    )
+    return
+
     fig, axes = plt.subplots(1, 2, figsize=(14, 6))
 
     ax = axes[0]
