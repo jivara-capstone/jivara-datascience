@@ -151,6 +151,11 @@ Output penting dari proses ini antara lain:
 
 Knowledge base ini disiapkan agar Backend dapat melakukan pengecekan risiko interaksi obat-makanan berdasarkan makanan yang terdeteksi dan obat yang dikonsumsi pengguna.
 
+Catatan implementasi saat ini:
+
+- Rule interaksi aktif dibaca dari `data_output/processed/drug_food_interactions.csv`.
+- Artefak tersebut dipadukan dengan `food_to_ingredient_kb.json` untuk memahami bahan pemicu pada makanan.
+
 ## Kesimpulan
 
 Tujuan utama Data Science pada proyek Jivara adalah menyiapkan data yang bersih, terstruktur, tervalidasi, dan siap dipakai oleh AI Engineer maupun Backend.

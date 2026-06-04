@@ -28,7 +28,6 @@ Berikut adalah penjelasan mengenai struktur folder dalam proyek ini:
 *   **`data_mentah/`**: Berisi dataset asli sebelum diproses.
     *   `makanan_indonesia/`: Dataset lama/Kaggle. Untuk training deteksi makanan terbaru, jangan dipakai karena kualitas dan distribusi kelasnya tidak stabil.
     *   `nutrition1.csv`: Data nutrisi makanan Indonesia yang digunakan pada pipeline v3.
-    *   `indonesian_food_drug_interactions.json`: Basis pengetahuan interaksi obat dan makanan Indonesia.
 *   **`data_output/`**: Hasil akhir dari pipeline pemrosesan data.
     *   `for_ai_engineer/`: Folder khusus berisi file pendukung untuk integrasi model.
         * `exports/`: Hasil export akhir dataset computer vision yang digunakan atau dikirim ke AI Engineer.
@@ -43,6 +42,19 @@ Berikut adalah penjelasan mengenai struktur folder dalam proyek ini:
     *   `DATA_SCIENCE_OBJECTIVES.md`: Ringkasan tujuan dan pertanyaan bisnis utama Data Science.
 *   **Skrip Utilitas**:
     *   `scripts/`: Berisi skrip pendukung untuk audit, cleaning, integrasi image, dan pembuatan lookup.
+
+## Catatan Interaksi Obat-Makanan
+
+Sumber yang benar-benar dipakai adalah:
+
+- `data_output/processed/drug_food_interactions.csv` sebagai rule interaksi makanan-kategori obat
+- `data_output/for_ai_engineer/food_to_ingredient_kb.json` sebagai mapping kelas makanan ke bahan
+- `data_output/processed/drug_name_complete_category_lookup.csv` sebagai penghubung nama obat BPOM ke kategori interaksi
+
+Sebagian rule pada `drug_food_interactions.csv` berasal dari kurasi literatur berbantuan LLM,
+dan sebagian lain berasal dari inferensi deterministik berbasis ingredient mapping dan gap analysis BPOM.
+Untuk kebutuhan audit internal, file `drug_food_interactions.csv` saat ini diperlakukan sebagai input eksternal yang diterima tim dari dataset Kaggle `Interaksi Obat dan Makanan`, lalu dipakai dan diperkaya lebih lanjut di dalam project:
+`https://www.kaggle.com/datasets/rizkipangestuas/interaksi-obat-dan-makanan/data`
 
 ## Cara Menjalankan Pipeline Deteksi Makanan
 Fokus training deteksi makanan menggunakan hasil export akhir dari notebook `Image_Dataset_Pipeline_Roboflow.ipynb`.

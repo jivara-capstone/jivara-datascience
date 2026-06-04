@@ -51,6 +51,14 @@ Fungsi:
 - `ingredient_to_food_kb.json` menghubungkan bahan ke daftar makanan.
 - `drug_food_interactions.csv` dapat dipakai sebagai rule awal untuk mengecek relasi makanan dan kategori obat.
 
+Catatan lineage:
+
+- `drug_food_interactions.csv` adalah artefak rule yang dipakai aktif oleh project.
+- File ini merupakan salinan handoff dari versi `data_output/processed/drug_food_interactions.csv`.
+- Sumbernya merupakan gabungan kurasi literatur berbantuan LLM dan extension deterministik berbasis ingredient mapping.
+- Untuk keperluan provenance, rule inti diperlakukan sebagai input eksternal tim yang berasal dari dataset Kaggle `Interaksi Obat dan Makanan`, lalu dipakai dan diperkaya di project ini:
+  `https://www.kaggle.com/datasets/rizkipangestuas/interaksi-obat-dan-makanan/data`
+
 Notebook terkait:
 
 - `notebooks/Cookpad_Resep_Data_Processing.ipynb`

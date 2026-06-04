@@ -21,6 +21,13 @@ Dokumen ini menjelaskan artefak data utama yang dihasilkan dari notebook Data Sc
 | Interaksi | `data_output/processed/drug_food_interactions.csv` | Rule interaksi makanan dan kategori obat. |
 | Lookup obat | `data_output/processed/drug_name_complete_category_lookup.csv` | Lookup nama obat BPOM ke kategori interaksi. |
 
+Catatan:
+
+Rule interaksi aktif pada project ini dibaca dari `data_output/processed/drug_food_interactions.csv`.
+File tersebut adalah artefak operasional yang dipakai downstream oleh lookup obat, dashboard, dan handoff AI Engineer.
+Untuk audit provenance, file ini diperlakukan sebagai input eksternal yang diterima tim dari dataset Kaggle `Interaksi Obat dan Makanan`, lalu dipakai dan diperkaya di dalam project:
+`https://www.kaggle.com/datasets/rizkipangestuas/interaksi-obat-dan-makanan/data`
+
 ## 1. Dataset Computer Vision YOLO
 
 Lokasi final:
@@ -192,6 +199,15 @@ Jumlah baris: 1,037.
 Fungsi:
 
 Menyimpan rule interaksi antara kelas makanan/bahan makanan dan kategori obat.
+
+Asal data praktis:
+
+- daftar kelas makanan dan bahan diperkaya dari artefak resep seperti `food_to_ingredient_kb.json`
+- rule inti berisi entri kurasi literatur berbantuan LLM
+- sebagian kategori tambahan diturunkan secara deterministik dari ingredient mapping dan gap analysis BPOM
+
+File ini sebaiknya dibaca sebagai rule base operasional project, bukan sebagai hasil ekstraksi otomatis penuh dari satu file mentah tunggal.
+Untuk review tim, rule inti sebaiknya dianggap sebagai dataset Kaggle yang diadopsi lalu dipakai sebagai basis integrasi dan extension internal.
 
 Kolom yang umum digunakan:
 
