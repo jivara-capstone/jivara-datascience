@@ -1,60 +1,126 @@
-DsJivara: Data Preparation Pipeline
-Dokumentasi ini ditujukan bagi AI Engineer untuk memahami struktur data, alur pipeline, dan cara penggunaan dataset dalam proyek DsJivara (Capstone Project).
+# Project Capstone : Jivara Data Science
 
-Gambaran Proyek
-DsJivara adalah sistem cerdas yang mengintegrasikan deteksi makanan, analisis nutrisi, dan penalaran farmakologis (interaksi obat dan makanan). Pipeline ini bertanggung jawab untuk membersihkan, menggabungkan, dan menyiapkan data mentah menjadi dataset yang siap digunakan untuk pelatihan model AI (seperti YOLOv11) dan integrasi sistem backend.
+### Data Preparation Pipeline for Nutrition, Drug, and Food Interaction Intelligence
 
-Tujuan Data Science
-Pekerjaan Data Science pada proyek ini diarahkan untuk menjawab 5 pertanyaan bisnis utama:
+---
 
-Bagaimana menyiapkan dataset image makanan yang layak untuk training model computer vision YOLO?
-Bagaimana memetakan hasil deteksi makanan dari model YOLO ke informasi bahan makanan dan nutrisi?
-Bagaimana membangun katalog nutrisi makanan Indonesia yang siap digunakan oleh Backend dan AI?
-Bagaimana membersihkan dan menstandarkan data obat BPOM agar dapat digunakan untuk sistem interaksi obat-makanan?
-Bagaimana membangun knowledge base yang menghubungkan makanan, bahan, nutrisi, obat, dan interaksi obat-makanan?
-Penjelasan lengkap mengenai tujuan, proses, input, dan output Data Science tersedia di:
+[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+[![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?style=flat-square&logo=jupyter&logoColor=white)](https://jupyter.org/)
+[![Pandas](https://img.shields.io/badge/Pandas-Data_Processing-150458?style=flat-square&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)](https://streamlit.io/)
+[![YOLO](https://img.shields.io/badge/YOLO-Computer_Vision-111827?style=flat-square)](https://github.com/ultralytics/ultralytics)
+[![Roboflow](https://img.shields.io/badge/Roboflow-Dataset-6706CE?style=flat-square)](https://roboflow.com/)
 
-notebooks/DATA_SCIENCE_OBJECTIVES.md
+---
 
-Index dokumentasi output tersedia di:
+## Ringkasan Proyek
 
-data_output/docs/README.md
+Jivara Data Science adalah bagian dari proyek capstone Jivara yang berfokus pada persiapan data untuk kebutuhan AI dan backend. Pipeline ini menggabungkan proses pengolahan dataset makanan, nutrisi, resep, obat BPOM, serta interaksi obat-makanan menjadi aset data yang siap dipakai untuk pelatihan model computer vision, knowledge base, dan integrasi aplikasi.
 
-Struktur Direktori
-Berikut adalah penjelasan mengenai struktur folder dalam proyek ini:
+Seluruh pekerjaan Data Science berada di direktori [`dataScience/`](./dataScience/), mulai dari data mentah, notebook eksperimen, hasil pemrosesan, dokumentasi, hingga artefak handoff untuk AI Engineer dan backend.
 
-data_mentah/: Berisi dataset asli sebelum diproses.
-makanan_indonesia/: Dataset lama/Kaggle. Untuk training deteksi makanan terbaru, jangan dipakai karena kualitas dan distribusi kelasnya tidak stabil.
-nutrition1.csv: Data nutrisi makanan Indonesia yang digunakan pada pipeline v3.
-indonesian_food_drug_interactions.json: Basis pengetahuan interaksi obat dan makanan Indonesia.
-data_output/: Hasil akhir dari pipeline pemrosesan data.
-for_ai_engineer/: Folder khusus berisi file pendukung untuk integrasi model.
-exports/: Hasil export akhir dataset computer vision yang digunakan atau dikirim ke AI Engineer.
-for_backend/: Folder khusus berisi knowledge base dan lookup untuk integrasi backend.
-processed/: Dataset tabular hasil cleaning dan transformasi.
-docs/: Dokumentasi pendukung seperti data dictionary, laporan dataset, dan handoff notes.
-notebooks/:
-Image_Dataset_Pipeline_Roboflow.ipynb: Pipeline dataset image Roboflow dan export final computer vision.
-BPOM_Drug_Data_Processing.ipynb: Pipeline cleaning dan standarisasi data obat BPOM.
-Cookpad_Resep_Data_Processing.ipynb: Pipeline resep dan mapping makanan ke bahan.
-Master_Data_Preparation_Pipeline_v3.ipynb: Pipeline katalog nutrisi dan knowledge base v3.
-DATA_SCIENCE_OBJECTIVES.md: Ringkasan tujuan dan pertanyaan bisnis utama Data Science.
-Skrip Utilitas:
-scripts/: Berisi skrip pendukung untuk audit, cleaning, integrasi image, dan pembuatan lookup.
-Cara Menjalankan Pipeline Deteksi Makanan
-Fokus training deteksi makanan menggunakan hasil export akhir dari notebook Image_Dataset_Pipeline_Roboflow.ipynb.
+---
 
-Artefak final yang digunakan untuk handoff computer vision berada di:
+## Fitur Utama
 
-data_output/for_ai_engineer/exports
-Folder kerja YOLO lain di dalam data_output/ diperlakukan sebagai artefak intermediate atau hasil proses pipeline, bukan output utama handoff.
+### **Pipeline Data Science**
+- **Persiapan Dataset Deteksi Makanan:** Menyiapkan dataset gambar makanan Indonesia untuk training model computer vision berbasis YOLO.
+- **Pengolahan Nutrisi Makanan:** Membersihkan dan menyatukan katalog nutrisi makanan agar siap dipakai oleh sistem AI dan backend.
+- **Pemrosesan Data Obat BPOM:** Membersihkan, standarisasi, dan pemetaan data obat untuk mendukung analisis interaksi obat-makanan.
+- **Knowledge Base Interaksi:** Menghubungkan makanan, bahan, nutrisi, obat, dan kategori interaksi ke dalam dataset terstruktur.
+- **Dokumentasi dan Handoff:** Menyediakan data dictionary, audit dataset, handoff notes, dan file output siap integrasi.
 
-Detail Dataset (YOLOv11)
-Dataset deteksi makanan disiapkan dari image Roboflow melalui proses validasi anotasi, pengecekan distribusi kelas, deteksi duplikasi, balancing, konversi format YOLO, dan export akhir.
+### **Dashboard Analisis**
+- **Dashboard Streamlit:** Visualisasi dan eksplorasi hasil olahan data melalui modul nutrisi resep, obat BPOM, dan interaksi obat-makanan.
 
-Ringkasan audit dataset tersedia di:
+---
 
-data_output/docs/dataset_report_roboflow.md
+## Struktur Repositori
 
-🛠️ Kontak & Kontribusi
-Jika terdapat kendala teknis atau pertanyaan mengenai pemetaan data, silakan hubungi tim Data Science atau buat issue di repositori ini.
+Fokus utama repositori ini untuk kebutuhan Data Science ada di:
+
+- `/dataScience` - ([Lihat README Data Science](./dataScience/README.md))
+- `/dataScience/notebooks` - Notebook pipeline utama dan objective Data Science
+- `/dataScience/data_output` - Output final, dokumen, dan artefak handoff
+- `/dataScience/dashboard` - Dashboard Streamlit untuk eksplorasi hasil data
+
+---
+
+## Persiapan (Prerequisites)
+
+Sebelum memulai, pastikan Anda telah menginstal:
+- [Python](https://www.python.org/)
+- [pip](https://pypi.org/project/pip/)
+- [Jupyter Notebook / JupyterLab](https://jupyter.org/)
+- [Streamlit](https://streamlit.io/)
+
+---
+
+## Memulai Proyek Secara Lokal
+
+### 1. Masuk ke Folder Data Science
+
+```bash
+cd dataScience
+```
+
+### 2. Install Dependency Root Proyek
+
+Jika Anda menggunakan `requirements.txt` dari root repository:
+
+```bash
+pip install -r ../requirements.txt
+```
+
+### 3. Buka Notebook Pipeline
+
+Notebook utama untuk pipeline persiapan data:
+
+```bash
+jupyter notebook notebooks/Master_Data_Preparation_Pipeline_v3.ipynb
+```
+
+Notebook lain yang tersedia:
+
+- [`dataScience/notebooks/Image_Dataset_Pipeline_Roboflow.ipynb`](./dataScience/notebooks/Image_Dataset_Pipeline_Roboflow.ipynb)
+- [`dataScience/notebooks/BPOM_Drug_Data_Processing.ipynb`](./dataScience/notebooks/BPOM_Drug_Data_Processing.ipynb)
+- [`dataScience/notebooks/Cookpad_Resep_Data_Processing.ipynb`](./dataScience/notebooks/Cookpad_Resep_Data_Processing.ipynb)
+
+### 4. Jalankan Dashboard Streamlit
+
+```bash
+streamlit run dashboard/dashboard.py
+```
+
+---
+
+## Output Penting
+
+Beberapa output penting yang dapat langsung digunakan:
+
+- [`dataScience/data_output/docs/data_dictionary.md`](./dataScience/data_output/docs/data_dictionary.md)
+- [`dataScience/data_output/docs/handoff_notes.md`](./dataScience/data_output/docs/handoff_notes.md)
+- [`dataScience/data_output/docs/dataset_report_roboflow.md`](./dataScience/data_output/docs/dataset_report_roboflow.md)
+- [`dataScience/data_output/for_ai_engineer/exports`](./dataScience/data_output/for_ai_engineer/exports)
+- [`dataScience/data_output/for_backend/drug_food_kb_final_v3.json`](./dataScience/data_output/for_backend/drug_food_kb_final_v3.json)
+
+---
+
+## Dokumentasi Tambahan
+
+- [README Data Science](./dataScience/README.md)
+- [Objective Data Science](./dataScience/notebooks/DATA_SCIENCE_OBJECTIVES.md)
+- [README Dokumentasi Output](./dataScience/data_output/docs/README.md)
+- [README Dashboard](./dataScience/dashboard/README_DASHBOARD.md)
+
+---
+
+## License
+
+Jivara - Copyright (c) 2026. All Rights Reserved.
+
+---
+
+<p align="center">
+ <b>Jivara Data Science Team</b>
+</p>
