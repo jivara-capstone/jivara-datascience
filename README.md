@@ -46,6 +46,31 @@ Fokus utama repositori ini untuk kebutuhan Data Science ada di:
 
 ---
 
+## Catatan Ukuran Repository
+
+Untuk menjaga ukuran repository tetap ringan, folder berikut tidak disimpan di paket project utama:
+
+- `dataScience/data_mentah`
+- `dataScience/data_output`
+
+Kedua folder tersebut dipindahkan ke Google Drive karena berisi dataset mentah, hasil olahan, export image, dan artefak handoff berukuran besar:
+
+- Google Drive data: <https://drive.google.com/drive/folders/1HzWPLhHqa1jjC5Oykw7oDFry1PFLo5hy?usp=drive_link>
+
+Dampaknya terhadap ukuran project:
+
+- Menghapus `dataScience/data_mentah` dan `dataScience/data_output` membuat isi folder `dataScience` tersisa sekitar `17.93 MB`.
+- Project dapat berada di bawah `100 MB` hanya jika folder `.git` tidak ikut dimasukkan ke file zip.
+- Jika zip dibuat dari root project dan `.git` masih ikut, ukuran zip tetap berpotensi jauh di atas `100 MB`.
+
+Rekomendasi distribusi:
+
+- Buat file zip tanpa `.git`
+- Sertakan source code, notebook, dashboard, dan dokumentasi
+- Ambil data mentah dan output final dari Google Drive di atas
+
+---
+
 ## Persiapan (Prerequisites)
 
 Sebelum memulai, pastikan Anda telah menginstal:

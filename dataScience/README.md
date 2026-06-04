@@ -43,6 +43,20 @@ Berikut adalah penjelasan mengenai struktur folder dalam proyek ini:
 *   **Skrip Utilitas**:
     *   `scripts/`: Berisi skrip pendukung untuk audit, cleaning, integrasi image, dan pembuatan lookup.
 
+## Catatan Penyimpanan Data Besar
+
+Untuk versi repository yang dibagikan, folder `data_mentah/` dan `data_output/` dapat dihapus dari project utama agar ukuran file lebih kecil. Kedua folder tersebut berisi data mentah, hasil processing, export dataset computer vision, dan artefak handoff yang ukurannya sangat besar, sehingga dipindahkan ke Google Drive berikut:
+
+<https://drive.google.com/drive/folders/1HzWPLhHqa1jjC5Oykw7oDFry1PFLo5hy?usp=drive_link>
+
+Implikasi ukuran:
+
+*   Jika `data_mentah/` dan `data_output/` dihapus, sisa isi folder `dataScience/` sekitar `17.93 MB`.
+*   Repository dapat berada di bawah `100 MB` bila file zip dibuat tanpa menyertakan folder `.git`.
+*   Jika `.git` ikut ter-zip dari root repository, ukuran total masih dapat melebihi `100 MB`.
+
+Karena itu, untuk kebutuhan submission atau distribusi ringan, gunakan source code, notebook, dashboard, dan dokumentasi dari repository ini, lalu unduh data mentah serta output final melalui Google Drive di atas.
+
 ## Catatan Interaksi Obat-Makanan
 
 Sumber yang benar-benar dipakai adalah:
