@@ -89,7 +89,7 @@ Notebook lain yang tersedia:
 ### 4. Jalankan Dashboard Streamlit
 
 ```bash
-streamlit run dashboard/dashboard.py
+python -m streamlit run dataScience\dashboard\dashboard.py
 ```
 
 ---
