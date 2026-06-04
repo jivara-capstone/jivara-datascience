@@ -375,6 +375,41 @@ def note(text: str):
     return f'<div class="jv-note">{text}</div>'
 
 
+def split_pipe_values(value: object):
+    if pd.isna(value):
+        return []
+    return [item.strip() for item in str(value).split("|") if item and item.strip()]
+
+
+def format_interaction_type(value: object):
+    mapping = {
+        "pharmacokinetic": "Farmakokinetik",
+        "pharmacodynamic": "Farmakodinamik",
+        "additive": "Aditif",
+        "timing": "Pengaturan waktu minum",
+        "avoid": "Hindari kombinasi",
+        "monitor": "Perlu monitoring",
+        "limit": "Batasi asupan",
+    }
+    normalized = str(value or "").strip().lower()
+    if not normalized:
+        return "-"
+    return mapping.get(normalized, normalized.replace("_", " ").title())
+
+
+def classify_interaction_source(source: object):
+    normalized = str(source or "").strip()
+    if normalized == "LLM-assisted curation (Claude) + pharmacology literature":
+        return "Kurasi literatur", True
+    if normalized == "deterministic extension from BPOM active ingredient gap analysis":
+        return "Inferensi deterministik", False
+    if not normalized:
+        return "Sumber tidak dicantumkan", False
+    if "literature" in normalized.lower():
+        return "Kurasi literatur", True
+    return "Sumber lain", False
+
+
 def clean_ingredient(item: str):
     cleaned = re.sub(
         r"^\d+[\s/\d]*\s*(sdm|sdt|buah|siung|batang|lembar|porsi|bungkus|butir|ekor|biji|iris|potong|helai|cm|kg|gr|gram|ml|liter|sendok|mangkok|gelas|sachet|bks|bh)\s*",
@@ -427,14 +462,21 @@ def compute_interaction_frame(kb: dict):
     rows = []
     for fname, fdata in foods.items():
         for inter in fdata.get("drug_interactions", []):
+            source_label, is_fact_based = classify_interaction_source(inter.get("source", ""))
             rows.append(
                 {
                     "Makanan": fname,
                     "Kategori": fdata.get("category", ""),
                     "Severity": inter.get("severity", 0),
                     "Tipe": inter.get("type", ""),
+                    "Tipe_Label": format_interaction_type(inter.get("type", "")),
                     "Kelas_Obat": inter.get("drug_class", ""),
                     "Mekanisme": inter.get("mechanism", ""),
+                    "Interaksi": inter.get("interaction", ""),
+                    "Bahan_Pemicu": "|".join(inter.get("matched_ingredients", [])),
+                    "Sumber": inter.get("source", ""),
+                    "Label_Sumber": source_label,
+                    "Basis_Faktual": is_fact_based,
                 }
             )
 
@@ -451,42 +493,85 @@ def compute_interaction_frame(kb: dict):
                 "severity": "Severity",
                 "interaction_type": "Tipe",
                 "mechanism": "Mekanisme",
+                "matched_ingredients": "Bahan_Pemicu",
+                "source": "Sumber",
             })
             csv_df["Kategori"] = ""
-            # Normalize Tipe to the expected labels
-            tipe_map = {
-                "pharmacokinetic": "AVOID",
-                "pharmacodynamic": "MONITOR",
-                "additive": "LIMIT",
-                "timing": "TIMING",
-            }
-            csv_df["Tipe"] = csv_df["Tipe"].str.strip().str.lower().map(tipe_map).fillna("MONITOR")
-            idf = csv_df[["Makanan", "Kategori", "Severity", "Tipe", "Kelas_Obat", "Mekanisme"]].reset_index(drop=True)
+            csv_df["Tipe"] = csv_df["Tipe"].fillna("").astype(str).str.strip().str.lower()
+            csv_df["Tipe_Label"] = csv_df["Tipe"].apply(format_interaction_type)
+            csv_df["Sumber"] = csv_df["Sumber"].fillna("")
+            source_info = csv_df["Sumber"].apply(classify_interaction_source)
+            csv_df["Label_Sumber"] = source_info.str[0]
+            csv_df["Basis_Faktual"] = source_info.str[1]
+            csv_df["Interaksi"] = csv_df["Mekanisme"]
+            idf = csv_df[
+                [
+                    "Makanan",
+                    "Kategori",
+                    "Severity",
+                    "Tipe",
+                    "Tipe_Label",
+                    "Kelas_Obat",
+                    "Mekanisme",
+                    "Interaksi",
+                    "Bahan_Pemicu",
+                    "Sumber",
+                    "Label_Sumber",
+                    "Basis_Faktual",
+                ]
+            ].reset_index(drop=True)
+            idf.attrs["data_origin"] = "csv_fallback"
             # Build a synthetic foods dict for downstream compatibility
             foods = {}
             for food_name, group in csv_df.groupby("Makanan"):
+                matched_ingredients = sorted(
+                    {
+                        ingredient
+                        for ingredients in group["Bahan_Pemicu"].tolist()
+                        for ingredient in split_pipe_values(ingredients)
+                    }
+                )
                 interactions = []
                 for _, row in group.iterrows():
                     interactions.append({
                         "drug_class": row["Kelas_Obat"],
                         "severity": int(row["Severity"]),
                         "type": row["Tipe"],
+                        "type_label": row["Tipe_Label"],
                         "mechanism": row.get("Mekanisme", ""),
                         "interaction": row.get("Mekanisme", ""),
                         "drug_examples": [],
+                        "matched_ingredients": split_pipe_values(row.get("Bahan_Pemicu", "")),
+                        "source": row.get("Sumber", ""),
+                        "source_label": row.get("Label_Sumber", ""),
+                        "is_fact_based": bool(row.get("Basis_Faktual", False)),
                     })
                 foods[food_name] = {
                     "category": "",
-                    "key_ingredients": [],
+                    "key_ingredients": matched_ingredients,
                     "drug_interactions": interactions,
                 }
             return idf, foods
 
     idf = pd.DataFrame(rows)
     # Ensure expected columns exist even when empty
-    for col in ["Makanan", "Kategori", "Severity", "Tipe", "Kelas_Obat", "Mekanisme"]:
+    for col in [
+        "Makanan",
+        "Kategori",
+        "Severity",
+        "Tipe",
+        "Tipe_Label",
+        "Kelas_Obat",
+        "Mekanisme",
+        "Interaksi",
+        "Bahan_Pemicu",
+        "Sumber",
+        "Label_Sumber",
+        "Basis_Faktual",
+    ]:
         if col not in idf.columns:
             idf[col] = pd.Series(dtype="object")
+    idf.attrs["data_origin"] = "json_kb"
     return idf, foods
 
 

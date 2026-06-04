@@ -103,7 +103,7 @@ with ic3:
 
 st.markdown(
     note(
-        "<strong>Kenapa ini penting?Warning obat-makanan akan jauh lebih masuk akal jika dikaitkan dengan bahan dominan "
+        "<strong>Kenapa ini penting?</strong>Warning obat-makanan akan jauh lebih masuk akal jika dikaitkan dengan bahan dominan "
         "dan pola masak nyata, bukan hanya nama hidangan.</strong> "
     ),
     unsafe_allow_html=True,

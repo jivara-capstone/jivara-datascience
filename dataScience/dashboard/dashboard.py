@@ -72,8 +72,8 @@ st.markdown(
 
 st.markdown(
     note(
-        f"<strong>📌 Produk yang sudah validated:</strong> Dari {len(df_obat):,} obat BPOM, sebanyak <strong>333 obat</strong> telah divalidasi dengan kategori interaksi lengkap. "
-        f"Lihat detail dan search obat validated di halaman <strong>Data Obat</strong> (menu sidebar)."
+        f"<strong>Produk yang sudah validated:</strong> Dari {len(df_obat):,} obat BPOM, sebanyak 333 obat telah divalidasi dengan kategori interaksi lengkap. "
+        f"Lihat detail dan search obat validated di halaman Data Obat</strong> (menu sidebar)."
     ),
     unsafe_allow_html=True,
 )
