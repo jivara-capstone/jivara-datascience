@@ -1,0 +1,9 @@
+{
+  "metadata": {
+    "version": "1.2-v3-all-nutrition1",
+    "nutrition_source": "nutrition1.csv",
+    "nutrition_entries": 1346,
+    "indonesian_classes_covered": 0
+  },
+  "local_ingredient_safety_registry": {}
+}

@@ -1,0 +1,11 @@
+metric,value
+food_classes_in_ingredient_mapping,61
+food_classes_with_nutrition_match,15
+food_classes_without_nutrition_match,46
+interaction_food_classes,61
+interaction_drug_categories,17
+interaction_rows,1037
+positive_interaction_rows,314
+backend_drugs_ready_for_api,333
+backend_drugs_with_multiple_categories,24
+inconsistent_interaction_labels,15

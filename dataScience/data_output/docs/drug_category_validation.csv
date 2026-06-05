@@ -1,0 +1,6 @@
+validation,count,values
+interaction_categories_missing_in_drug_lookup,0,
+extra_categories_in_drug_lookup,0,
+backend_categories_not_supported_by_interaction,0,
+duplicate_food_category_pairs,0,
+has_interaction_0_with_positive_severity,15,

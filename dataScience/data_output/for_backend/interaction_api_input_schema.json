@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "description": "Kontrak request Backend ke API AI interaksi obat-makanan. all_drug_categories wajib dikirim sebagai array.",
+  "request_example": {
+    "drug": {
+      "backend_drug_id": "DKI2558502117A1",
+      "name": "CADUET",
+      "composition": "AMLODIPINE | ATORVASTATIN",
+      "drug_category": "ccb",
+      "all_drug_categories": [
+        "ccb",
+        "statin"
+      ]
+    },
+    "food": {
+      "food_class": "kopi",
+      "ingredients": [
+        "kopi",
+        "kafein"
+      ],
+      "nutrition_key": "kopi"
+    }
+  },
+  "required_request_fields": [
+    "drug.backend_drug_id",
+    "drug.name",
+    "drug.composition",
+    "drug.all_drug_categories",
+    "food.food_class",
+    "food.ingredients"
+  ],
+  "expected_response_fields": [
+    "has_interaction",
+    "severity",
+    "interaction_type",
+    "mechanism",
+    "matched_categories",
+    "recommendation"
+  ]
+}

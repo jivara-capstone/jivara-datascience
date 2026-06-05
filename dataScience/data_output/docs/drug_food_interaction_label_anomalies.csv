@@ -1,0 +1,16 @@
+food_class,drug_category,has_interaction,severity,interaction_type,mechanism,matched_ingredients,source
+gulai-ikan-mas,ccb,0,1,pharmacokinetic,"Interaksi minimal/teoretis: jeruk dalam jumlah kecil, tidak signifikan secara klinis",jeruk,LLM-assisted curation (Claude) + pharmacology literature
+gulai-ikan-mas,nsaid,0,1,pharmacodynamic,"Interaksi minimal/teoretis: jeruk dalam jumlah kecil, tidak signifikan secara klinis",jeruk,LLM-assisted curation (Claude) + pharmacology literature
+gulai-ikan-mas,statin,0,1,pharmacokinetic,"Interaksi minimal/teoretis: jeruk dalam jumlah kecil, tidak signifikan secara klinis",jeruk,LLM-assisted curation (Claude) + pharmacology literature
+laksa-bogor,ccb,0,1,pharmacokinetic,"Interaksi minimal/teoretis: jeruk dalam jumlah kecil, tidak signifikan secara klinis",jeruk,LLM-assisted curation (Claude) + pharmacology literature
+laksa-bogor,nsaid,0,1,pharmacodynamic,"Interaksi minimal/teoretis: jeruk dalam jumlah kecil, tidak signifikan secara klinis",jeruk,LLM-assisted curation (Claude) + pharmacology literature
+laksa-bogor,statin,0,1,pharmacokinetic,"Interaksi minimal/teoretis: jeruk dalam jumlah kecil, tidak signifikan secara klinis",jeruk,LLM-assisted curation (Claude) + pharmacology literature
+sate-maranggi,ccb,0,1,pharmacokinetic,"Interaksi minimal/teoretis: jeruk dalam jumlah kecil, tidak signifikan secara klinis",jeruk,LLM-assisted curation (Claude) + pharmacology literature
+sate-maranggi,nsaid,0,1,pharmacodynamic,"Interaksi minimal/teoretis: jeruk dalam jumlah kecil, tidak signifikan secara klinis",jeruk,LLM-assisted curation (Claude) + pharmacology literature
+sate-maranggi,statin,0,1,pharmacokinetic,"Interaksi minimal/teoretis: jeruk dalam jumlah kecil, tidak signifikan secara klinis",jeruk,LLM-assisted curation (Claude) + pharmacology literature
+sate-umum,ccb,0,1,pharmacokinetic,"Interaksi minimal/teoretis: jeruk dalam jumlah kecil, tidak signifikan secara klinis",jeruk,LLM-assisted curation (Claude) + pharmacology literature
+sate-umum,nsaid,0,1,pharmacodynamic,"Interaksi minimal/teoretis: jeruk dalam jumlah kecil, tidak signifikan secara klinis",jeruk,LLM-assisted curation (Claude) + pharmacology literature
+sate-umum,statin,0,1,pharmacokinetic,"Interaksi minimal/teoretis: jeruk dalam jumlah kecil, tidak signifikan secara klinis",jeruk,LLM-assisted curation (Claude) + pharmacology literature
+soto-ayam,ccb,0,1,pharmacokinetic,"Interaksi minimal/teoretis: jeruk dalam jumlah kecil, tidak signifikan secara klinis",jeruk,LLM-assisted curation (Claude) + pharmacology literature
+soto-ayam,nsaid,0,1,pharmacodynamic,"Interaksi minimal/teoretis: jeruk dalam jumlah kecil, tidak signifikan secara klinis",jeruk,LLM-assisted curation (Claude) + pharmacology literature
+soto-ayam,statin,0,1,pharmacokinetic,"Interaksi minimal/teoretis: jeruk dalam jumlah kecil, tidak signifikan secara klinis",jeruk,LLM-assisted curation (Claude) + pharmacology literature
