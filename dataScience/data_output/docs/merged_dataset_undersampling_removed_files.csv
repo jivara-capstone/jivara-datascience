@@ -1,0 +1,436 @@
+class_name,split,image_file,label_file,labels_removed
+Tahu Goreng,train,images-8-_jpg.rf.725d386b247c3207d72f72d5893e6f5d.jpg,images-8-_jpg.rf.725d386b247c3207d72f72d5893e6f5d.txt,4
+Tahu Goreng,train,H0AF8MZfIU885QQfSTW4fcL8WqyBJuEK-31353839343134363531d41d8cd98f00b204e9800998ecf8427e_800x800_jpg.rf.47156ad7d9ce6a6a7378bf2f220d04a1.jpg,H0AF8MZfIU885QQfSTW4fcL8WqyBJuEK-31353839343134363531d41d8cd98f00b204e9800998ecf8427e_800x800_jpg.rf.47156ad7d9ce6a6a7378bf2f220d04a1.txt,6
+Tahu Goreng,train,images-53-_jpg.rf.b046a881a676f5f1b681b13aa3f8bc3c.jpg,images-53-_jpg.rf.b046a881a676f5f1b681b13aa3f8bc3c.txt,4
+Tahu Goreng,train,download-7-_jpg.rf.a0430ce3f4ffc659d95953b3bd9a1651.jpg,download-7-_jpg.rf.a0430ce3f4ffc659d95953b3bd9a1651.txt,6
+Tahu Goreng,train,images-20-_jpg.rf.a2facb74461cfb50da2902a6e0118e2e.jpg,images-20-_jpg.rf.a2facb74461cfb50da2902a6e0118e2e.txt,5
+Tahu Goreng,train,images-30-_jpg.rf.f219c20a64eb264bd7fc81294e5a34e9.jpg,images-30-_jpg.rf.f219c20a64eb264bd7fc81294e5a34e9.txt,2
+Tahu Goreng,train,images-41-_jpg.rf.c9b19e80f10af78ba3e01e10c34a9797.jpg,images-41-_jpg.rf.c9b19e80f10af78ba3e01e10c34a9797.txt,6
+Tahu Goreng,train,images-12-_jpg.rf.b0177b02bf8379b5b23a44fedaa8352c.jpg,images-12-_jpg.rf.b0177b02bf8379b5b23a44fedaa8352c.txt,9
+Tahu Goreng,train,tahu-kuning-goreng-foto-resep-utama-1-_jpg.rf.3c5524f82c1128a9fd1408dbaaf0cb50.jpg,tahu-kuning-goreng-foto-resep-utama-1-_jpg.rf.3c5524f82c1128a9fd1408dbaaf0cb50.txt,3
+Tahu Goreng,train,tahu-goreng-asin-foto-resep-utama_jpg.rf.2272f930f2e08c790506d2634ce0f2ff.jpg,tahu-goreng-asin-foto-resep-utama_jpg.rf.2272f930f2e08c790506d2634ce0f2ff.txt,4
+Tahu Goreng,train,236-tahu-goreng-kunyit-foto-resep-utama_jpg.rf.c16d650910552f4625d11f021fc52e6b.jpg,236-tahu-goreng-kunyit-foto-resep-utama_jpg.rf.c16d650910552f4625d11f021fc52e6b.txt,5
+Tahu Goreng,train,images-10-_jpg.rf.afed127e0d5cb84f7dcdb73f53297137.jpg,images-10-_jpg.rf.afed127e0d5cb84f7dcdb73f53297137.txt,8
+Tahu Goreng,train,images-1-_jpg.rf.a10f4c2fe320ee861d3a0d28f6dea61d.jpg,images-1-_jpg.rf.a10f4c2fe320ee861d3a0d28f6dea61d.txt,2
+Tahu Goreng,train,images-46-_jpg.rf.2a033641a1272f734f00d1f60e3932f8.jpg,images-46-_jpg.rf.2a033641a1272f734f00d1f60e3932f8.txt,4
+Tahu Goreng,train,tahu-goreng-sederhana-foto-resep-utama_jpg.rf.f0503618fd45ae408e4590ac03bba26f.jpg,tahu-goreng-sederhana-foto-resep-utama_jpg.rf.f0503618fd45ae408e4590ac03bba26f.txt,5
+Tahu Goreng,train,walau-lezat-jumlah-kalori-tahu-goreng-ini-harus-anda-ketahui-1600863874_jpg.rf.ef44806c8a91503d7d88488bdaf9efaa.jpg,walau-lezat-jumlah-kalori-tahu-goreng-ini-harus-anda-ketahui-1600863874_jpg.rf.ef44806c8a91503d7d88488bdaf9efaa.txt,3
+Tahu Goreng,train,images-45-_jpg.rf.ed83db97c4b58755162104100357ebca.jpg,images-45-_jpg.rf.ed83db97c4b58755162104100357ebca.txt,7
+Tahu Goreng,train,images_jpg.rf.6b9a6b8d473a21611caedb8704d12faf.jpg,images_jpg.rf.6b9a6b8d473a21611caedb8704d12faf.txt,2
+Tahu Goreng,train,432760395-1-_jpg.rf.1871cb2d65244cdd8d7179134513fffd.jpg,432760395-1-_jpg.rf.1871cb2d65244cdd8d7179134513fffd.txt,3
+Tahu Goreng,train,walau-lezat-jumlah-kalori-tahu-goreng-ini-harus-anda-ketahui-1600863874_jpg.rf.39f82d171fc261ad8bb17d21658d1b9b.jpg,walau-lezat-jumlah-kalori-tahu-goreng-ini-harus-anda-ketahui-1600863874_jpg.rf.39f82d171fc261ad8bb17d21658d1b9b.txt,3
+Tahu Goreng,train,tahu-kuning-piring-kaleng-IMG_6477_jpg.rf.16465fdc6e8cd0d67149d13a60e78062.jpg,tahu-kuning-piring-kaleng-IMG_6477_jpg.rf.16465fdc6e8cd0d67149d13a60e78062.txt,4
+Tahu Goreng,train,images-26-_jpg.rf.524421f5edc0296f612ce1c2289f3ef8.jpg,images-26-_jpg.rf.524421f5edc0296f612ce1c2289f3ef8.txt,2
+Tahu Goreng,train,images-13-_jpg.rf.3248ff87f66a9147fe596f61bf7cc3c2.jpg,images-13-_jpg.rf.3248ff87f66a9147fe596f61bf7cc3c2.txt,15
+Tahu Goreng,train,tahu-goreng-sederhana-foto-resep-utama_jpg.rf.d0d3734d7be4902e8831f725503236e6.jpg,tahu-goreng-sederhana-foto-resep-utama_jpg.rf.d0d3734d7be4902e8831f725503236e6.txt,5
+Tahu Goreng,train,7cc986dc3b1b8597a8b6380ae3a0a7d3_jpg.rf.5ae5ae4e930894ac1bfef49f803155ee.jpg,7cc986dc3b1b8597a8b6380ae3a0a7d3_jpg.rf.5ae5ae4e930894ac1bfef49f803155ee.txt,3
+Tahu Goreng,train,images-6-_jpg.rf.2b1924c2ea4cf25a16ff20c2a720086b.jpg,images-6-_jpg.rf.2b1924c2ea4cf25a16ff20c2a720086b.txt,9
+Tahu Goreng,train,tahu-goreng-sederhana-foto-resep-utama_jpg.rf.2665aa4e091f40b906c90d4ebf3449de.jpg,tahu-goreng-sederhana-foto-resep-utama_jpg.rf.2665aa4e091f40b906c90d4ebf3449de.txt,5
+Tahu Goreng,train,images-11-_jpg.rf.9bae645ce86254766f0651c05fcd687d.jpg,images-11-_jpg.rf.9bae645ce86254766f0651c05fcd687d.txt,7
+Tahu Goreng,train,tahu-goreng-gurih-foto-resep-utama_jpg.rf.a839b20bf264ae74ee1830a0631f5430.jpg,tahu-goreng-gurih-foto-resep-utama_jpg.rf.a839b20bf264ae74ee1830a0631f5430.txt,7
+Tahu Goreng,train,tahu-goreng-ngohiang_jpg.rf.9f4afdec2743774f2947901bab467813.jpg,tahu-goreng-ngohiang_jpg.rf.9f4afdec2743774f2947901bab467813.txt,2
+Tahu Goreng,train,images-27-_jpg.rf.db4ed0e2b4ccf9ba94c7bb16568a897a.jpg,images-27-_jpg.rf.db4ed0e2b4ccf9ba94c7bb16568a897a.txt,8
+Tahu Goreng,train,1383772_96538d58-e064-4f49-a501-43c76a5898f9_jpg.rf.a9dbe85e3426ed4c895588a27186b05e.jpg,1383772_96538d58-e064-4f49-a501-43c76a5898f9_jpg.rf.a9dbe85e3426ed4c895588a27186b05e.txt,4
+Tahu Goreng,train,tahu-goreng-tradisional-foto-resep-utama_jpg.rf.a142187edd09a531ccea178fb1690c98.jpg,tahu-goreng-tradisional-foto-resep-utama_jpg.rf.a142187edd09a531ccea178fb1690c98.txt,7
+Tahu Goreng,train,images-35-_jpg.rf.9633670cd223a2be5d05b0e99c14a725.jpg,images-35-_jpg.rf.9633670cd223a2be5d05b0e99c14a725.txt,7
+Tahu Goreng,train,AWpToqR3htz3wyM5oIGC1ntSei9mtJI9-31353835383234383233d41d8cd98f00b204e9800998ecf8427e_800x800_jpg.rf.c5ad84bb4b85dbe1440df2acbf70d785.jpg,AWpToqR3htz3wyM5oIGC1ntSei9mtJI9-31353835383234383233d41d8cd98f00b204e9800998ecf8427e_800x800_jpg.rf.c5ad84bb4b85dbe1440df2acbf70d785.txt,6
+Tahu Goreng,train,images-14-_jpg.rf.3c065905946356e2337001f9b2b02308.jpg,images-14-_jpg.rf.3c065905946356e2337001f9b2b02308.txt,6
+Tahu Goreng,train,Tahu-goreng-1_jpg.rf.dadfc16c659dacf9d9b2a45d33ddda92.jpg,Tahu-goreng-1_jpg.rf.dadfc16c659dacf9d9b2a45d33ddda92.txt,2
+Tahu Goreng,train,images-34-_jpg.rf.66ab451328f41404b0124ea23163460b.jpg,images-34-_jpg.rf.66ab451328f41404b0124ea23163460b.txt,4
+Tahu Goreng,train,download-5-_jpg.rf.69cb3b1bdb0aee50c5f13d09bbaa238d.jpg,download-5-_jpg.rf.69cb3b1bdb0aee50c5f13d09bbaa238d.txt,3
+Tahu Goreng,train,images-28-_jpg.rf.a92b353510190431db2099809cce55f9.jpg,images-28-_jpg.rf.a92b353510190431db2099809cce55f9.txt,5
+Tahu Goreng,train,tahu-goreng_jpg.rf.ecbd3e03eabe8fbe8038b9832ff78a52.jpg,tahu-goreng_jpg.rf.ecbd3e03eabe8fbe8038b9832ff78a52.txt,5
+Tahu Goreng,train,images-29-_jpg.rf.594fa4f887ca52a9279acba6eec2d2a3.jpg,images-29-_jpg.rf.594fa4f887ca52a9279acba6eec2d2a3.txt,5
+Tahu Goreng,train,tahu-goreng_jpg.rf.68153cd150ccfea8279a098a4202b94e.jpg,tahu-goreng_jpg.rf.68153cd150ccfea8279a098a4202b94e.txt,5
+Tahu Goreng,train,432760395-1-_jpg.rf.58e9b1d47e8c5a3ac7e5cb9acce9629b.jpg,432760395-1-_jpg.rf.58e9b1d47e8c5a3ac7e5cb9acce9629b.txt,3
+Tahu Goreng,train,Resep-Tahu-Goreng-Garing_jpg.rf.0f542447b4ccf6e984ffa926a3f7dc5c.jpg,Resep-Tahu-Goreng-Garing_jpg.rf.0f542447b4ccf6e984ffa926a3f7dc5c.txt,8
+Tahu Goreng,train,236-tahu-goreng-kunyit-foto-resep-utama_jpg.rf.77a087173888d81141e28e8d26f605f3.jpg,236-tahu-goreng-kunyit-foto-resep-utama_jpg.rf.77a087173888d81141e28e8d26f605f3.txt,5
+Tahu Goreng,train,tahu-kuning-piring-kaleng-IMG_6477_jpg.rf.6c838987002c6e3de9d92748a22c09d9.jpg,tahu-kuning-piring-kaleng-IMG_6477_jpg.rf.6c838987002c6e3de9d92748a22c09d9.txt,4
+Tahu Goreng,train,tahu-goreng-tepung-bumbu-foto-resep-utama_jpg.rf.39e023a0123cdc79042cbf02fb9aea11.jpg,tahu-goreng-tepung-bumbu-foto-resep-utama_jpg.rf.39e023a0123cdc79042cbf02fb9aea11.txt,5
+Tahu Goreng,train,photo_jpg.rf.31046f6c292183cf563bd77e66df147a.jpg,photo_jpg.rf.31046f6c292183cf563bd77e66df147a.txt,4
+Tahu Goreng,train,3006458954_jpg.rf.844ad3e7a9bcb02c4447f6f5acff0d9d.jpg,3006458954_jpg.rf.844ad3e7a9bcb02c4447f6f5acff0d9d.txt,5
+Tahu Goreng,train,tahu-goreng-tepung-bumbu-foto-resep-utama_jpg.rf.05b09b1e1c5e3c797ec84e0289e50faf.jpg,tahu-goreng-tepung-bumbu-foto-resep-utama_jpg.rf.05b09b1e1c5e3c797ec84e0289e50faf.txt,5
+Tahu Goreng,train,tahu-kuning-goreng-foto-resep-utama_jpg.rf.22a4669432aed50481027ea54667e078.jpg,tahu-kuning-goreng-foto-resep-utama_jpg.rf.22a4669432aed50481027ea54667e078.txt,4
+Tahu Goreng,train,download-9-_jpg.rf.a974b5abf6e7873e28d693b9d94435eb.jpg,download-9-_jpg.rf.a974b5abf6e7873e28d693b9d94435eb.txt,7
+Tahu Goreng,train,tahu-goreng-tradisional-foto-resep-utama_jpg.rf.b1b83af2646af864808cd7af5701011d.jpg,tahu-goreng-tradisional-foto-resep-utama_jpg.rf.b1b83af2646af864808cd7af5701011d.txt,7
+Tahu Goreng,train,images-31-_jpg.rf.9bf2d37765af2bdfcd2071531356f809.jpg,images-31-_jpg.rf.9bf2d37765af2bdfcd2071531356f809.txt,5
+Tahu Goreng,train,tahu-goreng-asin-foto-resep-utama_jpg.rf.6b17b66bc14078f5e92232dfafc6fd35.jpg,tahu-goreng-asin-foto-resep-utama_jpg.rf.6b17b66bc14078f5e92232dfafc6fd35.txt,4
+Tahu Goreng,train,images-2-_jpg.rf.cb749760830b5fc8a26dbdbe82e3cfbe.jpg,images-2-_jpg.rf.cb749760830b5fc8a26dbdbe82e3cfbe.txt,4
+Tahu Goreng,train,tahu-goreng-cantik_20180205_124732_jpg.rf.0fe2dcebba8affda82a2a2a6f98a8221.jpg,tahu-goreng-cantik_20180205_124732_jpg.rf.0fe2dcebba8affda82a2a2a6f98a8221.txt,6
+Tahu Goreng,train,H0AF8MZfIU885QQfSTW4fcL8WqyBJuEK-31353839343134363531d41d8cd98f00b204e9800998ecf8427e_800x800_jpg.rf.ae3dc91581bcc6ed8e1fec21ce95a29c.jpg,H0AF8MZfIU885QQfSTW4fcL8WqyBJuEK-31353839343134363531d41d8cd98f00b204e9800998ecf8427e_800x800_jpg.rf.ae3dc91581bcc6ed8e1fec21ce95a29c.txt,6
+Tahu Goreng,train,tahu-kuning-piring-kaleng-IMG_6477_jpg.rf.80f8c5f4382d6332feb5c17bb6efddac.jpg,tahu-kuning-piring-kaleng-IMG_6477_jpg.rf.80f8c5f4382d6332feb5c17bb6efddac.txt,4
+Tahu Goreng,train,Tahu-goreng-1280x720_jpg.rf.c047eda40a535100c771049f50869a5c.jpg,Tahu-goreng-1280x720_jpg.rf.c047eda40a535100c771049f50869a5c.txt,9
+Tahu Goreng,train,download-2-_jpg.rf.bbfd2f8867dffaaf227b2d4d0e4bbfb0.jpg,download-2-_jpg.rf.bbfd2f8867dffaaf227b2d4d0e4bbfb0.txt,4
+Tahu Goreng,train,images-37-_jpg.rf.6f8acff5bcd96fbfe1e744d6126cecb4.jpg,images-37-_jpg.rf.6f8acff5bcd96fbfe1e744d6126cecb4.txt,5
+Tahu Goreng,train,images-5-_jpg.rf.e8a43f0aad2fb853960f99dd5e563cf6.jpg,images-5-_jpg.rf.e8a43f0aad2fb853960f99dd5e563cf6.txt,5
+Tahu Goreng,train,images-9-_jpg.rf.14bc38a554ba096c08d1c30f20865f9e.jpg,images-9-_jpg.rf.14bc38a554ba096c08d1c30f20865f9e.txt,5
+Tahu Goreng,train,7cc986dc3b1b8597a8b6380ae3a0a7d3_jpg.rf.811ccb7d14219bba187d3b3d08643a08.jpg,7cc986dc3b1b8597a8b6380ae3a0a7d3_jpg.rf.811ccb7d14219bba187d3b3d08643a08.txt,3
+Tahu Goreng,train,maxresdefault_jpg.rf.f5d2e7015cc5d48a8ea4ba3264ea7b5e.jpg,maxresdefault_jpg.rf.f5d2e7015cc5d48a8ea4ba3264ea7b5e.txt,4
+Tahu Goreng,train,images-17-_jpg.rf.427843b18aeaecb859225398416664a3.jpg,images-17-_jpg.rf.427843b18aeaecb859225398416664a3.txt,2
+Tahu Goreng,train,tahu-goreng-asin-foto-resep-utama_jpg.rf.22cf87ca5ebd8a4574420f43807f0f96.jpg,tahu-goreng-asin-foto-resep-utama_jpg.rf.22cf87ca5ebd8a4574420f43807f0f96.txt,4
+Tahu Goreng,train,download-3-_jpg.rf.ab23c56dc8d729ca814d750a1ab8bbd4.jpg,download-3-_jpg.rf.ab23c56dc8d729ca814d750a1ab8bbd4.txt,8
+Tahu Goreng,train,images-32-_jpg.rf.a8d78aebde2227284f180dfe3a854e44.jpg,images-32-_jpg.rf.a8d78aebde2227284f180dfe3a854e44.txt,5
+Tahu Goreng,train,tahu-goreng-tanpa-tepung-foto-resep-utama_jpg.rf.aa75b8fde00e72a90fa5993920a6a1b4.jpg,tahu-goreng-tanpa-tepung-foto-resep-utama_jpg.rf.aa75b8fde00e72a90fa5993920a6a1b4.txt,5
+Tahu Goreng,train,resep-tahu-goreng-bumbu-marinasi-rasanya-maknyus202103270120_jpg.rf.500427e9d8dfef7a1cf0f013d425af42.jpg,resep-tahu-goreng-bumbu-marinasi-rasanya-maknyus202103270120_jpg.rf.500427e9d8dfef7a1cf0f013d425af42.txt,5
+Tahu Goreng,train,images-21-_jpg.rf.85ad32be5e286591992061929976e536.jpg,images-21-_jpg.rf.85ad32be5e286591992061929976e536.txt,8
+Tahu Goreng,train,images-16-_jpg.rf.a0ddaab417c7d2bfe4969f0576e97ddd.jpg,images-16-_jpg.rf.a0ddaab417c7d2bfe4969f0576e97ddd.txt,5
+Tahu Goreng,train,images-7-_jpg.rf.604ed07b289fb166a2f5df78f052f3d3.jpg,images-7-_jpg.rf.604ed07b289fb166a2f5df78f052f3d3.txt,6
+Tahu Goreng,train,tahu-goreng-bumbu-ayam-goreng-ungkep-telur-kocok-foto-resep-utama_jpg.rf.0c9868adaa8277e345b45dce4b83126f.jpg,tahu-goreng-bumbu-ayam-goreng-ungkep-telur-kocok-foto-resep-utama_jpg.rf.0c9868adaa8277e345b45dce4b83126f.txt,4
+Tahu Goreng,train,tahu-goreng-tradisional-foto-resep-utama_jpg.rf.e10ae1fe49ff1c2766aa08b02fa49649.jpg,tahu-goreng-tradisional-foto-resep-utama_jpg.rf.e10ae1fe49ff1c2766aa08b02fa49649.txt,7
+Tahu Goreng,train,walau-lezat-jumlah-kalori-tahu-goreng-ini-harus-anda-ketahui-1600863874_jpg.rf.ecddaa37025de49471104040daf88cd9.jpg,walau-lezat-jumlah-kalori-tahu-goreng-ini-harus-anda-ketahui-1600863874_jpg.rf.ecddaa37025de49471104040daf88cd9.txt,3
+Tempe Goreng,train,images-4-_jpg.rf.b3e3bcd0fad49e31cf8129a69e6f334c.jpg,images-4-_jpg.rf.b3e3bcd0fad49e31cf8129a69e6f334c.txt,2
+Tempe Goreng,train,images-20-_jpg.rf.1348d2ccf1d3539d8ae7ed4f490f3dba.jpg,images-20-_jpg.rf.1348d2ccf1d3539d8ae7ed4f490f3dba.txt,4
+Tempe Goreng,train,images-1-_jpg.rf.dcc24818569ff3a3be4af3332b1737f4.jpg,images-1-_jpg.rf.dcc24818569ff3a3be4af3332b1737f4.txt,5
+Tempe Goreng,train,images-57-_jpg.rf.102cb2d9b3798aa8889f863c2e6bde4a.jpg,images-57-_jpg.rf.102cb2d9b3798aa8889f863c2e6bde4a.txt,5
+Tempe Goreng,train,e0e5d5647cb47198fe27e1a684ae4469_jpg.rf.20bf1720cf8dfcb7dff4463d75db270a.jpg,e0e5d5647cb47198fe27e1a684ae4469_jpg.rf.20bf1720cf8dfcb7dff4463d75db270a.txt,3
+Tempe Goreng,train,images-54-_jpg.rf.0e8ed496472cf69cf3622be045037f3f.jpg,images-54-_jpg.rf.0e8ed496472cf69cf3622be045037f3f.txt,3
+Tempe Goreng,train,download-14-_jpg.rf.8750922269ee7404da5543415fd2bba8.jpg,download-14-_jpg.rf.8750922269ee7404da5543415fd2bba8.txt,5
+Tempe Goreng,train,tempe-goreng-gurih-foto-resep-utama_jpg.rf.0a9dc93c39d34bf4e0d48a2b9011a701.jpg,tempe-goreng-gurih-foto-resep-utama_jpg.rf.0a9dc93c39d34bf4e0d48a2b9011a701.txt,1
+Tempe Goreng,train,tempe-goreng-foto-resep-utama_jpg.rf.1af8f13cc38d7b53f114e1f1f55eb601.jpg,tempe-goreng-foto-resep-utama_jpg.rf.1af8f13cc38d7b53f114e1f1f55eb601.txt,3
+Tempe Goreng,train,images-27-_jpg.rf.22950bdd39f16f7ece95d3264a80b041.jpg,images-27-_jpg.rf.22950bdd39f16f7ece95d3264a80b041.txt,4
+Tempe Goreng,train,images-6-_jpg.rf.d2976a70ab07764fc3995c2fd734302e.jpg,images-6-_jpg.rf.d2976a70ab07764fc3995c2fd734302e.txt,1
+Tempe Goreng,train,images-25-_jpg.rf.556f7136b8b6d506a27d89cf38d4fd79.jpg,images-25-_jpg.rf.556f7136b8b6d506a27d89cf38d4fd79.txt,7
+Tempe Goreng,train,tempgorngjpg-20210909084704_jpg.rf.1090d55b0c6745dd5394fd7c54d5ea17.jpg,tempgorngjpg-20210909084704_jpg.rf.1090d55b0c6745dd5394fd7c54d5ea17.txt,5
+Tempe Goreng,train,photo-1-_jpg.rf.5ff696049df6c750d1fe10ad0943f9b5.jpg,photo-1-_jpg.rf.5ff696049df6c750d1fe10ad0943f9b5.txt,3
+Tempe Goreng,train,H1NA7nQU8Gv1DNTGd3pmhgLdc8Q4dRaU-31363038323535303530d41d8cd98f00b204e9800998ecf8427e_800x800_jpg.rf.3d5a04070afbe176aae68fbaaae52333.jpg,H1NA7nQU8Gv1DNTGd3pmhgLdc8Q4dRaU-31363038323535303530d41d8cd98f00b204e9800998ecf8427e_800x800_jpg.rf.3d5a04070afbe176aae68fbaaae52333.txt,3
+Tempe Goreng,train,images-46-_jpg.rf.ecd9fdb6d1c6aae4de92ced5641d20cd.jpg,images-46-_jpg.rf.ecd9fdb6d1c6aae4de92ced5641d20cd.txt,6
+Tempe Goreng,train,tumblr-inline-nmh2mvoii41qac5yq-1280-09d797eae8926332657eb07fde9a014a_600x400_jpg.rf.077d34c7c14309fdd0f810fa4d7250b2.jpg,tumblr-inline-nmh2mvoii41qac5yq-1280-09d797eae8926332657eb07fde9a014a_600x400_jpg.rf.077d34c7c14309fdd0f810fa4d7250b2.txt,1
+Tempe Goreng,train,images-33-_jpg.rf.adf38dff3383ad76dd4fef34a3993a53.jpg,images-33-_jpg.rf.adf38dff3383ad76dd4fef34a3993a53.txt,4
+Tempe Goreng,train,images-13-_jpg.rf.e5d34d986dcd3de825c2cfc5e1cbe0c0.jpg,images-13-_jpg.rf.e5d34d986dcd3de825c2cfc5e1cbe0c0.txt,1
+Tempe Goreng,train,images-30-_jpg.rf.c945b8f069119a28dc2aa58ddf9dc3c0.jpg,images-30-_jpg.rf.c945b8f069119a28dc2aa58ddf9dc3c0.txt,1
+Tempe Goreng,train,55763_jpg.rf.863d23bd30a8df6c1e6b5e317595c034.jpg,55763_jpg.rf.863d23bd30a8df6c1e6b5e317595c034.txt,5
+Tempe Goreng,train,images-27-_jpg.rf.2e6365a8bdfc6fc6c3dae88462f84e21.jpg,images-27-_jpg.rf.2e6365a8bdfc6fc6c3dae88462f84e21.txt,3
+Tempe Goreng,train,images-48-_jpg.rf.c3151901ccc715eadb486c38d59d4331.jpg,images-48-_jpg.rf.c3151901ccc715eadb486c38d59d4331.txt,3
+Tempe Goreng,train,tempe-goreng-foto-resep-utama-1-_jpg.rf.b13810ad49e40219f030df57f7094bca.jpg,tempe-goreng-foto-resep-utama-1-_jpg.rf.b13810ad49e40219f030df57f7094bca.txt,2
+Tempe Goreng,train,images-2-_jpg.rf.a669ef496fa36daf1f2c10a2f2c1fce0.jpg,images-2-_jpg.rf.a669ef496fa36daf1f2c10a2f2c1fce0.txt,4
+Tempe Goreng,train,tempe-goreng-foto-resep-utama-1-_jpg.rf.2ad583fb34980020827687ad01484f27.jpg,tempe-goreng-foto-resep-utama-1-_jpg.rf.2ad583fb34980020827687ad01484f27.txt,2
+Tempe Goreng,train,images-8-_jpg.rf.1b6bedb8219628cca4c37c3593d55c71.jpg,images-8-_jpg.rf.1b6bedb8219628cca4c37c3593d55c71.txt,1
+Tempe Goreng,train,images-22-_jpg.rf.78a14f40b8a39f8a008a30c29e8a967f.jpg,images-22-_jpg.rf.78a14f40b8a39f8a008a30c29e8a967f.txt,4
+Tempe Goreng,train,images-23-_jpg.rf.4eb4664ff0f99f446b396f818bcc2d7f.jpg,images-23-_jpg.rf.4eb4664ff0f99f446b396f818bcc2d7f.txt,2
+Tempe Goreng,train,images-21-_jpg.rf.13b4fe3e3f596b2aa4610232452edffb.jpg,images-21-_jpg.rf.13b4fe3e3f596b2aa4610232452edffb.txt,4
+Tempe Goreng,train,tempe-goreng-sambal-kencur_jpg.rf.65b6a8f45be1c9b274c2cc888ce09b23.jpg,tempe-goreng-sambal-kencur_jpg.rf.65b6a8f45be1c9b274c2cc888ce09b23.txt,3
+Tempe Goreng,train,images-14-_jpg.rf.dd1dce17d6626726f2d7031febce8b7e.jpg,images-14-_jpg.rf.dd1dce17d6626726f2d7031febce8b7e.txt,4
+Tempe Goreng,train,H1NA7nQU8Gv1DNTGd3pmhgLdc8Q4dRaU-31363038323535303530d41d8cd98f00b204e9800998ecf8427e_800x800_jpg.rf.9419a558e59a2004dce8d6ffeb83ad97.jpg,H1NA7nQU8Gv1DNTGd3pmhgLdc8Q4dRaU-31363038323535303530d41d8cd98f00b204e9800998ecf8427e_800x800_jpg.rf.9419a558e59a2004dce8d6ffeb83ad97.txt,3
+Tempe Goreng,train,tempe-goreng-gurih-foto-resep-utama_jpg.rf.fe8577e04336791704668add46f0b63d.jpg,tempe-goreng-gurih-foto-resep-utama_jpg.rf.fe8577e04336791704668add46f0b63d.txt,4
+Tempe Goreng,train,tempe-goreng4_jpg.rf.358226406bcee9506593e4ab5a33754c.jpg,tempe-goreng4_jpg.rf.358226406bcee9506593e4ab5a33754c.txt,3
+Tempe Goreng,train,images-57-_jpg.rf.c442463f2eddd1ecb3f4c80941ed9ca9.jpg,images-57-_jpg.rf.c442463f2eddd1ecb3f4c80941ed9ca9.txt,5
+Tempe Goreng,train,images-33-_jpg.rf.88f5bfcfe62ca3baf638075afb8785cd.jpg,images-33-_jpg.rf.88f5bfcfe62ca3baf638075afb8785cd.txt,1
+Tempe Goreng,train,5de808547be8494c518d33f5c918be67_jpg.rf.597945d7c159d8949cf7afd9499dbe53.jpg,5de808547be8494c518d33f5c918be67_jpg.rf.597945d7c159d8949cf7afd9499dbe53.txt,1
+Tempe Goreng,train,tempe-goreng-bawang-garam-foto-resep-utama_jpg.rf.d1b73f1965796760d1c92a480f5bfbe6.jpg,tempe-goreng-bawang-garam-foto-resep-utama_jpg.rf.d1b73f1965796760d1c92a480f5bfbe6.txt,3
+Tempe Goreng,train,images-3-_jpg.rf.6a761aaab96733cd52ead8f57dc79333.jpg,images-3-_jpg.rf.6a761aaab96733cd52ead8f57dc79333.txt,4
+Tempe Goreng,train,images-36-_jpg.rf.08992b6164d2a329070ef18b8badc819.jpg,images-36-_jpg.rf.08992b6164d2a329070ef18b8badc819.txt,3
+Tempe Goreng,train,images-35-_jpg.rf.76e2477961abc832d766f3d02d14ed90.jpg,images-35-_jpg.rf.76e2477961abc832d766f3d02d14ed90.txt,3
+Tempe Goreng,train,images-53-_jpg.rf.1330c427c8951ec3d1708124ff114cc1.jpg,images-53-_jpg.rf.1330c427c8951ec3d1708124ff114cc1.txt,1
+Tempe Goreng,train,images-5-_jpg.rf.8f4e1075013d340be3c9a723c5190c0e.jpg,images-5-_jpg.rf.8f4e1075013d340be3c9a723c5190c0e.txt,3
+Tempe Goreng,train,images-50-_jpg.rf.35cfc2101f612d2d95c87a7595be422a.jpg,images-50-_jpg.rf.35cfc2101f612d2d95c87a7595be422a.txt,1
+Tempe Goreng,train,images_jpg.rf.e85af543a21c4e36842cc42f94158f7c.jpg,images_jpg.rf.e85af543a21c4e36842cc42f94158f7c.txt,3
+Tempe Goreng,train,images-58-_jpg.rf.2bd63c37b930552774dc433e282a8c55.jpg,images-58-_jpg.rf.2bd63c37b930552774dc433e282a8c55.txt,5
+Tempe Goreng,train,images-26-_jpg.rf.2730eeba66e976288be2cdc212acd644.jpg,images-26-_jpg.rf.2730eeba66e976288be2cdc212acd644.txt,10
+Tempe Goreng,train,images-23-_jpg.rf.cd754e06fa5759a925cdc362ee869f3f.jpg,images-23-_jpg.rf.cd754e06fa5759a925cdc362ee869f3f.txt,2
+Tempe Goreng,train,tempe-goreng-bumbu-kuning-foto-resep-utama_jpg.rf.e9701b34d1640149c4b7c91314630a4c.jpg,tempe-goreng-bumbu-kuning-foto-resep-utama_jpg.rf.e9701b34d1640149c4b7c91314630a4c.txt,4
+Tempe Goreng,train,images-17-_jpg.rf.1f61d897bde2ce569c54aa1c34701e47.jpg,images-17-_jpg.rf.1f61d897bde2ce569c54aa1c34701e47.txt,2
+Tempe Goreng,train,images-45-_jpg.rf.e5a0dc62dacf9cde46b5d1b8e040c697.jpg,images-45-_jpg.rf.e5a0dc62dacf9cde46b5d1b8e040c697.txt,2
+Tempe Goreng,train,images-29-_jpg.rf.e1519c9b59002ee974b918e6f762133a.jpg,images-29-_jpg.rf.e1519c9b59002ee974b918e6f762133a.txt,2
+Tempe Goreng,train,images-50-_jpg.rf.1aa915c88fb9e08ab45afe541d963607.jpg,images-50-_jpg.rf.1aa915c88fb9e08ab45afe541d963607.txt,1
+Tempe Goreng,train,tempe-goreng-tepung-resipi-foto-utama_jpg.rf.c9a478fde5e92a630175f6c0f5a85769.jpg,tempe-goreng-tepung-resipi-foto-utama_jpg.rf.c9a478fde5e92a630175f6c0f5a85769.txt,3
+Tempe Goreng,train,tempe-goreng-bumbu-kunyit-1200x796_jpg.rf.5ca7e4628920ebcdab1a6eb8eca24673.jpg,tempe-goreng-bumbu-kunyit-1200x796_jpg.rf.5ca7e4628920ebcdab1a6eb8eca24673.txt,2
+Tempe Goreng,train,tempe-goreng-kencur-ebi_jpg.rf.74111035fa47f60b38b1635d98f7e317.jpg,tempe-goreng-kencur-ebi_jpg.rf.74111035fa47f60b38b1635d98f7e317.txt,4
+Tempe Goreng,train,images-25-_jpg.rf.582bfddc2a6731bcd53a7b422e4f2607.jpg,images-25-_jpg.rf.582bfddc2a6731bcd53a7b422e4f2607.txt,2
+Tempe Goreng,train,images-51-_jpg.rf.fce8d8cf276be34f32cd0170105dfd5a.jpg,images-51-_jpg.rf.fce8d8cf276be34f32cd0170105dfd5a.txt,4
+Tempe Goreng,train,tempe-goreng-simple-foto-resep-utama_jpg.rf.f5e20b0a83428bf831bed01b4d2c6252.jpg,tempe-goreng-simple-foto-resep-utama_jpg.rf.f5e20b0a83428bf831bed01b4d2c6252.txt,5
+Tempe Goreng,train,images-31-_jpg.rf.b985689df33ecc375ab9b497834ba921.jpg,images-31-_jpg.rf.b985689df33ecc375ab9b497834ba921.txt,3
+Tempe Goreng,train,images-9-_jpg.rf.fa74fac24b2ba7d599d32a33fdbc1a1b.jpg,images-9-_jpg.rf.fa74fac24b2ba7d599d32a33fdbc1a1b.txt,2
+Tempe Goreng,train,photo-2-_jpg.rf.ce7b71c8a6549d3dd3ebd25ac06ca288.jpg,photo-2-_jpg.rf.ce7b71c8a6549d3dd3ebd25ac06ca288.txt,5
+Tempe Goreng,train,cbfa50b82f21bba113aed63c69ed43e9_jpg.rf.06933586326de5951858461cec78e58a.jpg,cbfa50b82f21bba113aed63c69ed43e9_jpg.rf.06933586326de5951858461cec78e58a.txt,5
+Tempe Goreng,train,photo-2-_jpg.rf.f1c3f7759eef6df78f62f56e5405af8f.jpg,photo-2-_jpg.rf.f1c3f7759eef6df78f62f56e5405af8f.txt,4
+Tempe Goreng,train,20200716155728-4288-cara-mengolah-ayam-tempe-goreng-sedap_jpg.rf.44c9b1076606f40f55e784cd374668b3.jpg,20200716155728-4288-cara-mengolah-ayam-tempe-goreng-sedap_jpg.rf.44c9b1076606f40f55e784cd374668b3.txt,2
+Tempe Goreng,train,images_jpg.rf.1d6c3c9c71d9b59572806371e7122d53.jpg,images_jpg.rf.1d6c3c9c71d9b59572806371e7122d53.txt,3
+Tempe Goreng,train,images-32-_jpg.rf.5c5f26ec8ce5c8c116a4edbe3b1b9127.jpg,images-32-_jpg.rf.5c5f26ec8ce5c8c116a4edbe3b1b9127.txt,5
+Tempe Goreng,train,images-42-_jpg.rf.c2547d12c471c80672732fd26c589cd2.jpg,images-42-_jpg.rf.c2547d12c471c80672732fd26c589cd2.txt,3
+Tempe Goreng,train,images-20-_jpg.rf.45f1222e5b0b03277cac5c6bb75354b8.jpg,images-20-_jpg.rf.45f1222e5b0b03277cac5c6bb75354b8.txt,3
+Tempe Goreng,train,images-40-_jpg.rf.3a5a69cb1ffa69b0d9e139d1cffe2c4a.jpg,images-40-_jpg.rf.3a5a69cb1ffa69b0d9e139d1cffe2c4a.txt,5
+Tempe Goreng,train,images-2-_jpg.rf.5c5eab5d29130f3cca46b25aea37537a.jpg,images-2-_jpg.rf.5c5eab5d29130f3cca46b25aea37537a.txt,3
+Tempe Goreng,train,images-35-_jpg.rf.6087a8833399b3858a4a47aa8c9a63d0.jpg,images-35-_jpg.rf.6087a8833399b3858a4a47aa8c9a63d0.txt,1
+Tempe Goreng,train,tempe-goreng-foto-resep-utama-2-_jpg.rf.be69f6aef2b12d5bf04808d43cc58296.jpg,tempe-goreng-foto-resep-utama-2-_jpg.rf.be69f6aef2b12d5bf04808d43cc58296.txt,5
+Tempe Goreng,train,IMG_01082020_182608__822_x_430_piksel__jpg.rf.3778391bdaf7b7c74ca2503d0b697acc.jpg,IMG_01082020_182608__822_x_430_piksel__jpg.rf.3778391bdaf7b7c74ca2503d0b697acc.txt,1
+Tempe Goreng,train,images-10-_jpg.rf.47e9f1a9aba98c026c0f5028a2ddcf09.jpg,images-10-_jpg.rf.47e9f1a9aba98c026c0f5028a2ddcf09.txt,3
+Tempe Goreng,train,images-17-_jpg.rf.b25063d89ddaa4f1e4d19628c9228eb0.jpg,images-17-_jpg.rf.b25063d89ddaa4f1e4d19628c9228eb0.txt,3
+Tempe Goreng,train,images-55-_jpg.rf.212b20be94532b0f54dbf2ed35747e9e.jpg,images-55-_jpg.rf.212b20be94532b0f54dbf2ed35747e9e.txt,4
+Tempe Goreng,train,images-19-_jpg.rf.fc864da202353de0ea28020b97ac3d7c.jpg,images-19-_jpg.rf.fc864da202353de0ea28020b97ac3d7c.txt,3
+Tempe Goreng,train,cbfa50b82f21bba113aed63c69ed43e9_jpg.rf.7005e5ccc34a9486544743b0c424d487.jpg,cbfa50b82f21bba113aed63c69ed43e9_jpg.rf.7005e5ccc34a9486544743b0c424d487.txt,4
+Tempe Goreng,train,tempe-goreng-sambal-kencur_jpg.rf.ba8129e3c796b24f4833693260403597.jpg,tempe-goreng-sambal-kencur_jpg.rf.ba8129e3c796b24f4833693260403597.txt,2
+Tempe Goreng,train,images-24-_jpg.rf.a9abd88afeddb9f388e662628c80747f.jpg,images-24-_jpg.rf.a9abd88afeddb9f388e662628c80747f.txt,4
+Tempe Goreng,train,images-1-_jpg.rf.08a04494a70f2dc88e00f3914c4f48ed.jpg,images-1-_jpg.rf.08a04494a70f2dc88e00f3914c4f48ed.txt,6
+Tempe Goreng,train,images-14-_jpg.rf.c03f4889c3966d396e0988fc93a71d87.jpg,images-14-_jpg.rf.c03f4889c3966d396e0988fc93a71d87.txt,5
+Rendang,train,images-9-_jpg.rf.c03690368ea15bc362d4b7a4a44d6c38.jpg,images-9-_jpg.rf.c03690368ea15bc362d4b7a4a44d6c38.txt,2
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0142_rendang_daging_131.jpg,MI_makanan_indonesia_tambahan_rendang_0142_rendang_daging_131.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0084_rendang_daging_062.jpg,MI_makanan_indonesia_tambahan_rendang_0084_rendang_daging_062.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0055_rendang_daging_075.jpg,MI_makanan_indonesia_tambahan_rendang_0055_rendang_daging_075.txt,1
+Rendang,train,daging_rendang-18-_jpg.rf.f5c552dc23ae3f5956e5655b875fa182.jpg,daging_rendang-18-_jpg.rf.f5c552dc23ae3f5956e5655b875fa182.txt,1
+Rendang,train,IMG_13122020_135234__822_x_430_piksel__jpg.rf.97bbd70a1d6c57f44401f24b510e0ced.jpg,IMG_13122020_135234__822_x_430_piksel__jpg.rf.97bbd70a1d6c57f44401f24b510e0ced.txt,2
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0064_rendang_daging_186.jpg,MI_makanan_indonesia_tambahan_rendang_0064_rendang_daging_186.txt,1
+Rendang,train,daging_rendang-81-_jpg.rf.7f8aa2f1d50fa7dbad8d82d8238004ab.jpg,daging_rendang-81-_jpg.rf.7f8aa2f1d50fa7dbad8d82d8238004ab.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0052_rendang_daging_034.jpg,MI_makanan_indonesia_tambahan_rendang_0052_rendang_daging_034.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0183_rendang_007.jpg,MI_makanan_indonesia_tambahan_rendang_0183_rendang_007.txt,1
+Rendang,train,IJ3wrAS45yTy7ChmmNXIY679RVUGXGP5-31353935373636383738d41d8cd98f00b204e9800998ecf8427e_800x800_jpg.rf.f286d51a2ccbd2c49f493e2686bdf35e.jpg,IJ3wrAS45yTy7ChmmNXIY679RVUGXGP5-31353935373636383738d41d8cd98f00b204e9800998ecf8427e_800x800_jpg.rf.f286d51a2ccbd2c49f493e2686bdf35e.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0087_rendang_daging_129.jpg,MI_makanan_indonesia_tambahan_rendang_0087_rendang_daging_129.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0026_rendang_daging_148.jpg,MI_makanan_indonesia_tambahan_rendang_0026_rendang_daging_148.txt,1
+Rendang,train,daging_rendang-105-_jpg.rf.0da022e0dcbbebee6728f48858c877f2.jpg,daging_rendang-105-_jpg.rf.0da022e0dcbbebee6728f48858c877f2.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0144_rendang_daging_093.jpg,MI_makanan_indonesia_tambahan_rendang_0144_rendang_daging_093.txt,1
+Rendang,train,daging_rendang-98-_jpg.rf.68c47d6351c2f149435c3590b4545695.jpg,daging_rendang-98-_jpg.rf.68c47d6351c2f149435c3590b4545695.txt,2
+Rendang,train,resep_rendang_sapi_jpg.rf.469d9cf9bb0f15782e669d7e57e97c98.jpg,resep_rendang_sapi_jpg.rf.469d9cf9bb0f15782e669d7e57e97c98.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0108_rendang_daging_087.jpg,MI_makanan_indonesia_tambahan_rendang_0108_rendang_daging_087.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0006_rendang_daging_172.jpg,MI_makanan_indonesia_tambahan_rendang_0006_rendang_daging_172.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0204_rendang_daging_101.jpg,MI_makanan_indonesia_tambahan_rendang_0204_rendang_daging_101.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0122_rendang_daging_058.jpg,MI_makanan_indonesia_tambahan_rendang_0122_rendang_daging_058.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0019_rendang_daging_170.jpg,MI_makanan_indonesia_tambahan_rendang_0019_rendang_daging_170.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0198_rendang_daging_171.jpg,MI_makanan_indonesia_tambahan_rendang_0198_rendang_daging_171.txt,1
+Rendang,train,images-4-_jpg.rf.f7a6ddd7c30b2307442658ce2050622c.jpg,images-4-_jpg.rf.f7a6ddd7c30b2307442658ce2050622c.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0034_rendang_daging_036.jpg,MI_makanan_indonesia_tambahan_rendang_0034_rendang_daging_036.txt,1
+Rendang,train,daging_rendang-65-_jpg.rf.b4d30f79b74f2983adbc0a884b060f68.jpg,daging_rendang-65-_jpg.rf.b4d30f79b74f2983adbc0a884b060f68.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0168_rendang_daging_037.jpg,MI_makanan_indonesia_tambahan_rendang_0168_rendang_daging_037.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0078_rendang_107.jpg,MI_makanan_indonesia_tambahan_rendang_0078_rendang_107.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0120_rendang_daging_019.jpg,MI_makanan_indonesia_tambahan_rendang_0120_rendang_daging_019.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0023_rendang_daging_032.jpg,MI_makanan_indonesia_tambahan_rendang_0023_rendang_daging_032.txt,1
+Rendang,train,daging_rendang-4-_jpg.rf.a7e7e0f4eefc3f5f69527fbef3ec4cea.jpg,daging_rendang-4-_jpg.rf.a7e7e0f4eefc3f5f69527fbef3ec4cea.txt,1
+Rendang,train,resep-rendang_jpg.rf.56fc0d31217ff41e8b2cb0352a5fd82f.jpg,resep-rendang_jpg.rf.56fc0d31217ff41e8b2cb0352a5fd82f.txt,1
+Rendang,train,daging_rendang-5-_jpg.rf.1bcf9b806fe7791ac01bfba2163e9b51.jpg,daging_rendang-5-_jpg.rf.1bcf9b806fe7791ac01bfba2163e9b51.txt,1
+Rendang,train,MI_IMG_6991.jpg,MI_IMG_6991.txt,1
+Rendang,train,daging_rendang-73-_jpg.rf.c5f0866cde9036f734b8f90cd193105b.jpg,daging_rendang-73-_jpg.rf.c5f0866cde9036f734b8f90cd193105b.txt,1
+Rendang,train,MI_IMG_6990.jpg,MI_IMG_6990.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0063_rendang_142.png,MI_makanan_indonesia_tambahan_rendang_0063_rendang_142.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0137_rendang_019.jpg,MI_makanan_indonesia_tambahan_rendang_0137_rendang_019.txt,1
+Rendang,train,images_daging_rendang-sapi-pedas_jpg.rf.6834d991313be1a9563f05b7511e36ac.jpg,images_daging_rendang-sapi-pedas_jpg.rf.6834d991313be1a9563f05b7511e36ac.txt,3
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0015_rendang_daging_125.jpg,MI_makanan_indonesia_tambahan_rendang_0015_rendang_daging_125.txt,1
+Rendang,train,ist_20180822_121951_jpg.rf.05f1589aac27da0a04ea97aecb2d2c69.jpg,ist_20180822_121951_jpg.rf.05f1589aac27da0a04ea97aecb2d2c69.txt,2
+Rendang,train,Resep-Rendang-Sapi-Cara-Membuat-dan-Tips-Daging-Cepat-Empuk_jpg.rf.840d10e9cc7ecbb2967b0ba75d6f46f9.jpg,Resep-Rendang-Sapi-Cara-Membuat-dan-Tips-Daging-Cepat-Empuk_jpg.rf.840d10e9cc7ecbb2967b0ba75d6f46f9.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0077_rendang_daging_056.jpg,MI_makanan_indonesia_tambahan_rendang_0077_rendang_daging_056.txt,1
+Rendang,train,daging_rendang-20-_jpg.rf.0a9e1ce20387fe2a0337b23a15bdfe09.jpg,daging_rendang-20-_jpg.rf.0a9e1ce20387fe2a0337b23a15bdfe09.txt,1
+Rendang,train,resep-rendang-daging-sapi-minang-full-bumbu-untuk-pemula_jpg.rf.4c6c1fa10dc698cd4bbb577c6669c7ac.jpg,resep-rendang-daging-sapi-minang-full-bumbu-untuk-pemula_jpg.rf.4c6c1fa10dc698cd4bbb577c6669c7ac.txt,1
+Rendang,train,rendang-daging-1-_jpg.rf.68b260d1f60f3e7ef915435816960795.jpg,rendang-daging-1-_jpg.rf.68b260d1f60f3e7ef915435816960795.txt,1
+Rendang,train,daging_rendang-10-_jpg.rf.9f06094dfb428b6a413287fc1be32ced.jpg,daging_rendang-10-_jpg.rf.9f06094dfb428b6a413287fc1be32ced.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0123_rendang_049.jpg,MI_makanan_indonesia_tambahan_rendang_0123_rendang_049.txt,1
+Rendang,train,IMG_2752_wm_jpg.rf.682379af8b7fdf428d3574b703cc6f52.jpg,IMG_2752_wm_jpg.rf.682379af8b7fdf428d3574b703cc6f52.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0162_rendang_081.jpg,MI_makanan_indonesia_tambahan_rendang_0162_rendang_081.txt,1
+Rendang,train,rendang-daging-padang-anti-gagal-foto-resep-utama_jpg.rf.729667aedf6ede0000ede8cfff19e61d.jpg,rendang-daging-padang-anti-gagal-foto-resep-utama_jpg.rf.729667aedf6ede0000ede8cfff19e61d.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0072_rendang_122.jpg,MI_makanan_indonesia_tambahan_rendang_0072_rendang_122.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0143_rendang_daging_115.jpg,MI_makanan_indonesia_tambahan_rendang_0143_rendang_daging_115.txt,1
+Rendang,train,rendang1-5ac0dc70251902c6f7594f48869e8e4f_600x400_jpg.rf.007940e2b50cb91f02f9f40bc1e71255.jpg,rendang1-5ac0dc70251902c6f7594f48869e8e4f_600x400_jpg.rf.007940e2b50cb91f02f9f40bc1e71255.txt,1
+Rendang,train,213c98558a7233f0f923c91df2b986f9beef-curry-recipe-stew-beef-in-coconut-curry_jpg.rf.36c31b1695dd0e8f3b24fcdd9caf6250.jpg,213c98558a7233f0f923c91df2b986f9beef-curry-recipe-stew-beef-in-coconut-curry_jpg.rf.36c31b1695dd0e8f3b24fcdd9caf6250.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0147_rendang_daging_057.jpg,MI_makanan_indonesia_tambahan_rendang_0147_rendang_daging_057.txt,1
+Rendang,train,MI_IMG_6944.jpg,MI_IMG_6944.txt,1
+Rendang,train,daging_rendang-37-_jpg.rf.994c310ed9eae4ebff11ede67231bc28.jpg,daging_rendang-37-_jpg.rf.994c310ed9eae4ebff11ede67231bc28.txt,1
+Rendang,train,daging_rendang-97-_jpg.rf.1c707ee97a0dbd7c0040977024eb5aa4.jpg,daging_rendang-97-_jpg.rf.1c707ee97a0dbd7c0040977024eb5aa4.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0178_rendang_041.jpg,MI_makanan_indonesia_tambahan_rendang_0178_rendang_041.txt,1
+Rendang,train,rendang-sapi-lezaat-foto-resep-utama_jpg.rf.9b100f9e8cdf4eb65a3b126091ff7449.jpg,rendang-sapi-lezaat-foto-resep-utama_jpg.rf.9b100f9e8cdf4eb65a3b126091ff7449.txt,1
+Rendang,train,rendang-daging-sapi-foto-resep-utama_jpg.rf.8e9819e4af03d52220eafc830d4ada76.jpg,rendang-daging-sapi-foto-resep-utama_jpg.rf.8e9819e4af03d52220eafc830d4ada76.txt,3
+Rendang,train,daging_rendang-71-_jpg.rf.387a68c23718e484ff1a244fd122f0c0.jpg,daging_rendang-71-_jpg.rf.387a68c23718e484ff1a244fd122f0c0.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0154_rendang_daging_028.jpg,MI_makanan_indonesia_tambahan_rendang_0154_rendang_daging_028.txt,1
+Rendang,train,daging_rendang-90-_jpg.rf.20545528430a26b34dce3f4181e5ee81.jpg,daging_rendang-90-_jpg.rf.20545528430a26b34dce3f4181e5ee81.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0199_rendang_daging_161.jpg,MI_makanan_indonesia_tambahan_rendang_0199_rendang_daging_161.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0054_rendang_094.jpg,MI_makanan_indonesia_tambahan_rendang_0054_rendang_094.txt,1
+Rendang,train,daging_rendang-75-_jpg.rf.6faaf2817339271804ea7d7a33851770.jpg,daging_rendang-75-_jpg.rf.6faaf2817339271804ea7d7a33851770.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0033_rendang_daging_108.jpg,MI_makanan_indonesia_tambahan_rendang_0033_rendang_daging_108.txt,1
+Rendang,train,6348e45dd3a46_jpg.rf.55c0ce65ed1746f2d38814f3660f4705.jpg,6348e45dd3a46_jpg.rf.55c0ce65ed1746f2d38814f3660f4705.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0173_rendang_daging_063.jpg,MI_makanan_indonesia_tambahan_rendang_0173_rendang_daging_063.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0156_rendang_daging_191.jpg,MI_makanan_indonesia_tambahan_rendang_0156_rendang_daging_191.txt,1
+Rendang,train,Resep-Rendang-Padang-min-1024x616_jpg.rf.1ba60428eeef17dfa46c459546f6a23d.jpg,Resep-Rendang-Padang-min-1024x616_jpg.rf.1ba60428eeef17dfa46c459546f6a23d.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0027_rendang_daging_153.jpg,MI_makanan_indonesia_tambahan_rendang_0027_rendang_daging_153.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0049_rendang_daging_174.jpg,MI_makanan_indonesia_tambahan_rendang_0049_rendang_daging_174.txt,1
+Rendang,train,maxresdefault-2-_jpg.rf.6dd642d5222d1333fcafab993096de24.jpg,maxresdefault-2-_jpg.rf.6dd642d5222d1333fcafab993096de24.txt,1
+Rendang,train,MI_IMG_7011.jpg,MI_IMG_7011.txt,1
+Rendang,train,daging_rendang-49-_jpg.rf.ce759f95ed6a9f495baabd6ff910c1d3.jpg,daging_rendang-49-_jpg.rf.ce759f95ed6a9f495baabd6ff910c1d3.txt,2
+Rendang,train,MI_IMG_6948.jpg,MI_IMG_6948.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0073_rendang_032.jpg,MI_makanan_indonesia_tambahan_rendang_0073_rendang_032.txt,1
+Rendang,train,resep-rendang-sapi-lezat-dicoba-yuk-untuk-rayakan-idul-adha-TSs3ZBynuL_jpg.rf.0d7f22d6e46328ab67bafba6f3a9adce.jpg,resep-rendang-sapi-lezat-dicoba-yuk-untuk-rayakan-idul-adha-TSs3ZBynuL_jpg.rf.0d7f22d6e46328ab67bafba6f3a9adce.txt,1
+Rendang,train,MI_IMG_6949.jpg,MI_IMG_6949.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0146_rendang_daging_163.jpg,MI_makanan_indonesia_tambahan_rendang_0146_rendang_daging_163.txt,1
+Rendang,train,daging_rendang-102-_jpg.rf.e4436469a1bdd98b336d9c2909e5ca6a.jpg,daging_rendang-102-_jpg.rf.e4436469a1bdd98b336d9c2909e5ca6a.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0029_rendang_162.jpg,MI_makanan_indonesia_tambahan_rendang_0029_rendang_162.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0138_rendang_daging_023.jpg,MI_makanan_indonesia_tambahan_rendang_0138_rendang_daging_023.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0012_rendang_163.jpg,MI_makanan_indonesia_tambahan_rendang_0012_rendang_163.txt,1
+Rendang,train,rendang-daging-sapi-foto-resep-utama-11-_jpg.rf.8d962571713cd399ae66a4a593b13776.jpg,rendang-daging-sapi-foto-resep-utama-11-_jpg.rf.8d962571713cd399ae66a4a593b13776.txt,1
+Rendang,train,images-14-_jpg.rf.424d95055d163c31adf2c6028fa32e5d.jpg,images-14-_jpg.rf.424d95055d163c31adf2c6028fa32e5d.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0088_rendang_daging_045.jpg,MI_makanan_indonesia_tambahan_rendang_0088_rendang_daging_045.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0182_rendang_daging_001.jpg,MI_makanan_indonesia_tambahan_rendang_0182_rendang_daging_001.txt,1
+Rendang,train,download-1-_jpg.rf.8915510fc64b7223936b2384c484d154.jpg,download-1-_jpg.rf.8915510fc64b7223936b2384c484d154.txt,1
+Rendang,train,Begini-Cara-Membuat-Rendang-Daging-Sapi-yang-Enak-hingga-Resep-Rendang-Sapi-Khas-Padang_jpg.rf.581cba3ae7753f90a9df61adf0b79a68.jpg,Begini-Cara-Membuat-Rendang-Daging-Sapi-yang-Enak-hingga-Resep-Rendang-Sapi-Khas-Padang_jpg.rf.581cba3ae7753f90a9df61adf0b79a68.txt,2
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0067_rendang_daging_091.jpg,MI_makanan_indonesia_tambahan_rendang_0067_rendang_daging_091.txt,1
+Rendang,train,daging_rendang-104-_jpg.rf.f82ef72af72eb8f728340565499aedf2.jpg,daging_rendang-104-_jpg.rf.f82ef72af72eb8f728340565499aedf2.txt,1
+Rendang,train,daging_rendang-43-_jpg.rf.42f891de35e83b71a77818dd7a8f04c1.jpg,daging_rendang-43-_jpg.rf.42f891de35e83b71a77818dd7a8f04c1.txt,1
+Rendang,train,resep-rendang-sapi-hidangan-lebaran-yang-lezatnya-mantap-jiwa-gykeVIMcTT_jpg.rf.a40a615bb34fa6b0f56f34c3632c0ccd.jpg,resep-rendang-sapi-hidangan-lebaran-yang-lezatnya-mantap-jiwa-gykeVIMcTT_jpg.rf.a40a615bb34fa6b0f56f34c3632c0ccd.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0020_rendang_daging_106.jpg,MI_makanan_indonesia_tambahan_rendang_0020_rendang_daging_106.txt,1
+Rendang,train,download-10-_jpg.rf.91f3fed48b939cafd27ceb4ce1f8e2cf.jpg,download-10-_jpg.rf.91f3fed48b939cafd27ceb4ce1f8e2cf.txt,1
+Rendang,train,MI_IMG_6930.jpg,MI_IMG_6930.txt,1
+Rendang,train,MI_IMG_7010.jpg,MI_IMG_7010.txt,1
+Rendang,train,MI_IMG_6931.jpg,MI_IMG_6931.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0193_rendang_daging_007.jpg,MI_makanan_indonesia_tambahan_rendang_0193_rendang_daging_007.txt,1
+Rendang,train,MI_IMG_7001.jpg,MI_IMG_7001.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0157_rendang_daging_025.jpg,MI_makanan_indonesia_tambahan_rendang_0157_rendang_daging_025.txt,1
+Rendang,train,daging_rendang-48-_jpg.rf.5a78b0a887ba96a6e6aad4ab7fc820d6.jpg,daging_rendang-48-_jpg.rf.5a78b0a887ba96a6e6aad4ab7fc820d6.txt,1
+Rendang,train,rendang-sapi-padang-beef-rendang-3-800x600_jpg.rf.de176a3c557d3b2aff5f33f105fab323.jpg,rendang-sapi-padang-beef-rendang-3-800x600_jpg.rf.de176a3c557d3b2aff5f33f105fab323.txt,2
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0195_rendang_daging_067.jpg,MI_makanan_indonesia_tambahan_rendang_0195_rendang_daging_067.txt,1
+Rendang,train,download-5-_jpg.rf.e43992df5769fab997838223bb178188.jpg,download-5-_jpg.rf.e43992df5769fab997838223bb178188.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0118_rendang_106.jpg,MI_makanan_indonesia_tambahan_rendang_0118_rendang_106.txt,1
+Rendang,train,download_jpg.rf.ce1e33a0df289927a3f60ccdb9eb183d.jpg,download_jpg.rf.ce1e33a0df289927a3f60ccdb9eb183d.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0058_rendang_daging_022.jpg,MI_makanan_indonesia_tambahan_rendang_0058_rendang_daging_022.txt,1
+Rendang,train,Bumbu_Rendang_Daging_Sapi_jpg.rf.60e9895f6c268e5d0bf254f7d8b5888b.jpg,Bumbu_Rendang_Daging_Sapi_jpg.rf.60e9895f6c268e5d0bf254f7d8b5888b.txt,1
+Rendang,train,MI_IMG_6936.jpg,MI_IMG_6936.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0149_rendang_daging_052.jpg,MI_makanan_indonesia_tambahan_rendang_0149_rendang_daging_052.txt,1
+Rendang,train,MI_IMG_6932.jpg,MI_IMG_6932.txt,1
+Rendang,train,images-30-_jpg.rf.d44571b2ed371727d361629dce32df44.jpg,images-30-_jpg.rf.d44571b2ed371727d361629dce32df44.txt,6
+Rendang,train,daging_rendang-30-_jpg.rf.e93576bdcbdf28f0a98b87d2d0790edf.jpg,daging_rendang-30-_jpg.rf.e93576bdcbdf28f0a98b87d2d0790edf.txt,1
+Rendang,train,2140787252_jpg.rf.e3843bc1158bab42f3ceb5642ffcc628.jpg,2140787252_jpg.rf.e3843bc1158bab42f3ceb5642ffcc628.txt,1
+Rendang,train,rendang-daging-sapi-foto-resep-utama-12-_jpg.rf.ad2a6abebc97fdccb865dc9eaaf651ed.jpg,rendang-daging-sapi-foto-resep-utama-12-_jpg.rf.ad2a6abebc97fdccb865dc9eaaf651ed.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0031_rendang_daging_074.jpg,MI_makanan_indonesia_tambahan_rendang_0031_rendang_daging_074.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0100_rendang_101.jpg,MI_makanan_indonesia_tambahan_rendang_0100_rendang_101.txt,1
+Rendang,train,daging_rendang-26-_jpg.rf.84738d21807198434406c1ddc6d8be74.jpg,daging_rendang-26-_jpg.rf.84738d21807198434406c1ddc6d8be74.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0136_rendang_daging_097.jpg,MI_makanan_indonesia_tambahan_rendang_0136_rendang_daging_097.txt,1
+Rendang,train,daging_rendang-55-_jpg.rf.fd903a1d793a8890b73a79ef644158d4.jpg,daging_rendang-55-_jpg.rf.fd903a1d793a8890b73a79ef644158d4.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0125_rendang_daging_102.jpg,MI_makanan_indonesia_tambahan_rendang_0125_rendang_daging_102.txt,1
+Rendang,train,MI_IMG_6945.jpg,MI_IMG_6945.txt,1
+Rendang,train,MI_IMG_6953.jpg,MI_IMG_6953.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0051_rendang_daging_187.jpg,MI_makanan_indonesia_tambahan_rendang_0051_rendang_daging_187.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0185_rendang_daging_060.jpg,MI_makanan_indonesia_tambahan_rendang_0185_rendang_daging_060.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0039_rendang_daging_179.jpg,MI_makanan_indonesia_tambahan_rendang_0039_rendang_daging_179.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0205_rendang_198.jpg,MI_makanan_indonesia_tambahan_rendang_0205_rendang_198.txt,1
+Rendang,train,daging_rendang-34-_jpg.rf.1c9340b540468533117c9c27d85d06ad.jpg,daging_rendang-34-_jpg.rf.1c9340b540468533117c9c27d85d06ad.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0028_rendang_daging_099.jpg,MI_makanan_indonesia_tambahan_rendang_0028_rendang_daging_099.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0119_rendang_daging_143.jpg,MI_makanan_indonesia_tambahan_rendang_0119_rendang_daging_143.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0069_rendang_080.jpg,MI_makanan_indonesia_tambahan_rendang_0069_rendang_080.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0095_rendang_daging_200.jpg,MI_makanan_indonesia_tambahan_rendang_0095_rendang_daging_200.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0145_rendang_daging_016.jpg,MI_makanan_indonesia_tambahan_rendang_0145_rendang_daging_016.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0134_rendang_053.jpg,MI_makanan_indonesia_tambahan_rendang_0134_rendang_053.txt,1
+Rendang,train,maxresdefault-1-_jpg.rf.751d0ba7ff7a3806f8f81cdf0153ed76.jpg,maxresdefault-1-_jpg.rf.751d0ba7ff7a3806f8f81cdf0153ed76.txt,1
+Rendang,train,1111285-1000xauto-13-cara-membuat-rendang-enak-empuk-dan-sederhana_jpg.rf.0471b713d63d7c6ba4c24474f67f0bd8.jpg,1111285-1000xauto-13-cara-membuat-rendang-enak-empuk-dan-sederhana_jpg.rf.0471b713d63d7c6ba4c24474f67f0bd8.txt,1
+Rendang,train,MI_makanan_indonesia_tambahan_rendang_0083_rendang_035.jpg,MI_makanan_indonesia_tambahan_rendang_0083_rendang_035.txt,1
+Rendang,train,daging_rendang-33-_JPG.rf.60e51a622260af5f162111cb88ddbed8.jpg,daging_rendang-33-_JPG.rf.60e51a622260af5f162111cb88ddbed8.txt,1
+Rendang,train,daging_rendang-19-_jpg.rf.a39373c6e072e475e15e5afeb22473c0.jpg,daging_rendang-19-_jpg.rf.a39373c6e072e475e15e5afeb22473c0.txt,1
+Pempek,train,image25_jpeg_jpg.rf.e6e4e765febe4b7671b94651a7c0d605.jpg,image25_jpeg_jpg.rf.e6e4e765febe4b7671b94651a7c0d605.txt,1
+Pempek,train,roboflow_data_tambahan_pempek_0049_pempek_(83).jpg,roboflow_data_tambahan_pempek_0049_pempek_(83).txt,1
+Pempek,train,MI_makanan_indonesia_tambahan_pempek-palembang_0016_pempek_palembang_106.jpg,MI_makanan_indonesia_tambahan_pempek-palembang_0016_pempek_palembang_106.txt,1
+Pempek,train,cookpad_imbalance_pempek_pempek_007.jpg,cookpad_imbalance_pempek_pempek_007.txt,1
+Pempek,train,MI_makanan_indonesia_tambahan_pempek-palembang_0076_pempek_palembang_197.jpg,MI_makanan_indonesia_tambahan_pempek-palembang_0076_pempek_palembang_197.txt,1
+Pempek,train,cookpad_imbalance_pempek_pempek_071.jpg,cookpad_imbalance_pempek_pempek_071.txt,1
+Pempek,train,images36_jpg.rf.0b60e3e13fb2761b00d7835b912ee783.jpg,images36_jpg.rf.0b60e3e13fb2761b00d7835b912ee783.txt,1
+Pempek,train,MI_makanan_indonesia_tambahan_pempek-palembang_0109_pempek_palembang_116.jpg,MI_makanan_indonesia_tambahan_pempek-palembang_0109_pempek_palembang_116.txt,1
+Pempek,train,MI_makanan_indonesia_tambahan_pempek-palembang_0035_pempek_086.jpg,MI_makanan_indonesia_tambahan_pempek-palembang_0035_pempek_086.txt,1
+Pempek,train,roboflow_data_tambahan_pempek_0091_pempek_(35).jpg,roboflow_data_tambahan_pempek_0091_pempek_(35).txt,1
+Pempek,train,MI_makanan_indonesia_tambahan_pempek-palembang_0085_pempek_062.jpg,MI_makanan_indonesia_tambahan_pempek-palembang_0085_pempek_062.txt,1
+Pempek,train,MI_makanan_indonesia_tambahan_pempek-palembang_0041_pempek_palembang_141.jpg,MI_makanan_indonesia_tambahan_pempek-palembang_0041_pempek_palembang_141.txt,1
+Pempek,train,MI_makanan_indonesia_tambahan_pempek-palembang_0100_pempek_112.jpg,MI_makanan_indonesia_tambahan_pempek-palembang_0100_pempek_112.txt,1
+Pempek,train,roboflow_data_tambahan_pempek_0066_pempek_(80).jpg,roboflow_data_tambahan_pempek_0066_pempek_(80).txt,1
+Pempek,train,MI_IMG_7097.jpg,MI_IMG_7097.txt,1
+Pempek,train,roboflow_data_tambahan_pempek_0043_pempek_(75).jpg,roboflow_data_tambahan_pempek_0043_pempek_(75).txt,1
+Pempek,train,roboflow_data_tambahan_pempek_0017_pempek_(66).jpg,roboflow_data_tambahan_pempek_0017_pempek_(66).txt,1
+Pempek,train,MI_makanan_indonesia_tambahan_pempek-palembang_0004_pempek_048.jpg,MI_makanan_indonesia_tambahan_pempek-palembang_0004_pempek_048.txt,1
+Pempek,train,MI_makanan_indonesia_tambahan_pempek-palembang_0021_pempek_palembang_176.jpg,MI_makanan_indonesia_tambahan_pempek-palembang_0021_pempek_palembang_176.txt,1
+Pempek,train,cookpad_imbalance_pempek_pempek_012.jpg,cookpad_imbalance_pempek_pempek_012.txt,1
+Pempek,train,MI_IMG_7065.jpg,MI_IMG_7065.txt,1
+Pempek,train,170939184_189954586297097_6964096392117527821_n_jpg.rf.0ea0d6a0bcf5e99416fabdc2d9c9d199.jpg,170939184_189954586297097_6964096392117527821_n_jpg.rf.0ea0d6a0bcf5e99416fabdc2d9c9d199.txt,1
+Pempek,train,MI_makanan_indonesia_tambahan_pempek-palembang_0040_pempek_palembang_043.jpg,MI_makanan_indonesia_tambahan_pempek-palembang_0040_pempek_palembang_043.txt,1
+Pempek,train,MI_makanan_indonesia_tambahan_pempek-palembang_0114_pempek_015.jpg,MI_makanan_indonesia_tambahan_pempek-palembang_0114_pempek_015.txt,1
+Pempek,train,roboflow_data_tambahan_pempek_0022_pempek_(76).jpg,roboflow_data_tambahan_pempek_0022_pempek_(76).txt,1
+Pempek,train,MI_makanan_indonesia_tambahan_pempek-palembang_0019_pempek_palembang_192.jpg,MI_makanan_indonesia_tambahan_pempek-palembang_0019_pempek_palembang_192.txt,1
+Pempek,train,cookpad_imbalance_pempek_pempek_027.jpg,cookpad_imbalance_pempek_pempek_027.txt,1
+Pempek,train,MI_makanan_indonesia_tambahan_pempek-palembang_0077_pempek_palembang_145.jpg,MI_makanan_indonesia_tambahan_pempek-palembang_0077_pempek_palembang_145.txt,1
+Pempek,train,MI_IMG_7083.jpg,MI_IMG_7083.txt,1
+Pempek,train,cookpad_imbalance_pempek_pempek_047.jpg,cookpad_imbalance_pempek_pempek_047.txt,1
+Pempek,train,roboflow_data_tambahan_pempek_0024_pempek_(109).jpg,roboflow_data_tambahan_pempek_0024_pempek_(109).txt,1
+Pempek,train,MI_makanan_indonesia_tambahan_pempek-palembang_0029_pempek_004.jpg,MI_makanan_indonesia_tambahan_pempek-palembang_0029_pempek_004.txt,1
+Pempek,train,images28_jpg.rf.79dbfb4a6a8c68c572c65e2670ff667a.jpg,images28_jpg.rf.79dbfb4a6a8c68c572c65e2670ff667a.txt,1
+Pempek,train,MI_makanan_indonesia_tambahan_pempek-palembang_0009_pempek_palembang_053.jpg,MI_makanan_indonesia_tambahan_pempek-palembang_0009_pempek_palembang_053.txt,1
+Pempek,train,MI_makanan_indonesia_tambahan_pempek-palembang_0089_pempek_096.jpg,MI_makanan_indonesia_tambahan_pempek-palembang_0089_pempek_096.txt,1
+Pempek,train,roboflow_data_tambahan_pempek_0076_pempek_(62).jpg,roboflow_data_tambahan_pempek_0076_pempek_(62).txt,1
+Pempek,train,MI_makanan_indonesia_tambahan_pempek-palembang_0022_pempek_014.jpg,MI_makanan_indonesia_tambahan_pempek-palembang_0022_pempek_014.txt,1
+Pempek,train,cookpad_imbalance_pempek_pempek_045.jpg,cookpad_imbalance_pempek_pempek_045.txt,1
+Pempek,train,image32_jpeg_jpg.rf.e54e4b9bcd79a9a90ebff8eeb68d8ab2.jpg,image32_jpeg_jpg.rf.e54e4b9bcd79a9a90ebff8eeb68d8ab2.txt,1
+Pempek,train,roboflow_data_tambahan_pempek_0030_pempek_(49).jpg,roboflow_data_tambahan_pempek_0030_pempek_(49).txt,1
+Pempek,train,roboflow_data_tambahan_pempek_0013_pempek_(100).jpg,roboflow_data_tambahan_pempek_0013_pempek_(100).txt,1
+Pempek,train,MI_makanan_indonesia_tambahan_pempek-palembang_0031_pempek_085.jpg,MI_makanan_indonesia_tambahan_pempek-palembang_0031_pempek_085.txt,1
+Pempek,train,images9_jpg.rf.4e7329da988cb8bd2e1f9c7bada2d3e4.jpg,images9_jpg.rf.4e7329da988cb8bd2e1f9c7bada2d3e4.txt,1
+Pempek,train,roboflow_data_tambahan_pempek_0056_pempek_(102).jpg,roboflow_data_tambahan_pempek_0056_pempek_(102).txt,1
+Pempek,train,MI_IMG_7085.jpg,MI_IMG_7085.txt,1
+Pempek,train,MI_makanan_indonesia_tambahan_pempek-palembang_0099_pempek_palembang_006.jpg,MI_makanan_indonesia_tambahan_pempek-palembang_0099_pempek_palembang_006.txt,1
+Pempek,train,MI_makanan_indonesia_tambahan_pempek-palembang_0001_pempek_palembang_144.jpg,MI_makanan_indonesia_tambahan_pempek-palembang_0001_pempek_palembang_144.txt,1
+Pempek,train,pempek_169_jpeg_jpg.rf.d80b182612c7338a970742c215362d67.jpg,pempek_169_jpeg_jpg.rf.d80b182612c7338a970742c215362d67.txt,1
+Pempek,train,MI_makanan_indonesia_tambahan_pempek-palembang_0023_pempek_120.jpg,MI_makanan_indonesia_tambahan_pempek-palembang_0023_pempek_120.txt,1
+Pempek,train,MI_makanan_indonesia_tambahan_pempek-palembang_0046_pempek_141.jpg,MI_makanan_indonesia_tambahan_pempek-palembang_0046_pempek_141.txt,1
+Pempek,train,MI_makanan_indonesia_tambahan_pempek-palembang_0027_pempek_palembang_142.jpg,MI_makanan_indonesia_tambahan_pempek-palembang_0027_pempek_palembang_142.txt,1
+Pempek,train,image21_jpeg_jpg.rf.0269eae58e73ac52107968079511b6ad.jpg,image21_jpeg_jpg.rf.0269eae58e73ac52107968079511b6ad.txt,1
+Pempek,train,MI_makanan_indonesia_tambahan_pempek-palembang_0042_pempek_063.jpg,MI_makanan_indonesia_tambahan_pempek-palembang_0042_pempek_063.txt,1
+Pempek,train,roboflow_data_tambahan_pempek_0034_pempek_(61).jpg,roboflow_data_tambahan_pempek_0034_pempek_(61).txt,1
+Pempek,train,cookpad_imbalance_pempek_pempek_074.jpg,cookpad_imbalance_pempek_pempek_074.txt,1
+Pempek,train,MI_makanan_indonesia_tambahan_pempek-palembang_0013_pempek_032.jpg,MI_makanan_indonesia_tambahan_pempek-palembang_0013_pempek_032.txt,1
+Pempek,train,MI_IMG_7084.jpg,MI_IMG_7084.txt,1
+Pempek,train,roboflow_data_tambahan_pempek_0035_pempek_(114).jpg,roboflow_data_tambahan_pempek_0035_pempek_(114).txt,1
+Pempek,train,MI_IMG_7086.jpg,MI_IMG_7086.txt,1
+Pempek,train,MI_makanan_indonesia_tambahan_pempek-palembang_0131_pempek_palembang_121.jpg,MI_makanan_indonesia_tambahan_pempek-palembang_0131_pempek_palembang_121.txt,1
+Pempek,train,cookpad_imbalance_pempek_pempek_021.jpg,cookpad_imbalance_pempek_pempek_021.txt,1
+Pempek,train,roboflow_data_tambahan_pempek_0099_pempek_(34).jpg,roboflow_data_tambahan_pempek_0099_pempek_(34).txt,1
+Pempek,train,MI_IMG_7091.jpg,MI_IMG_7091.txt,1
+Pempek,train,roboflow_data_tambahan_pempek_0023_pempek_(120).jpg,roboflow_data_tambahan_pempek_0023_pempek_(120).txt,1
+Pempek,train,cookpad_imbalance_pempek_pempek_005.jpg,cookpad_imbalance_pempek_pempek_005.txt,1
+Pempek,train,MI_IMG_7100.jpg,MI_IMG_7100.txt,1
+Pempek,train,MI_makanan_indonesia_tambahan_pempek-palembang_0103_pempek_143.jpg,MI_makanan_indonesia_tambahan_pempek-palembang_0103_pempek_143.txt,1
+Pempek,train,MI_makanan_indonesia_tambahan_pempek-palembang_0032_pempek_098.jpg,MI_makanan_indonesia_tambahan_pempek-palembang_0032_pempek_098.txt,1
+Pempek,train,roboflow_data_tambahan_pempek_0084_pempek_(88).jpg,roboflow_data_tambahan_pempek_0084_pempek_(88).txt,1
+Pempek,train,MI_makanan_indonesia_tambahan_pempek-palembang_0130_pempek_087.jpg,MI_makanan_indonesia_tambahan_pempek-palembang_0130_pempek_087.txt,1
+Pempek,train,pempek2-2-500x333_jpg.rf.550b076a9ad59cde7b31d1e1676ac54d.jpg,pempek2-2-500x333_jpg.rf.550b076a9ad59cde7b31d1e1676ac54d.txt,1
+Pempek,train,resep-pempek-palembang-dengan-kuah-cuko20_700_jpg.rf.e696b81f0d3df7b9aaf66adbc9c90ad7.jpg,resep-pempek-palembang-dengan-kuah-cuko20_700_jpg.rf.e696b81f0d3df7b9aaf66adbc9c90ad7.txt,1
+Pempek,train,roboflow_data_tambahan_pempek_0063_pempek_(94).jpg,roboflow_data_tambahan_pempek_0063_pempek_(94).txt,1
+Pempek,train,MI_makanan_indonesia_tambahan_pempek-palembang_0073_pempek_130.jpg,MI_makanan_indonesia_tambahan_pempek-palembang_0073_pempek_130.txt,1
+Pempek,train,cookpad_imbalance_pempek_pempek_001.jpg,cookpad_imbalance_pempek_pempek_001.txt,1
+Pempek,train,roboflow_data_tambahan_pempek_0050_pempek_(20).jpg,roboflow_data_tambahan_pempek_0050_pempek_(20).txt,1
+Pempek,train,MI_makanan_indonesia_tambahan_pempek-palembang_0124_pempek_054.jpg,MI_makanan_indonesia_tambahan_pempek-palembang_0124_pempek_054.txt,1
+Pempek,train,roboflow_data_tambahan_pempek_0047_pempek_(4).jpg,roboflow_data_tambahan_pempek_0047_pempek_(4).txt,1
+Pempek,train,MI_makanan_indonesia_tambahan_pempek-palembang_0133_pempek_palembang_074.png,MI_makanan_indonesia_tambahan_pempek-palembang_0133_pempek_palembang_074.txt,1
+Pempek,train,pempek2_jpg.rf.f65ec8a44a977ceead52579c66486f8f.jpg,pempek2_jpg.rf.f65ec8a44a977ceead52579c66486f8f.txt,1
+Pempek,train,cookpad_imbalance_pempek_pempek_080.jpg,cookpad_imbalance_pempek_pempek_080.txt,1
+Pempek,train,MI_makanan_indonesia_tambahan_pempek-palembang_0067_pempek_palembang_112.jpg,MI_makanan_indonesia_tambahan_pempek-palembang_0067_pempek_palembang_112.txt,1
+Pempek,train,cara-membuat-pempek-rev-1_jpg.rf.182060eaa8ba6718205518e936705631.jpg,cara-membuat-pempek-rev-1_jpg.rf.182060eaa8ba6718205518e936705631.txt,1
+Pempek,train,cookpad_imbalance_pempek_pempek_052.jpg,cookpad_imbalance_pempek_pempek_052.txt,1
+Pempek,train,roboflow_data_tambahan_pempek_0083_pempek_(86).jpg,roboflow_data_tambahan_pempek_0083_pempek_(86).txt,1
+Pempek,train,MI_makanan_indonesia_tambahan_pempek-palembang_0068_pempek_palembang_166.jpg,MI_makanan_indonesia_tambahan_pempek-palembang_0068_pempek_palembang_166.txt,1
+Pempek,train,roboflow_data_tambahan_pempek_0057_pempek_(121).jpg,roboflow_data_tambahan_pempek_0057_pempek_(121).txt,1
+Pempek,train,MI_IMG_7082.jpg,MI_IMG_7082.txt,1
+Pempek,train,roboflow_data_tambahan_pempek_0072_pempek_(113).jpg,roboflow_data_tambahan_pempek_0072_pempek_(113).txt,1
+Pempek,train,roboflow_data_tambahan_pempek_0090_pempek_(127).jpg,roboflow_data_tambahan_pempek_0090_pempek_(127).txt,1
+Pempek,train,roboflow_data_tambahan_pempek_0087_pempek_(55).jpg,roboflow_data_tambahan_pempek_0087_pempek_(55).txt,1
+Pempek,train,roboflow_data_tambahan_pempek_0044_pempek_(26).jpg,roboflow_data_tambahan_pempek_0044_pempek_(26).txt,1
+Pempek,train,MI_makanan_indonesia_tambahan_pempek-palembang_0038_pempek_084.jpg,MI_makanan_indonesia_tambahan_pempek-palembang_0038_pempek_084.txt,1
+Pempek,train,MI_IMG_7074.jpg,MI_IMG_7074.txt,1
+Pempek,train,roboflow_data_tambahan_pempek_0085_pempek_(97).jpg,roboflow_data_tambahan_pempek_0085_pempek_(97).txt,1
+Pempek,train,MI_makanan_indonesia_tambahan_pempek-palembang_0088_pempek_palembang_012.jpg,MI_makanan_indonesia_tambahan_pempek-palembang_0088_pempek_palembang_012.txt,1
+Pempek,train,roboflow_data_tambahan_pempek_0052_pempek_(48).jpg,roboflow_data_tambahan_pempek_0052_pempek_(48).txt,1
+Pempek,train,MI_makanan_indonesia_tambahan_pempek-palembang_0119_pempek_072.jpg,MI_makanan_indonesia_tambahan_pempek-palembang_0119_pempek_072.txt,1
+Pempek,train,cookpad_imbalance_pempek_pempek_073.jpg,cookpad_imbalance_pempek_pempek_073.txt,1
+Pempek,train,pempek-dos_jpg.rf.3cefe01a4a1694608b2432c426159e79.jpg,pempek-dos_jpg.rf.3cefe01a4a1694608b2432c426159e79.txt,1
+Pempek,train,MI_makanan_indonesia_tambahan_pempek-palembang_0102_pempek_083.jpg,MI_makanan_indonesia_tambahan_pempek-palembang_0102_pempek_083.txt,1
+Pempek,train,cookpad_imbalance_pempek_pempek_035.jpg,cookpad_imbalance_pempek_pempek_035.txt,1
+Pempek,train,MI_makanan_indonesia_tambahan_pempek-palembang_0049_pempek_097.jpg,MI_makanan_indonesia_tambahan_pempek-palembang_0049_pempek_097.txt,1
+Pempek,train,image13_jpeg_jpg.rf.816f6a6343f4b064703fac20377c3f3c.jpg,image13_jpeg_jpg.rf.816f6a6343f4b064703fac20377c3f3c.txt,1
+Pempek,train,roboflow_data_tambahan_pempek_0055_pempek_(63).jpg,roboflow_data_tambahan_pempek_0055_pempek_(63).txt,1
+Pempek,train,MI_makanan_indonesia_tambahan_pempek-palembang_0064_pempek_palembang_172.jpg,MI_makanan_indonesia_tambahan_pempek-palembang_0064_pempek_palembang_172.txt,1
+Pempek,train,roboflow_data_tambahan_pempek_0039_pempek_(105).jpg,roboflow_data_tambahan_pempek_0039_pempek_(105).txt,1
+Pempek,train,image19_jpeg_jpg.rf.4fcace701cda92b773ae3218f5896188.jpg,image19_jpeg_jpg.rf.4fcace701cda92b773ae3218f5896188.txt,1
+Pempek,train,MI_IMG_7105.jpg,MI_IMG_7105.txt,1
+Pempek,train,roboflow_data_tambahan_pempek_0053_pempek_(81).jpg,roboflow_data_tambahan_pempek_0053_pempek_(81).txt,1
+Pempek,train,roboflow_data_tambahan_pempek_0040_pempek_(57).jpg,roboflow_data_tambahan_pempek_0040_pempek_(57).txt,1
+Pempek,train,MI_IMG_7058.jpg,MI_IMG_7058.txt,1
+Pempek,train,MI_makanan_indonesia_tambahan_pempek-palembang_0084_pempek_104.jpg,MI_makanan_indonesia_tambahan_pempek-palembang_0084_pempek_104.txt,1
+Donat,train,donuts_609_jpg.rf.2d217001dc589d2bfb0bb2befa711792.jpg,donuts_609_jpg.rf.2d217001dc589d2bfb0bb2befa711792.txt,1
+Donat,train,donuts_227_jpg.rf.bb907d47fe8378878d1753d42daa95dc.jpg,donuts_227_jpg.rf.bb907d47fe8378878d1753d42daa95dc.txt,2
+Donat,train,donuts_67_jpg.rf.c944c1a4d37ce05031fe61668a0d4012.jpg,donuts_67_jpg.rf.c944c1a4d37ce05031fe61668a0d4012.txt,1
+Donat,train,donuts_487_jpg.rf.1bf042491a1c8f9d9a8d3c7c9a22165f.jpg,donuts_487_jpg.rf.1bf042491a1c8f9d9a8d3c7c9a22165f.txt,8
+Donat,train,donuts_415_jpg.rf.684f4d91e71b8efec6401f37fc5de648.jpg,donuts_415_jpg.rf.684f4d91e71b8efec6401f37fc5de648.txt,2
+Biskuit Choco Chips,train,cookpad_200_extra_biskuit_choco_chips_0005_biskuit_choco_chips_169.jpg,cookpad_200_extra_biskuit_choco_chips_0005_biskuit_choco_chips_169.txt,1
+Biskuit Choco Chips,train,cookpad_200_extra_biskuit_choco_chips_0074_1_(36).jpg,cookpad_200_extra_biskuit_choco_chips_0074_1_(36).txt,1
+Biskuit Choco Chips,train,Individual-Chocolate-Chip-Cookie-3-1067x1600_jpg.rf.d754979186bf5ccbcd0199fddbc4fbc3.jpg,Individual-Chocolate-Chip-Cookie-3-1067x1600_jpg.rf.d754979186bf5ccbcd0199fddbc4fbc3.txt,1
+Biskuit Choco Chips,train,cookpad_200_extra_biskuit_choco_chips_0010_biskuit_choco_chips_195.jpg,cookpad_200_extra_biskuit_choco_chips_0010_biskuit_choco_chips_195.txt,1
+Biskuit Choco Chips,train,cookpad_200_extra_biskuit_choco_chips_0113_biskuit_choco_chips_029.jpg,cookpad_200_extra_biskuit_choco_chips_0113_biskuit_choco_chips_029.txt,1
+Biskuit Choco Chips,train,cookpad_imbalance_biskuit_biskuit_022.jpg,cookpad_imbalance_biskuit_biskuit_022.txt,1
+Biskuit Choco Chips,train,cookpad_200_extra_biskuit_choco_chips_0014_biskuit_choco_chips_134.jpg,cookpad_200_extra_biskuit_choco_chips_0014_biskuit_choco_chips_134.txt,1
+Biskuit Choco Chips,train,cookpad_200_extra_biskuit_choco_chips_0072_1_(32).jpg,cookpad_200_extra_biskuit_choco_chips_0072_1_(32).txt,1
+Biskuit Choco Chips,train,cookpad_200_extra_biskuit_choco_chips_0192_biskuit_choco_chips_197.jpg,cookpad_200_extra_biskuit_choco_chips_0192_biskuit_choco_chips_197.txt,1
+Biskuit Choco Chips,train,cookpad_200_extra_biskuit_choco_chips_0057_biskuit_choco_chips_190.jpg,cookpad_200_extra_biskuit_choco_chips_0057_biskuit_choco_chips_190.txt,1
